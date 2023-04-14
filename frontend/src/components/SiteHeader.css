@@ -1,0 +1,57 @@
+@font-face {
+    font-family: bebasFont;
+    src: url(../fonts/BebasNeue-Regular.ttf);
+}
+
+.SiteHeader {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    width: 1200px;
+    /* height: 220px; */
+    margin: 0 auto;
+    display: flex;
+    /* flex-direction: row; */
+    padding: 0;
+}
+.SiteHeader h2 {
+    font-family: bebasFont;
+    font-weight: 100;
+    width: 290px;
+    line-height: 55px;
+    display: inline-block;
+    height: 55px;
+    margin: 0;
+}
+.SiteHeader__navbar {
+    list-style-type: none; /* Remove bullets */   
+    width: 610px;
+    height: 55px;
+    margin: 0;
+}
+.SiteHeader__navbar li {
+    display: inline-block;
+    /* width: 120px; */
+    padding: 16px;
+}
+.SiteHeader__navbar li a {
+    text-decoration: none;
+    color: black;
+}
+.SiteHeader__phoneData {
+    width: 180px;
+    display: flex;
+    margin-left: 80px;
+}
+.SiteHeader__navbar,
+.SiteHeader__phoneData,
+.SiteHeader__phoneData p {
+    height: 55px;
+}
+.SiteHeader__phoneData img {
+    height: 16px;
+    margin:  auto;
+}
+.SiteHeader__phoneData p {
+    /* width: 20px; */
+}
