@@ -1,0 +1,13 @@
+video {
+    height: 350px;
+    width: 1200px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+@media(max-width: 1200px) {
+    video {
+        width: 100%;
+    }
+}

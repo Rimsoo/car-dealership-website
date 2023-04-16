@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 // page and layout imports
@@ -8,13 +9,15 @@ import Financing from "./pages/Financing";
 import Offer from "./pages/Offer";
 import Sold from "./pages/Sold";
 import SiteHeader from "./components/SiteHeader";
+import Wallpaper from "./components/Wallpaper";
 
 function App() {
   return (
     <Router>
       {/* <ApolloProvider client={client}>         */}
         <div className="App">
-          <SiteHeader /> 
+          <SiteHeader />
+          <Wallpaper />
           <Routes>
             {/* There must be 'exact' below due to fact every other route suits to '/' route */}
             <Route path='/About' element={<About />} /> 
