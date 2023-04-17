@@ -46,7 +46,7 @@ export default function Car(props) {
                 </div>
             </div>
 
-            <button>SZCZEGÓŁY ></button>
+            <button>SZCZEGÓŁY</button>
         </div>
     )
 }

@@ -90,7 +90,7 @@
 @media (max-width: 990px) {
     .SiteHeader__navbar {
         position: absolute;
-        width: 350px;
+        width: 300px;
         top: 55px;
         right: 0;
         z-index: 2;  

@@ -86,11 +86,11 @@
     margin: 10px 0;
 }
 .Car__description {
-    width: 180px;
+    width: 160px;
     margin: 0 auto;
 }
 .Car__description div {
-    width: 90px;
+    width: 80px;
     display: inline-block;
     height: 30px;
 }

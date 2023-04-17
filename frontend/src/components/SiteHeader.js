@@ -18,12 +18,12 @@ export default function SiteHeader() {
                 'SiteHeader__navbar' : 
                 'SiteHeader__navbar SiteHeader__navbar--hidden'
             }>
-                <li><Link to='/' >Oferta</Link></li>
-                <li><Link to='/Sold' >Sprzedane</Link></li>
-                <li><Link to='/About' >O nas</Link></li>
-                <li><Link to='/Buy' >Skup aut</Link></li>
-                <li><Link to='/Financing' >Finansowanie</Link> </li>
-                <li><Link to='/Contact' >Kontakt</Link></li>
+                <li><Link onClick={toggleMenu} to='/' >Oferta</Link></li>
+                <li><Link onClick={toggleMenu} to='/Sold' >Sprzedane</Link></li>
+                <li><Link onClick={toggleMenu} to='/About' >O nas</Link></li>
+                <li><Link onClick={toggleMenu} to='/Buy' >Skup aut</Link></li>
+                <li><Link onClick={toggleMenu} to='/Financing' >Finansowanie</Link> </li>
+                <li><Link onClick={toggleMenu} to='/Contact' >Kontakt</Link></li>
             </ul>
 
             <img 

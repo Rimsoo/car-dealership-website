@@ -6,7 +6,7 @@ export default function Financing() {
 
     return (
         <div className='simple-text'>
-            <h1>Finansowanie</h1>
+            <h1>FINANSOWANIE</h1>
             <p>
                 Lorem ipsum dolor sit amet, at usu libris mandamus. Iisque conclusionemque ad cum. Ut nam augue inermis dolores, has putent perfecto recteque ea. Cum legimus consequat incorrupte ex.
             </p>
