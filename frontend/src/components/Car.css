@@ -12,7 +12,66 @@
     border-radius: 20px;
     font-family: bebasFont;
     display: inline-block;
-    margin: 10px 10px;
+    margin: 10px 13px;
+    position: relative; /* seems unnecessary but it stops .Car span of going out of the area due to its absolute: position */
+}
+.Car span {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    width: 150px;
+    height: 150px;
+    /* background-color: red; */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.Car span span {
+    position: absolute;
+    /* position: relative; */
+    left: -60px;
+    top: 50px;
+    width: 250px;
+    height: 27px;
+    transform: rotate(-45deg);
+    transform: rotate(-45deg) translateY(-20px);
+    letter-spacing: 0.02em;
+    /* box-shadow: 50px 50px 100px rgba(0, 0, 0, 1); */
+}
+/* Little shadows of ribbon */
+.Car .container-ribbon--green::after, 
+.Car .container-ribbon--yellow::after, 
+.Car .container-ribbon--red::after {
+    content: ''; /* must be to show color */
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    bottom: 30.5px;
+    left: 0;
+    z-index: -1;
+}
+.Car .container-ribbon--green::after {
+    background-color: hsl(120, 100%, 15%);
+    box-shadow: 109.5px -110px hsl(120, 100%, 15%); /* Line responsible for the second shadow (the one higher) */
+}
+.Car .container-ribbon--yellow::after {
+    background-color: hsl(39, 100%, 40%);
+    box-shadow: 109.5px -110px hsl(39, 100%, 40%); /* Line responsible for the second shadow (the one higher) */
+}
+.Car .container-ribbon--red::after {
+    background-color: hsl(0, 100%, 40%);
+    box-shadow: 109.5px -110px hsl(0, 100%, 40%); /* Line responsible for the second shadow (the one higher) */
+}
+.Car .ribbon--green {
+    background: green;
+}
+.Car .ribbon--yellow {
+    background: orange;
+}
+.Car .ribbon--red {
+    background: red;
 }
 .Car img {
     width: 100%;
@@ -23,20 +82,15 @@
 }
 .Car__title {
     font-size: 24px;
-    /* width: 100%; */
     text-align: center;
     margin: 10px 0;
-    /* color: white; */
 }
 .Car__description {
     width: 180px;
     margin: 0 auto;
 }
 .Car__description div {
-    /* background-color: grey; */
-    /* color: white; */
     width: 90px;
-    /* height: 20px; */
     display: inline-block;
     height: 30px;
 }
@@ -49,15 +103,21 @@
 .Car button {
     font-size: 20px;
     font-family: bebasFont;
-    /* font-weight: 700; */
     height: 35px;
     border-radius: 5px;
     display: block;
     width: 100px;
     margin: 10px auto;
-
-    /* background-color: black; */
+    
     background-color: white;
-    /* color: white; */
     color: black;
+    transition-property: color;
+    transition-property: background-color;
+    /* transition-duration: 0.5s; */
+    transition-duration: 1s;
+    /* transition-delay: 2s; */
+}
+.Car button:hover {
+    background-color: black;
+    color: white;
 }

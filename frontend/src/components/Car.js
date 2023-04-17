@@ -2,38 +2,47 @@ import React from 'react';
 import { Link } from 'react-router-dom';    
 import './Car.css';    
 
-export default function Car() {
+export default function Car(props) {
 
     return (
         <div className='Car'>
-            <img src='./assets/mercedes.jpg' />
+            {/* <span className='container-ribbon' */}
+            <span className={props.state === 'soon' ? 
+                    'container-ribbon--yellow' : (props.state === 'sold' ? 
+                        'container-ribbon--red' : 'container-ribbon--green')}> 
+                <span className={props.state === 'soon' ? 'ribbon--yellow' : (props.state === 'sold' ? 'ribbon--red' : 'ribbon--green')}>
+                    {props.state === 'soon' ? 'Już wkrótce!' : (props.state === 'sold' ? 'Sprzedane' : props.state + ' PLN')}
+                </span>
+            </span>
 
-            <p className='Car__title'>Mercedes XYZ</p>
+            <img src={'./assets/' + props.imageSource + '.jpg'} />
+
+            <p className='Car__title'>{props.title}</p>
 
             <div className='Car__description'>
                 <div>
                     <img className='Car__description__icons' 
                         src='./assets/mileage.png'
                     />
-                     122687
+                     {props.mileage}
                 </div>
                 <div>                    
                     <img className='Car__description__icons' 
                         src='./assets/calendar.png'
                     />
-                    2022
+                    {props.year}
                 </div>
                 <div>
                     <img className='Car__description__icons' 
                         src='./assets/gasoline.png'
                     />
-                    Benzyna
+                    {props.fuel}
                 </div>
                 <div>
                     <img className='Car__description__icons' 
                         src='./assets/engineering.png'
                     />
-                    230KM
+                    {props.power}{' KM'}
                 </div>
             </div>
 

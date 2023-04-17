@@ -1,3 +1,4 @@
+/* About and Financing page */
 .simple-text {
     width: 1000px;
     margin: 0 auto;
@@ -13,4 +14,59 @@
         width: 90vw;
         margin: 0 auto;
     }
+}
+
+/* Offer page */
+.car-windows-area {
+    width: 1200px;
+    margin: 0 auto;
+    /* justify-content: center;
+    align-items: center; */
+}
+.car-windows-area h1 {
+    text-align: center;
+    font-weight: 600;
+    /* text-decoration: underline 1.5px;
+    text-underline-offset: 8px; */
+}
+@media(max-width: 1200px) {
+    .car-windows-area {
+        width: 900px;
+    }
+}
+@media(max-width: 910px) {
+    .car-windows-area {
+        width: 610px;
+    }
+}
+@media(max-width: 620px) {
+    .car-windows-area {
+        width: 285px;
+    }
+}
+
+/* Contact page */
+.contact-area {
+    font-family: bebasFont;
+    width: 1200px;
+    margin: 0 auto;
+}
+.contact-area__info,
+.contact-area__form {
+    width: 590px;
+    display: inline-block;
+}
+form {
+    width: 590px;
+}
+form input {
+    font-family: bebasFont;
+    font-size: 18px;
+    width: 550px;
+    height: 26px;
+    line-height: 30px;
+    border-radius: 5px;
+    margin: 3px 5px;
+    padding-left: 5px;
+    padding-top: 3px;
 }
