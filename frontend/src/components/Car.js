@@ -46,7 +46,9 @@ export default function Car(props) {
                 </div>
             </div>
 
-            <button>SZCZEGÓŁY</button>
+            <Link to='/CarPage' >
+                <button>SZCZEGÓŁY</button>
+            </Link>
         </div>
     )
 }
