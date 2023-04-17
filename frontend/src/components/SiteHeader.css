@@ -43,6 +43,9 @@
     /* transition: underline 0.2s; */
     transition: color 0.25s;
 }
+.SiteHeader .active {
+    color: rgb(208, 208, 208);
+}
 .SiteHeader__phoneData {
     width: 180px;
     /* display: flex; */

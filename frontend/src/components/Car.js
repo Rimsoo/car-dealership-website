@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';    
+import { NavLink } from 'react-router-dom';    
 import './Car.css';    
 
 export default function Car(props) {
@@ -46,9 +46,9 @@ export default function Car(props) {
                 </div>
             </div>
 
-            <Link to='/CarPage' >
+            <NavLink to='/CarPage' >
                 <button>SZCZEGÓŁY</button>
-            </Link>
+            </NavLink>
         </div>
     )
 }
