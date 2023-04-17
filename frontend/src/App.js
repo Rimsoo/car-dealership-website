@@ -7,6 +7,7 @@ import Buy from "./pages/Buy";
 import CarPage from "./pages/CarPage";
 import Contact from "./pages/Contact";
 import Financing from "./pages/Financing";
+import Footer from "./components/Footer";
 import Offer from "./pages/Offer";
 import Sold from "./pages/Sold";
 import SiteHeader from "./components/SiteHeader";
@@ -29,6 +30,7 @@ function App() {
             <Route exact path='/' element={<Offer />} /> 
             <Route path='/Sold' element={<Sold />} /> 
           </Routes>
+          <Footer />
         </div>
       {/* </ApolloProvider> */}
     </Router>

@@ -1,0 +1,28 @@
+.Footer {
+    background-color: hsl(0, 0%, 40%);
+    color: white;
+    height: 40px;
+    line-height: 40px;
+    font-family: bebasFont;
+    margin-top: 40px;
+}
+.Footer::before {
+    /* font-weight: 100; */
+    content: 'Copyright © 2023 Mateusz Czarnota';
+    float: left;
+    margin-left: 8px;
+}
+.Footer::after {
+    content: 'Realizacja ARDEO Grzegorz Muszyński';
+    float: right;
+    margin-right: 8px;
+}
+
+@media (max-width: 450px) {
+    .Footer {
+        font-size: 13px;
+        height: 60px;
+        line-height: 30px;
+    }
+
+}
