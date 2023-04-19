@@ -16,19 +16,19 @@ import Wallpaper from "./components/Wallpaper";
 function App() {
   return (
     <Router>
-      {/* <ApolloProvider client={client}>         */}
+      {/* <ApolloProvider client={client}> */}
         <div className="App">
           <SiteHeader />
           <Wallpaper />
           <Routes>
             {/* There must be 'exact' below due to fact every other route suits to '/' route */}
-            <Route path='/About' element={<About />} /> 
-            <Route path='/Buy' element={<Buy />} /> 
-            <Route path='/CarPage' element={<CarPage />} /> 
-            <Route path='/Contact' element={<Contact />} /> 
-            <Route path='/Financing' element={<Financing />} /> 
+            <Route path='/about' element={<About />} /> 
+            <Route path='/buy' element={<Buy />} /> 
+            <Route path='/carpage/:id' element={<CarPage />} /> 
+            <Route path='/contact' element={<Contact />} /> 
+            <Route path='/financing' element={<Financing />} /> 
             <Route exact path='/' element={<Offer />} /> 
-            <Route path='/Sold' element={<Sold />} /> 
+            <Route path='/sold' element={<Sold />} /> 
           </Routes>
           <Footer />
         </div>

@@ -9,6 +9,7 @@ export default function Offer() {
             {/* <h1>Sprawdź naszą ofertę</h1> */}
             <h1>SPRAWDŹ NASZĄ OFERTĘ</h1>
             <Car 
+                id={'1'}
                 state={'soon'}
                 title={'Mercedes XYZ'}
                 mileage={'100000'} 
@@ -18,6 +19,7 @@ export default function Offer() {
                 imageSource={'mercedes'}
             />
             <Car 
+                id={'2'}
                 state={'70000'}
                 title={'Hyundai ABC'}
                 mileage={'234456'} 
@@ -26,7 +28,8 @@ export default function Offer() {
                 power={'210'} 
                 imageSource={'hyundai'}
             />
-            <Car 
+            <Car
+                id={'3'} 
                 state={'90000'}
                 title={'Hyundai ABC'}
                 mileage={'1234345'} 
@@ -35,7 +38,8 @@ export default function Offer() {
                 power={'143'} 
                 imageSource={'hyundai'}
             />
-            <Car 
+            <Car
+                id={'5'} 
                 state={'soon'}
                 title={'Mercedes XYZ'}
                 mileage={'456567'} 
@@ -44,7 +48,8 @@ export default function Offer() {
                 power={'230'} 
                 imageSource={'mercedes'}
             />
-            <Car 
+            <Car
+                id={'4'} 
                 state={'150000'}
                 title={'Mercedes XYZ'}
                 mileage={'6785554'} 

@@ -4,9 +4,6 @@ import './Footer.css';
 
 export default function Footer() {
     return (
-        <div className='Footer'>
-            {/* <div>Copyright © 2023 Mateusz Czarnota</div>
-            <div>Realizacja ARDEO Grzegorz Muszyński</div> */}
-        </div>
+        <div className='Footer'></div>
     )
 }

@@ -46,7 +46,7 @@ export default function Car(props) {
                 </div>
             </div>
 
-            <NavLink to='/CarPage' >
+            <NavLink to={`/CarPage/${props.id}`} >
                 <button>SZCZEGÓŁY</button>
             </NavLink>
         </div>
