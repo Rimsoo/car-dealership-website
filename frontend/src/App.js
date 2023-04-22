@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'; // For fetching with graphql
 
 // page and layout imports
 import About from "./pages/About";
@@ -13,10 +14,16 @@ import Sold from "./pages/Sold";
 import SiteHeader from "./components/SiteHeader";
 import Wallpaper from "./components/Wallpaper";
 
+// Graphql
+const client = new ApolloClient({
+  uri: 'http://localhost:1337/graphql',
+  cache: new InMemoryCache()
+});
+
 function App() {
   return (
     <Router>
-      {/* <ApolloProvider client={client}> */}
+      <ApolloProvider client={client}>
         <div className="App">
           <SiteHeader />
           <Wallpaper />
@@ -32,7 +39,7 @@ function App() {
           </Routes>
           <Footer />
         </div>
-      {/* </ApolloProvider> */}
+      </ApolloProvider>
     </Router>
   );
 }

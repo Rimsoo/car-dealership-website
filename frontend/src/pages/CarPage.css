@@ -1,0 +1,52 @@
+@font-face {
+    font-family: bebasFont;
+    src: url(../fonts/gotham-ssm-book.otf);
+    /* src: url(../fonts/GothamMedium.ttf); */
+}
+.CarPage h1 {
+    font-family: bebasFont;
+    font-weight: 500;
+}
+.CarPage {
+    width: 1200px;
+    margin: 0 auto;
+}
+.CarPage img {
+    width: 750px;
+    height: 500px;
+    object-fit: cover;
+    /* display: inline-block; */
+}
+.CarPage .price {
+    color: red;
+}
+.data__table {
+    font-family: bebasFont;
+    font-weight: 100;
+    font-size: 12px;
+    background-color: hsl(0, 0%, 90%);
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.data__table tr {
+    /* border-bottom: 3px solid black; */
+    /* line-height: 18px; */
+    width: 260px;
+}
+.data__table td {
+    /* border-bottom: 1px solid black; */
+    border: 3px solid black;
+    line-height: 16px;
+}
+.data__table td:nth-child(1) {
+    /* background-color: black; */
+    /* color: hsl(0, 0%, 90%); */
+    width: 130px;
+    padding-left: 3px;
+}
+.data__table td:nth-child(2) {
+    width: 130px;
+    text-align: right;
+    padding-right: 3px;
+}
