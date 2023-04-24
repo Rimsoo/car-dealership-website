@@ -126,7 +126,8 @@
         text-align: center;
         margin: 0 auto;
     }
-    .contact-area__info h3, div {
+    .contact-area__info h3, 
+    .contact-area__info div {
         text-align: center;
     }
     .contact-area__form h3 {
