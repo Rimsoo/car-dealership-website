@@ -54,6 +54,7 @@
     /* color: hsl(0, 100%, 40%); */
     font-weight: 500;
     color: hsl(0, 0%, 30%);
+    vertical-align: bottom;
 }
 /* Data cells of second column */
 .CarPage__table td:nth-child(2) {
@@ -97,7 +98,7 @@
         width: 790px;
         margin: 0 auto;
         position: relative;
-        top: 80px;
+        margin-top: 80px;
     }
     .CarPage__table {
         margin: 0;
@@ -117,4 +118,12 @@
     }
 }
 @media(max-width: 900px) {
+    .CarPage__description {
+        width: 88vw;
+    }
+}
+@media(max-width: 580px) {
+    .CarPage__table {
+        width: 90vw;
+    }
 }

@@ -135,6 +135,7 @@
     }
 }
 @media (max-width: 660px) {
+    .contact-area,
     .contact-area__info,
     .contact-area__info div,
     .contact-area__form {

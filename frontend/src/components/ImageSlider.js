@@ -32,19 +32,15 @@ export default function ImageSlider(props) {
                 onClick={() => setIsGalleryDisplayed(true)}
             ></div>
 
-            <span 
+            <div 
                 className='container-slider__left-arrow' 
                 onClick={goToPrevImg}
-            >
-                &#8250;
-            </span>
+            ><p>&#8249;</p></div>
 
-            <span 
+            <div 
                 className='container-slider__right-arrow' 
                 onClick={goToNextImg}
-            >
-                &#8250;
-            </span>
+            ><p>&#8250;</p></div>
 
             <div
                 className="container-slider__dots-area"
@@ -67,24 +63,24 @@ export default function ImageSlider(props) {
                 onClick={() => setIsGalleryDisplayed(false)}
             ></div>
 
-            {/* <div id='gallery-modal' style={isGalleryDisplayed ? {display: 'block'} : {display: 'none'}} > */}
-            <div 
-                id='close-gallery'
-                style={isGalleryDisplayed ? {display: 'block'} : {display: 'none'}} 
-                onClick={() => setIsGalleryDisplayed(false)}
-                >+
-            </div>
+
             <div 
                 className='gallery-modal__left-arrow' 
                 onClick={goToPrevImg} 
                 style={isGalleryDisplayed ? {display: 'block'} : {display: 'none'}}
             >&#8250;</div>
 
-            <img 
+            <div
                 id='bigSlide'
-                src={props.slides[currentIndex]} 
                 style={isGalleryDisplayed ? {display: 'block'} : {display: 'none'}}
-            />
+            >
+                <img src={props.slides[currentIndex]}/>  
+                <div 
+                    id='close-gallery'
+                    style={isGalleryDisplayed ? {display: 'block'} : {display: 'none'}} 
+                    onClick={() => setIsGalleryDisplayed(false)}
+                >+</div>
+            </div>
 
             <div 
                 className='gallery-modal__right-arrow'
