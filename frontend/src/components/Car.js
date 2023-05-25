@@ -19,10 +19,6 @@ export default function Car(props) {
                 </span>
             </span>
 
-            {/* the varrant for images in assets folder */}
-            {/* <img src={'./assets/' + props.imageSource + '.jpg'} />  */}
-
-            {/* the varrant for images fetched from db} */}
             <img src={props.imageSource} />
 
             <p className='Car__title'>{props.title}</p>
@@ -30,27 +26,27 @@ export default function Car(props) {
             <div className='Car__description'>
                 <div>
                     <img className='Car__description__icons' 
-                        src='./assets/mileage.png'
+                        src={require('../assets/mileage.png')}
                     />
                      {props.mileage}
                 </div>
                 <div>                    
                     <img className='Car__description__icons' 
-                        src='./assets/calendar.png'
+                        src={require('../assets/calendar.png')}
                     />
                     {props.year}
                 </div>
                 <div>
                     <img className='Car__description__icons' 
-                        src='./assets/gasoline.png'
+                        src={require('../assets/engineering.png')}
                     />
-                    {props.fuel}
+                    {props.power}{' KM'}
                 </div>
                 <div>
                     <img className='Car__description__icons' 
-                        src='./assets/engineering.png'
+                        src={require('../assets/gasoline.png')}
                     />
-                    {props.power}{' KM'}
+                    {props.fuel}
                 </div>
             </div>
 

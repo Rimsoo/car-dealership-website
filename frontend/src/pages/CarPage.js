@@ -9,6 +9,7 @@ const strapiURL = 'http://localhost:1337';
 const apiURL = 'http://localhost:1337/api/cars?populate=*'; 
 
 export default function CarPage() {
+    // Some code lines below commented out till the app will be deployed width databases
     const { loading, error, data } = useFetch(apiURL);
     const { id } = useParams();
     let imagesURLs = []; // here will be stored URLs of images
@@ -21,9 +22,6 @@ export default function CarPage() {
         imagesURLs.push(strapiURL + car.attributes.url)
     ));
 
-    console.log(imagesURLs);
-    console.log(imagesURLs.length);
-
     return (
         <div className='CarPage'>
             <h1>{data[idNumber][1].attributes.title}<span className='price'>{data[idNumber][1].attributes.price ? ' - ' : ''} {data[idNumber][1].attributes.price} PLN</span></h1>
@@ -32,66 +30,68 @@ export default function CarPage() {
             <ImageSlider id='ImageSlider' slides={imagesURLs} />
 
             <table className='CarPage__table'>
-                <tr>
-                    <td>Rok produkcji:</td>
-                    <td>{data[idNumber][1].attributes.year}</td>
-                </tr>
-                <tr>
-                    <td>Przebieg:</td>
-                    <td>{data[idNumber][1].attributes.mileage}</td>
-                </tr>
-                <tr>
-                    <td>Paliwo:</td>
-                    <td>{data[idNumber][1].attributes.fuel}</td>
-                </tr>
-                <tr>
-                    <td>Moc silnika:</td>
-                    <td>{data[idNumber][1].attributes.power}</td>
-                </tr>
-                <tr>
-                    <td>Poj. silnika:</td>
-                    <td>{data[idNumber][1].attributes.engine_size}</td>
-                </tr>
-                <tr>
-                    <td>Liczba drzwi:</td>
-                    <td>{data[idNumber][1].attributes.doors}</td>
-                </tr>
-                <tr>
-                    <td>Liczba miejsc:</td>
-                    <td>{data[idNumber][1].attributes.seats}</td>
-                </tr>
-                <tr>
-                    <td>Skrzynia biegów:</td>
-                    <td>{data[idNumber][1].attributes.gearbox}</td>
-                </tr>
-                <tr>
-                    <td>Napęd:</td>
-                    <td>{data[idNumber][1].attributes.drive}</td>
-                </tr>
-                <tr>
-                    <td>Nadwozie:</td>
-                    <td>{data[idNumber][1].attributes.body}</td>
-                </tr>
-                <tr>
-                    <td>Kolor:</td>
-                    <td>{data[idNumber][1].attributes.color}</td>
-                </tr>
-                <tr>
-                    <td>Kraj pochodzenia:</td>
-                    <td>{data[idNumber][1].attributes.country}</td>
-                </tr>
-                <tr>
-                    <td>Data pierwszej rejestracji:</td>
-                    <td>{data[idNumber][1].attributes.first_registration}</td>
-                </tr>
-                <tr>
-                    <td>Liczba właścicieli:</td>
-                    <td>{data[idNumber][1].attributes.owners_number}</td>
-                </tr>
-                <tr>
-                    <td>VIN:</td>
-                    <td>{data[idNumber][1].attributes.vin}</td>
-                </tr>
+                <tbody>
+                    <tr>
+                        <td>Rok produkcji:</td>
+                        <td>{data[idNumber][1].attributes.year}</td>
+                    </tr>
+                    <tr>
+                        <td>Przebieg:</td>
+                        <td>{data[idNumber][1].attributes.mileage}</td>
+                    </tr>
+                    <tr>
+                        <td>Paliwo:</td>
+                        <td>{data[idNumber][1].attributes.fuel}</td>
+                    </tr>
+                    <tr>
+                        <td>Moc silnika:</td>
+                        <td>{data[idNumber][1].attributes.power}</td>
+                    </tr>
+                    <tr>
+                        <td>Poj. silnika:</td>
+                        <td>{data[idNumber][1].attributes.engine_size}</td>
+                    </tr>
+                    <tr>
+                        <td>Liczba drzwi:</td>
+                        <td>{data[idNumber][1].attributes.doors}</td>
+                    </tr>
+                    <tr>
+                        <td>Liczba miejsc:</td>
+                        <td>{data[idNumber][1].attributes.seats}</td>
+                    </tr>
+                    <tr>
+                        <td>Skrzynia biegów:</td>
+                        <td>{data[idNumber][1].attributes.gearbox}</td>
+                    </tr>
+                    <tr>
+                        <td>Napęd:</td>
+                        <td>{data[idNumber][1].attributes.drive}</td>
+                    </tr>
+                    <tr>
+                        <td>Nadwozie:</td>
+                        <td>{data[idNumber][1].attributes.body}</td>
+                    </tr>
+                    <tr>
+                        <td>Kolor:</td>
+                        <td>{data[idNumber][1].attributes.color}</td>
+                    </tr>
+                    <tr>
+                        <td>Kraj pochodzenia:</td>
+                        <td>{data[idNumber][1].attributes.country}</td>
+                    </tr>
+                    <tr>
+                        <td>Data pierwszej rejestracji:</td>
+                        <td>{data[idNumber][1].attributes.first_registration}</td>
+                    </tr>
+                    <tr>
+                        <td>Liczba właścicieli:</td>
+                        <td>{data[idNumber][1].attributes.owners_number}</td>
+                    </tr>
+                    <tr>
+                        <td>VIN:</td>
+                        <td>{data[idNumber][1].attributes.vin}</td>
+                    </tr>
+                </tbody>
             </table>
 
             {/* <span className='equipment'>

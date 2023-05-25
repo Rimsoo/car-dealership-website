@@ -38,7 +38,7 @@
     },
     "price": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "gallery": {
       "type": "media",

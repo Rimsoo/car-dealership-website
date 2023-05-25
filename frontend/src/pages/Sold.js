@@ -15,14 +15,13 @@ export default function Sold() {
     
     const filteredData = data.filter(car => car[1].attributes.state === 'sold')
 
-    // console.log(data);
-
     return (
         <div className='car-windows-area'>
             <h1>SPRZEDANE</h1>
 
-            {filteredData.map(car => (
+            {filteredData.map((car, index) => (
                     <Car 
+                        key={'Car no ' + index}
                         id={car[1].id}
                         state={car[1].attributes.state}
                         title={car[1].attributes.title}
@@ -30,7 +29,7 @@ export default function Sold() {
                         year={car[1].attributes.year} 
                         fuel={car[1].attributes.fuel} 
                         power={car[1].attributes.power} 
-                        imageSource={strapiURL + car[1].attributes.gallery.data[1].attributes.url}
+                        imageSource={strapiURL + car[1].attributes.gallery.data[0].attributes.url}
                     />
                 )
             )}

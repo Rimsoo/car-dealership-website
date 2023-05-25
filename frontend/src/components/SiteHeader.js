@@ -27,7 +27,10 @@ export default function SiteHeader() {
 
     return (
         <div className='SiteHeader'>
-            <h2>Mateusz Czarnota - premium cars</h2>
+            <div className='SiteHeader__name'>
+                <h2>ALFA MOTORS</h2>
+                <p>Centrum Wyselekcjonowanych Krajowych Samochodów Marek Premium</p>
+            </div>
 
             <ul className={
                     menuBtnClicked ? 
@@ -46,13 +49,13 @@ export default function SiteHeader() {
 
             <img 
                 id='SiteHeader__menuBtn' 
-                src='./assets/menuBtn.png' 
+                src={require('../assets/menuBtn.png')}
                 onClick={toggleMenu}
                 ref={buttonRef}
             />
 
             <div className='SiteHeader__phoneData'>
-                <img src='./assets/phoneIcon.png' alt="phone icon" />
+                <img src={require('../assets/phoneIcon.png')} alt="phone icon" />
                 <p>+48 XXX XXX XXX</p>
             </div>
         </div>
