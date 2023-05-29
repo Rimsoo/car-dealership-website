@@ -5,8 +5,8 @@ import ImageSlider from '../components/ImageSlider';
 import { useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 
-const strapiURL = 'http://localhost:1337';
-const apiURL = 'http://localhost:1337/api/cars?populate=*'; 
+const strapiURL = 'http://strapi.ardeo-studio.pl/';
+const apiURL = 'http://strapi.ardeo-studio.pl/api/cars?populate=*'; 
 
 export default function CarPage() {
     // Some code lines below commented out till the app will be deployed width databases

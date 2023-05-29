@@ -5,8 +5,13 @@ import './Pages.css';
 import { useQuery, gql } from '@apollo/client';
 import useFetch from '../hooks/useFetch';
 
-const strapiURL = 'http://localhost:1337';
-const apiURL = 'http://localhost:1337/api/cars?populate=*'; // cannot select with url when 'populate' is used. Man must filter below
+const strapiURL = 'http://strapi.ardeo-studio.pl';
+const apiURL = 'http://strapi.ardeo-studio.pl/api/cars?populate=*';
+
+// Below two lines for local version:
+// const strapiURL = 'http://localhost:1337';
+// const apiURL = 'http://localhost:1337/api/cars?populate=*';
+ // cannot select with url when 'populate' is used. Man must filter below
 
 export default function Offer() {
     // Some code lines below commented out till the app will be deployed width databases
