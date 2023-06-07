@@ -8,14 +8,17 @@ export default function Contact() {
             <span className='contact-area__form'>
                 <h3>Formularz kontaktu</h3>
 
-                <form action="https://formsubmit.co/your@email.com" method="POST">
-                    <input type="text" name="name" placeholder='Imię' required/>
-                    <input type="text" name="surname" placeholder='Nazwisko' required/>
-                    <input type="text" name="phone" placeholder='Numer telefonu' />
-                    <input type="email" name="email" placeholder='Adres e-mail' required/>
-                    <textarea type="text" name="message" placeholder='Treść' required rows='4' />
+                <form action="https://formsubmit.co/alfamotors.kontakt@gmail.com" method="POST">
+                    <input type="text" name="Imię" placeholder='Imię' required/>
+                    <input type="text" name="Nazwisko" placeholder='Nazwisko' required/>
+                    <input type="text" name="Numer telefonu" placeholder='Numer telefonu' />
+                    <input type="email" name="Adres e-mail" placeholder='Adres e-mail' required/>
+                    <textarea type="text" name="Wiadomość" placeholder='Treść' required rows='4' />
 
                     <button type="submit">WYŚLIJ</button>
+
+                    <input type="hidden" name="_subject" value="Klient przysłał zapytanie"></input>
+                    <input type="hidden" name="_next" value="https://yourdomain.co/thanks.html"></input>
                 </form>
             </span>
 
@@ -24,11 +27,11 @@ export default function Contact() {
                 
                 <div>
                     <img src={require('../assets/phoneIcon.png')} alt="phone_icon" />
-                    <span>Telefon: +48 XXX XXX XXX</span>
+                    <span>Telefon: +48 505 964 955</span>
                 </div>
                 <div>
                     <img src={require('../assets/email.png')} alt="email_icon" />
-                    <span>E-mail: xxxxxxxxxx@xxx</span>
+                    <span>E-mail: alfamotors.kontakt@gmail.com</span>
                 </div>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1555473.3398993865!2d19.0236861221721!3d50.1859647846431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4717abd77be7063d%3A0x6bf2110444b3d159!2s32-200%20Miech%C3%B3w!5e0!3m2!1spl!2spl!4v1682497385509!5m2!1spl!2spl"></iframe>
             </span>        

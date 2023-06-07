@@ -13,6 +13,7 @@ import Footer from "./components/Footer";
 import Offer from "./pages/Offer";
 import Sold from "./pages/Sold";
 import SiteHeader from "./components/SiteHeader";
+import Thanks from "./pages/Thanks";
 import Wallpaper from "./components/Wallpaper";
 
 // Graphql
@@ -37,6 +38,7 @@ function App() {
             <Route path='/financing' element={<Financing />} /> 
             <Route exact path='/' element={<Offer />} /> 
             <Route path='/sold' element={<Sold />} /> 
+            <Route path='/thanks' element={<Thanks />} /> 
           </Routes>
           <Footer />
         </div>

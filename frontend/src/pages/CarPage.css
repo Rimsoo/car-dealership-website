@@ -1,6 +1,6 @@
 @font-face {
     font-family: bebasFont;
-    src: url(../fonts/gotham-ssm-book.otf);
+    /* src: url(../fonts/gotham-ssm-book.otf); */
     /* src: url(../fonts/GothamMedium.ttf); */
 }
 .CarPage h1 {
@@ -15,18 +15,14 @@
     width: 790px;
     height: 500px;
     object-fit: cover;
-    /* display: inline-block; */
 }
-.CarPage .price {
+.CarPage__price,
+.CarPage__dash {
     color: hsl(0, 100%, 40%);
 }
 .CarPage__table {
     font-size: 15px;
     background-color: hsl(0, 0%, 95%);
-    /* background-color: hsl(0, 0%, 99%); */
-    /* background-color: black; */
-    /* background-color: hsl(0, 0%, 10%); */
-    /* color: hsl(0, 0%, 40%); */
     display: inline-block;
     margin-left: 15px;
     width: 300px;
@@ -70,7 +66,7 @@
 }
 .CarPage__description {
     width: 1080px;
-    margin-top: 10px;
+    margin-top: -180px;
     background-color: hsl(0, 0%, 95%);
     box-shadow: 5px 5px 5px 5px hsl(0, 0%, 70%);
 }
@@ -87,7 +83,7 @@
     padding: 5px 10px;
     margin: 0;
 }
-@media(max-width: 1160px) {
+@media(max-width: 1250px) {
     .CarPage {
         width: 100vw;
     }
@@ -95,13 +91,18 @@
         width: 100vw;
         text-align: center;
     }
+    .CarPage .container-slider {
+        display: block;
+        width: 790px;
+        margin: 0 auto;
+    }
     .CarPage__description {
         margin: 0;
         width: 790px;
         margin: 0 auto;
         position: relative;
         margin-top: 0px;
-        top: 80px;
+        margin-top: 80px;
     }
     .CarPage__table {
         margin: 0;
@@ -111,13 +112,10 @@
         margin: 0 auto;
     }
     .CarPage__table tbody {
-        /* width: 513px; */
-        /* display: flex; */
         width: 100%;
     }
     /* Must be :nth-child() below. Seems unnecessary but it doesn't overwrite without it */
     .CarPage__table tr td:nth-child(n) {
-        /* display: inline-block; */
         width: 250px;
     }
 }
@@ -126,11 +124,41 @@
         width: 88vw;
     }
 }
+@media(max-width: 900px) {
+    .CarPage .container-slider {
+        width: 100%;
+    }
+}
+@media(max-width: 600px) {
+    .CarPage h1 {
+        font-size: 25px;
+    }
+}
 @media(max-width: 580px) {
     .CarPage__table {
         width: 90vw;
     }
     .CarPage__table tbody {
         display: inline-block; /* crucial for squeezing this element */
+    }
+}
+@media(max-width: 420px) {
+    .CarPage h1 {
+        margin-bottom: 8px;
+    }
+    .CarPage__price {
+        display: block;
+    }
+    .CarPage__dash {
+        display: none;
+    }
+}
+@media(max-width: 320px) {
+    .CarPage__price,
+    .CarPage__dash {
+        font-size: 22px;
+    }
+    .CarPage h1 {
+        padding: 0 5px;
     }
 }

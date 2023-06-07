@@ -65,7 +65,7 @@ export default function ImageSlider(props) {
 
 
             <div 
-                className='gallery-modal__left-arrow' 
+                className='gallery-modal__left-arrow gallery-modal__arrow' 
                 onClick={goToPrevImg} 
                 style={isGalleryDisplayed ? {display: 'block'} : {display: 'none'}}
             >&#8250;</div>
@@ -83,7 +83,7 @@ export default function ImageSlider(props) {
             </div>
 
             <div 
-                className='gallery-modal__right-arrow'
+                className='gallery-modal__right-arrow gallery-modal__arrow'
                 onClick={goToNextImg}
                 style={isGalleryDisplayed ? {display: 'block'} : {display: 'none'}}
             >&#8249;</div>

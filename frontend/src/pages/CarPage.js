@@ -21,7 +21,6 @@ export default function CarPage() {
     // console.log(typeof data[0][1].id); // result is Number
 
     function isThatCar(fetchedCar) {
-        console.log(fetchedCar[1].id, idCar)
         return fetchedCar[1].id === idCar;
     }
     
@@ -30,17 +29,18 @@ export default function CarPage() {
 
     // let foundCar = data.find(fetchedCar => fetchedCar[1].id === Number(idCar));
     let foundCar = data.find(isThatCar);
-    // console.log("our car: ", foundCar);
     
     foundCar[1].attributes.gallery.data.map(car => (
         imagesURLs.push(strapiURL + car.attributes.url)
     ));
-        
-    // console.log(imagesURLs)
 
     return (
         <div className='CarPage'>
-            <h1>{foundCar[1].attributes.title}<span className='price'>{foundCar[1].attributes.price ? ' - ' : ''} {foundCar[1].attributes.price} PLN</span></h1>
+            <h1>
+                {foundCar[1].attributes.title}
+                <span className='CarPage__dash'>{foundCar[1].attributes.price ? ' - ' : ''}</span> 
+                <span className='CarPage__price'>{foundCar[1].attributes.price} PLN</span>
+            </h1>
 
             {/* <img src={imagesURLs[0]}></img> */}
             <ImageSlider id='ImageSlider' slides={imagesURLs} />

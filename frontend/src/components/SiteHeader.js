@@ -27,10 +27,12 @@ export default function SiteHeader() {
 
     return (
         <div className='SiteHeader'>
-            <div className='SiteHeader__name'>
-                <h2>ALFA MOTORS</h2>
-                <p>Centrum Wyselekcjonowanych Krajowych Samochodów Marek Premium</p>
-            </div>
+                <div className='SiteHeader__name'>
+                    <NavLink to='/' style={{color: 'black'}}>
+                        <h2>ALFA MOTORS</h2>
+                    </NavLink>
+                    <p>Centrum Wyselekcjonowanych Krajowych Samochodów Marek Premium</p>
+                </div>
 
             <ul className={
                     menuBtnClicked ? 
@@ -56,7 +58,7 @@ export default function SiteHeader() {
 
             <div className='SiteHeader__phoneData'>
                 <img src={require('../assets/phoneIcon.png')} alt="phone icon" />
-                <p>+48 XXX XXX XXX</p>
+                <p>+48 505 964 955</p>
             </div>
         </div>
     )

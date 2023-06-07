@@ -111,8 +111,7 @@
     height: none;
 
 }
-.gallery-modal__left-arrow,
-.gallery-modal__right-arrow {
+.gallery-modal__arrow {
     font-size: 280px;
     color: hsl(0, 0%, 100%, 0.7);
     position: fixed;
@@ -128,8 +127,7 @@
 }
 
 @media (max-width: 1200px) {
-    .gallery-modal__left-arrow,
-    .gallery-modal__right-arrow {
+    .gallery-modal__arrow {
         top: 35%;
         font-size: 180px;
     }
@@ -150,12 +148,11 @@
     .container-slider {
         width: 90vw;
     }
-    .container-slider__left-arrow,
-    .container-slider__right-arrow {
+    .gallery-modal__arrow {
+        top: 38%;
         font-size: 120px; 
     }
-    .container-slider__left-arrow p,
-    .container-slider__right-arrow p {
+    .gallery-modal__arrow p {
         position: relative;
         bottom: 20px;
     }
@@ -169,50 +166,37 @@
         width: 100vw;
         left: 0;
     }
-    .gallery-modal__left-arrow,
-    .gallery-modal__right-arrow {
+    .gallery-modal__arrow {
         top: 42%;
         font-size: 100px;
-        color: hsl(0, 0%, 0%, 0.8);
+        /* color: hsl(0, 0%, 0%, 0.8); */
     }
-    .container-slider__left-arrow,
-    .container-slider__right-arrow {
+    .gallery-modal__arrow {
         font-size: 80px;
     }
     
 }
-@media (max-width: 600px) {
-    .container-slider__left-arrow {
-        /* top: 22%; */
-        /* left: 1%; */
-    }
-    .container-slider__right-arrow {
-        /* top: 3%; */
-        /* left: 84%; */
-    }
-}
 @media (max-width: 500px) {
-    .gallery-modal__left-arrow,
-    .gallery-modal__right-arrow {
+    .gallery-modal__arrow {
         top: 44%;
         font-size: 80px;
     }
-    .container-slider__right-arrow,
-    .container-slider__left-arrow {
+    .gallery-modal__arrow {
         font-size: 60px;
     }
-    .container-slider__left-arrow p,
-    .container-slider__right-arrow p {
+    .gallery-modal__arrow p {
         bottom: 10px;
     }
 }
 @media (max-width: 350px) {
-    .container-slider__right-arrow,
-    .container-slider__left-arrow {
+    .gallery-modal__arrow {
+        top: 47%;
+        /* font-size: 80px; */
+    }
+    .gallery-modal__arrow {
         font-size: 40px;
     }
-    .container-slider__left-arrow p,
-    .container-slider__right-arrow p {
+    .gallery-modal__arrow p {
         bottom: 6px;
     }
 }
