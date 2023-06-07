@@ -15,20 +15,24 @@ export default function CarPage() {
     // Some code lines below commented out till the app will be deployed width databases
     const { loading, error, data } = useFetch(apiURL);
     const { id } = useParams();
+    //const idCar = useParams(); // Results in e.g. "{id: '6'}"
     let imagesURLs = []; // here will be stored URLs of images
-    let idNumber = Number(id); // turninig string into number
+    let idCar = Number(id); // turninig string into number
+    // console.log(typeof data[0][1].id); // result is Number
 
-    // console.log(idNumber);
-    // console.log(data[idNumber][1]);
-    // console.log(data[idNumber]);
-    // console.log(data[idNumber][1].attributes.gallery.data);
+    function isThatCar(fetchedCar) {
+        console.log(fetchedCar[1].id, idCar)
+        return fetchedCar[1].id === idCar;
+    }
     
     if (loading) return <p>Loading...</p>
     if (error) return <p>Error!!!</p>
 
-    // let foundArray = data.find(idNumber => )
+    // let foundCar = data.find(fetchedCar => fetchedCar[1].id === Number(idCar));
+    let foundCar = data.find(isThatCar);
+    // console.log("our car: ", foundCar);
     
-    data[idNumber][1].attributes.gallery.data.map(car => (
+    foundCar[1].attributes.gallery.data.map(car => (
         imagesURLs.push(strapiURL + car.attributes.url)
     ));
         
@@ -36,7 +40,7 @@ export default function CarPage() {
 
     return (
         <div className='CarPage'>
-            <h1>{data[idNumber][1].attributes.title}<span className='price'>{data[idNumber][1].attributes.price ? ' - ' : ''} {data[idNumber][1].attributes.price} PLN</span></h1>
+            <h1>{foundCar[1].attributes.title}<span className='price'>{foundCar[1].attributes.price ? ' - ' : ''} {foundCar[1].attributes.price} PLN</span></h1>
 
             {/* <img src={imagesURLs[0]}></img> */}
             <ImageSlider id='ImageSlider' slides={imagesURLs} />
@@ -45,63 +49,63 @@ export default function CarPage() {
                 <tbody>
                     <tr>
                         <td>Rok produkcji:</td>
-                        <td>{data[idNumber][1].attributes.year}</td>
+                        <td>{foundCar[1].attributes.year}</td>
                     </tr>
                     <tr>
                         <td>Przebieg:</td>
-                        <td>{data[idNumber][1].attributes.mileage}</td>
+                        <td>{foundCar[1].attributes.mileage}</td>
                     </tr>
                     <tr>
                         <td>Paliwo:</td>
-                        <td>{data[idNumber][1].attributes.fuel}</td>
+                        <td>{foundCar[1].attributes.fuel}</td>
                     </tr>
                     <tr>
                         <td>Moc silnika:</td>
-                        <td>{data[idNumber][1].attributes.power}</td>
+                        <td>{foundCar[1].attributes.power}</td>
                     </tr>
                     <tr>
                         <td>Poj. silnika:</td>
-                        <td>{data[idNumber][1].attributes.engine_size}</td>
+                        <td>{foundCar[1].attributes.engine_size}</td>
                     </tr>
                     <tr>
                         <td>Liczba drzwi:</td>
-                        <td>{data[idNumber][1].attributes.doors}</td>
+                        <td>{foundCar[1].attributes.doors}</td>
                     </tr>
                     <tr>
                         <td>Liczba miejsc:</td>
-                        <td>{data[idNumber][1].attributes.seats}</td>
+                        <td>{foundCar[1].attributes.seats}</td>
                     </tr>
                     <tr>
                         <td>Skrzynia biegów:</td>
-                        <td>{data[idNumber][1].attributes.gearbox}</td>
+                        <td>{foundCar[1].attributes.gearbox}</td>
                     </tr>
                     <tr>
                         <td>Napęd:</td>
-                        <td>{data[idNumber][1].attributes.drive}</td>
+                        <td>{foundCar[1].attributes.drive}</td>
                     </tr>
                     <tr>
                         <td>Nadwozie:</td>
-                        <td>{data[idNumber][1].attributes.body}</td>
+                        <td>{foundCar[1].attributes.body}</td>
                     </tr>
                     <tr>
                         <td>Kolor:</td>
-                        <td>{data[idNumber][1].attributes.color}</td>
+                        <td>{foundCar[1].attributes.color}</td>
                     </tr>
                     <tr>
                         <td>Kraj pochodzenia:</td>
-                        <td>{data[idNumber][1].attributes.country}</td>
+                        <td>{foundCar[1].attributes.country}</td>
                     </tr>
                     <tr>
                         <td>Data pierwszej rejestracji:</td>
-                        <td>{data[idNumber][1].attributes.first_registration}</td>
+                        <td>{foundCar[1].attributes.first_registration}</td>
                     </tr>
                     <tr>
                         <td>Liczba właścicieli:</td>
-                        <td>{data[idNumber][1].attributes.owners_number}</td>
+                        <td>{foundCar[1].attributes.owners_number}</td>
                     </tr>
                     <tr>
                         <td>VIN:</td>
-                        <td>{data[idNumber][1].attributes.vin}</td>
+                        <td>{foundCar[1].attributes.vin}</td>
                     </tr>
                 </tbody>
             </table>
@@ -111,7 +115,7 @@ export default function CarPage() {
             <div className='CarPage__description'>
                 <div id='description-title'>Opis pojazdu</div>
                 <ReactMarkdown className='CarPage__description__text'>
-                    {data[idNumber][1].attributes.description}
+                    {foundCar[1].attributes.description}
                 </ReactMarkdown>
             </div>
         </div>
