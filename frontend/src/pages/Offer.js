@@ -5,12 +5,12 @@ import './Pages.css';
 import { useQuery, gql } from '@apollo/client';
 import useFetch from '../hooks/useFetch';
 
-const strapiURL = 'http://strapi.ardeo-studio.pl';
-const apiURL = 'http://strapi.ardeo-studio.pl/api/cars?populate=*';
+const strapiURL = 'https://kokpit.alfamotors.pl';
+const apiURL = 'https://kokpit.alfamotors.pl/api/cars?populate=*';
 
-// Below two lines for local version:
 // const strapiURL = 'http://localhost:1337';
 // const apiURL = 'http://localhost:1337/api/cars?populate=*';
+// ABOVE two lines for local version:
  // cannot select with url when 'populate' is used. Man must filter below
 
 export default function Offer() {
@@ -22,12 +22,17 @@ export default function Offer() {
     
     const filteredData = data.filter(car => car[1].attributes.state !== 'sold')
 
+    console.log(data)
+    // console.log(typeof data[1][1].id)
+    // console.log(typeof data[8][1].id)
+
     return (
         <div className='car-windows-area'>
             <h1>SPRAWDŹ NASZĄ OFERTĘ</h1>
 
             {filteredData.map((car, index) => (
-                    <Car 
+                
+                    <Car
                         key={'Car no ' + index}
                         id={car[1].id}
                         state={car[1].attributes.state}

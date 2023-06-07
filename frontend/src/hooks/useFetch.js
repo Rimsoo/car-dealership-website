@@ -17,7 +17,6 @@ const useFetch = (url) => {
 
                 // console.log("review: ", json[0], "type of ", typeof json);   
                 // console.log("id of one review: ", json[0][0], "type of ", typeof json);
-
                 setData(json)
                 setLoading(false)
             } catch (error) {

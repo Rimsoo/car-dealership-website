@@ -5,22 +5,34 @@ import ImageSlider from '../components/ImageSlider';
 import { useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 
-const strapiURL = 'http://strapi.ardeo-studio.pl/';
-const apiURL = 'http://strapi.ardeo-studio.pl/api/cars?populate=*'; 
+const strapiURL = 'https://kokpit.alfamotors.pl/';
+const apiURL = 'https://kokpit.alfamotors.pl/api/cars?populate=*';
+
+// const strapiURL = 'http://localhost:1337';
+// const apiURL = 'http://localhost:1337/api/cars?populate=*'; 
 
 export default function CarPage() {
     // Some code lines below commented out till the app will be deployed width databases
     const { loading, error, data } = useFetch(apiURL);
     const { id } = useParams();
     let imagesURLs = []; // here will be stored URLs of images
-    let idNumber = Number(id) - 1;
+    let idNumber = Number(id); // turninig string into number
 
+    // console.log(idNumber);
+    // console.log(data[idNumber][1]);
+    // console.log(data[idNumber]);
+    // console.log(data[idNumber][1].attributes.gallery.data);
+    
     if (loading) return <p>Loading...</p>
     if (error) return <p>Error!!!</p>
 
+    // let foundArray = data.find(idNumber => )
+    
     data[idNumber][1].attributes.gallery.data.map(car => (
         imagesURLs.push(strapiURL + car.attributes.url)
     ));
+        
+    // console.log(imagesURLs)
 
     return (
         <div className='CarPage'>
