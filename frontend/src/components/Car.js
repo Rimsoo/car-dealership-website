@@ -6,8 +6,21 @@ export default function Car(props) {
 
     return (
         <div className='Car'>
-            {/* <span className='container-ribbon' */}
-            <span className={props.state === 'soon' ? 
+            <span className={
+                (props.state === 'soon' || props.state === 'zarezerwowane') ? 
+                    'container-ribbon--yellow' : (props.state === 'sold' ? 
+                        'container-ribbon--red' : 'container-ribbon--green')}> 
+                <span className={
+                    (props.state === 'soon' || props.state === 'zarezerwowane') ? 
+                        'ribbon--yellow' : (props.state === 'sold' ? 
+                            'ribbon--red' : 'ribbon--green')}>
+                    {props.state === 'soon' ? 
+                        'Już wkrótce!' : (props.state === 'sold' ?
+                            'Sprzedane' : props.state === 'zarezerwowane' ?
+                                'Zarezerwowane' : props.state)}
+                </span>
+            </span>
+            {/* <span className={props.state === 'soon' ? 
                     'container-ribbon--yellow' : (props.state === 'sold' ? 
                         'container-ribbon--red' : 'container-ribbon--green')}> 
                 <span className={props.state === 'soon' ? 
@@ -17,7 +30,7 @@ export default function Car(props) {
                         'Już wkrótce!' : (props.state === 'sold' ?
                             'Sprzedane' : props.state)}
                 </span>
-            </span>
+            </span> */}
 
             <img src={props.imageSource} />
 

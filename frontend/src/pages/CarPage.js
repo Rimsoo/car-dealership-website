@@ -6,7 +6,9 @@ import { useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 
 const strapiURL = 'https://kokpit.alfamotors.pl/';
-const apiURL = 'https://kokpit.alfamotors.pl/api/cars?populate=*';
+// const apiURL = 'https://kokpit.alfamotors.pl/api/cars?populate=*';
+// The one below should get more than 25 given by a default
+const apiURL = 'https://kokpit.alfamotors.pl/api/cars?sort=date&pagination[pageSize]=200&populate=*'; 
 
 // const strapiURL = 'http://localhost:1337';
 // const apiURL = 'http://localhost:1337/api/cars?populate=*'; 
@@ -40,8 +42,10 @@ export default function CarPage() {
         <div className='CarPage'>
             <h1>
                 {foundCar[1].attributes.title}
-                <span className='CarPage__dash'>{foundCar[1].attributes.price ? ' - ' : ''}</span> 
-                <span className='CarPage__price'>{foundCar[1].attributes.price} PLN</span>
+                <span className='CarPage__price' style={foundCar[1].attributes.state==='sold' || foundCar[1].attributes.state==='soon' ? {display: 'none'} : {}}>
+                    <span className='CarPage__price__dash'>{foundCar[1].attributes.price ? ' - ' : ''}</span> 
+                    <span className='CarPage__price__number'>{foundCar[1].attributes.price} PLN</span>
+                </span>
             </h1>
 
             {/* <img src={imagesURLs[0]}></img> */}

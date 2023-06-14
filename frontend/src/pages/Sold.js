@@ -5,7 +5,9 @@ import './Pages.css';
 import useFetch from '../hooks/useFetch';
 
 const strapiURL = 'https://kokpit.alfamotors.pl';
-const apiURL = 'https://kokpit.alfamotors.pl/api/cars?populate=*'; 
+// const apiURL = 'https://kokpit.alfamotors.pl/api/cars?populate=*'; 
+// The one below should get more than 25 given by a default
+const apiURL = 'https://kokpit.alfamotors.pl/api/cars?sort=date&pagination[pageSize]=200&populate=*'; 
 
 // const strapiURL = 'http://localhost:1337';
 // const apiURL = 'http://localhost:1337/api/cars?populate=*'; 

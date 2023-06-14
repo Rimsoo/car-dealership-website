@@ -3,21 +3,22 @@
     /* src: url(../fonts/gotham-ssm-book.otf); */
     /* src: url(../fonts/GothamMedium.ttf); */
 }
-.CarPage h1 {
-    font-family: bebasFont;
-    font-weight: 500;
-}
 .CarPage {
     width: 1190px;
     margin: 0 auto;
+    padding-bottom: 60px;
+}
+.CarPage h1 {
+    font-family: bebasFont;
+    font-weight: 500;
 }
 .CarPage img {
     width: 790px;
     height: 500px;
     object-fit: cover;
 }
-.CarPage__price,
-.CarPage__dash {
+.CarPage__price__number,
+.CarPage__price__dash {
     color: hsl(0, 100%, 40%);
 }
 .CarPage__table {
@@ -142,20 +143,25 @@
         display: inline-block; /* crucial for squeezing this element */
     }
 }
+@media(max-width: 450px) {
+    .CarPage {
+        padding-bottom: 80px;
+    }
+}
 @media(max-width: 420px) {
     .CarPage h1 {
         margin-bottom: 8px;
     }
-    .CarPage__price {
+    .CarPage__price__number {
         display: block;
     }
-    .CarPage__dash {
+    .CarPage__price__dash {
         display: none;
     }
 }
 @media(max-width: 320px) {
-    .CarPage__price,
-    .CarPage__dash {
+    .CarPage__price__number,
+    .CarPage__price__dash {
         font-size: 22px;
     }
     .CarPage h1 {

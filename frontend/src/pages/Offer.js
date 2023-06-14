@@ -6,7 +6,8 @@ import { useQuery, gql } from '@apollo/client';
 import useFetch from '../hooks/useFetch';
 
 const strapiURL = 'https://kokpit.alfamotors.pl';
-const apiURL = 'https://kokpit.alfamotors.pl/api/cars?populate=*';
+const apiURL = 'https://kokpit.alfamotors.pl/api/cars?sort=date&pagination[pageSize]=200&populate=*'; 
+
 
 // const strapiURL = 'http://localhost:1337';
 // const apiURL = 'http://localhost:1337/api/cars?populate=*';
@@ -19,6 +20,8 @@ export default function Offer() {
     if (loading) return <p>Loading...</p>
     if (error) return <p>Error!!!</p>
     
+    console.log(data)
+
     const filteredData = data.filter(car => car[1].attributes.state !== 'sold')
 
     return (
