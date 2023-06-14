@@ -22,24 +22,26 @@ export default function Offer() {
     const filteredData = data.filter(car => car[1].attributes.state !== 'sold')
 
     return (
-        <div className='car-windows-area'>
-            <h1>SPRAWDŹ NASZĄ OFERTĘ</h1>
+        <div id="Offer">
+            <div className='car-windows-area'>
+                <h1>SPRAWDŹ NASZĄ OFERTĘ</h1>
 
-            {filteredData.map((car, index) => (
-                
-                    <Car
-                        key={'Car no ' + index}
-                        id={car[1].id}
-                        state={car[1].attributes.state}
-                        title={car[1].attributes.title}
-                        mileage={car[1].attributes.mileage} 
-                        year={car[1].attributes.year} 
-                        fuel={car[1].attributes.fuel} 
-                        power={car[1].attributes.power} 
-                        imageSource={strapiURL + car[1].attributes.gallery.data[0].attributes.url}
-                    />
-                )
-            )}
+                {filteredData.map((car, index) => (
+                    
+                        <Car
+                            key={'Car no ' + index}
+                            id={car[1].id}
+                            state={car[1].attributes.state}
+                            title={car[1].attributes.title}
+                            mileage={car[1].attributes.mileage} 
+                            year={car[1].attributes.year} 
+                            fuel={car[1].attributes.fuel} 
+                            power={car[1].attributes.power} 
+                            imageSource={strapiURL + car[1].attributes.gallery.data[0].attributes.url}
+                        />
+                    )
+                )}
+            </div>
         </div>
     )
 }

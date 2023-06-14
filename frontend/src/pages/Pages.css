@@ -1,19 +1,85 @@
-/* About and Financing page */
-.simple-text {
-    width: 1000px;
-    margin: 0 auto 230px;
-}
-.simple-text h1 {
-    font-family: bebasFont;
-    font-weight: 500;
-    text-decoration: underline 2px;
-    text-underline-offset: 8px;
+.App {
+    min-height: 100vh;
+    position: relative;
 }
 
-@media(max-width: 1000px) {
-    .simple-text {
+* {
+    /* border: 1px solid red; */
+}
+/* The About page */
+#About {
+    width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+#About h1 {
+    font-family: bebasFont;
+    font-weight: 500;
+    /* text-decoration: underline 2px;
+    text-underline-offset: 8px; */
+    text-align: center;     
+    font-size: 35px;
+    margin-bottom: 0;
+}
+#About h2 {
+    font-family: bebasFont;
+    font-weight: 500;
+    margin: 0 0 4px;
+    text-decoration: underline 2px;
+    text-underline-offset: 4px;
+    /* font-size:  */
+}
+#About h3 {
+    font-family: bebasFont;
+    font-weight: 500;
+    margin: 40px auto 20px;
+    text-align: center;
+    font-size: 28px;
+    /* font-size:  */
+}
+#About p {
+    margin: 0;
+}
+#About span {
+    font-weight: 700;
+}
+.About__box {
+    margin-bottom: 20px;
+}
+.About__box ul {
+    padding-left: 25px;
+    margin: 3px;
+}
+
+@media(max-width: 1100px) {
+    #About {
         width: 90vw;
-        margin: 0 auto;
+        /* margin: 0 auto 230px; */
+        padding-bottom: 80px;
+    }
+}
+
+/* Financing page */
+#Financing {
+    width: 800px;
+    margin: 0 auto;
+}
+#Financing h1 {
+    font-family: bebasFont;
+    font-weight: 500;
+    /* text-decoration: underline 2px;
+    text-underline-offset: 8px; */
+    text-align: center;
+}
+#Financing li {
+    margin: 20px 0;
+}   
+
+@media(max-width: 1000px) {
+    #Financing {
+        width: 90vw;
+        /* margin: 0 auto 230px; */
+        padding-bottom: 80px;
     }
 }
 
@@ -24,6 +90,7 @@
 .car-windows-area {
     width: 1200px;
     margin: 0 auto;
+    padding-bottom: 50px;
     /* justify-content: center;
     align-items: center; */
 }
@@ -47,6 +114,17 @@
 @media(max-width: 620px) {
     .car-windows-area {
         width: 285px;
+    }
+    #Offer .car-windows-area {
+        padding-bottom: 70px;
+    }
+}
+@media(max-width: 450px) {
+    .car-windows-area {
+        padding-bottom: 70px;
+    }
+    #Offer .car-windows-area {
+        padding-bottom: 90px;
     }
 }
 
@@ -135,6 +213,8 @@
     .contact-area {
         width: 600px;
         flex-direction: column-reverse;
+        margin: 0 auto;
+        padding-bottom: 80px;
     }
     .contact-area__info {
         text-align: center;
@@ -171,13 +251,19 @@
 }
 
 /* Buy page */
-.buy-area {
+* {
+    /* border: 1px solid red;    */
+}
+#Buy {
+    padding-bottom: 80px;
+}
+#Buy .buy-area {
     width: 1200px;
-    margin: 40px auto 290px;
+    margin: 40px auto 0px;
     background: hsl(0, 0%, 90%);
     box-shadow: 5px 5px 5px 5px hsl(0, 0%, 80%);
 }
-.buy-area h3 {
+#Buy .buy-area h3 {
     font-family: bebasFont;
     font-size: 22px;
     font-weight: 500;
@@ -186,19 +272,19 @@
     padding-top: 5px;
     padding-left: 5px;
 }
-.buy-area p {
+#Buy .buy-area p {
     margin: 5px;
     padding-left: 5px;
 }
-.buy-area form {
+#Buy .buy-area form {
     display: flex;
     /* flex-direction: column; */
     height: 200px;
 }
-.buy-area form span {
+#Buy .buy-area form span {
     width: 400px;
 }
-.buy-area input {
+#Buy .buy-area input {
     font-family: bebasFont;
     font-size: 18px;
     height: 26px;
@@ -210,7 +296,7 @@
     padding-top: 3px;
     width: 370px;
 }
-.buy-area textarea {
+#Buy .buy-area textarea {
     font-family: bebasFont;
     font-size: 18px;
     width: 370px;
@@ -219,7 +305,7 @@
     border-radius: 5px;
     margin: 5px;
 }
-.buy-area button {
+#Buy .buy-area button {
     font-family: bebasFont;
     font-size: 18px;
     letter-spacing: 0.05em;
@@ -234,55 +320,70 @@
     transition-duration: 1s;
     /* transition-delay: 2s; */
 }
-.buy-area button:hover {
+#Buy .buy-area button:hover {
     background-color: black;
     color: white;
 }
 
 @media (max-width: 1200px) {
-    .buy-area {
+    #Buy .buy-area {
         width: 800px;
         height: 480px;
-        margin-bottom: 90px;
+        margin-bottom: 0px;
+        /* padding-bottom: 40px; */
     }
-    .buy-area form {
+    /* #Buy .buy-area::after {
+        border: 1px solid red;
+        height: 150px;
+        width: 150px;
+        content: '';
+        background-color: white;
+        position: relative;
+        bottom: -300px;
+    } */
+    #Buy .buy-area form {
         flex-wrap: wrap; 
     }
-    #third-span {
+    #Buy #third-span {
         width: 800px;
     }
-    .buy-area textarea {
+    #Buy .buy-area textarea {
         display: block;
         width: 97%;
         margin: 0 auto;
     }
-    .buy-area button {
+    #Buy .buy-area button {
         margin-top: 10px;
     }
 }
 @media (max-width: 800px) {
-    .buy-area {
+    #Buy .buy-area {
         width: 550px;
     }
     .column-inputs {
         width: 270px !important;
     }
-    #third-span {
+    #Buy #third-span {
         width: 540px;
     }
-    .buy-area input {
+    #Buy .buy-area input {
         width: 250px;
     }
 }
 @media (max-width: 570px) {
-    .buy-area {
+    #Buy .buy-area {
         width: 270px;
         height: 740px;
     }
-    #third-span {
+    #Buy #third-span {
         width: 270px;
     }
-    .buy-area textarea {
+    #Buy .buy-area textarea {
         width: 250px;
     }
 }
+/* @media (max-width: 450px) {
+    #Buy .buy-area {
+        padding-bottom: 60px;
+    }
+} */
