@@ -82,9 +82,6 @@
     "vin": {
       "type": "string"
     },
-    "owners_number": {
-      "type": "integer"
-    },
     "description": {
       "type": "richtext",
       "required": false
