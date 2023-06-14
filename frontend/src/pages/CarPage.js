@@ -29,6 +29,8 @@ export default function CarPage() {
 
     // let foundCar = data.find(fetchedCar => fetchedCar[1].id === Number(idCar));
     let foundCar = data.find(isThatCar);
+
+    console.log(foundCar);
     
     foundCar[1].attributes.gallery.data.map(car => (
         imagesURLs.push(strapiURL + car.attributes.url)
@@ -53,7 +55,7 @@ export default function CarPage() {
                     </tr>
                     <tr>
                         <td>Przebieg:</td>
-                        <td>{foundCar[1].attributes.mileage}</td>
+                        <td>{foundCar[1].attributes.mileage} km</td>
                     </tr>
                     <tr>
                         <td>Paliwo:</td>
@@ -61,7 +63,7 @@ export default function CarPage() {
                     </tr>
                     <tr>
                         <td>Moc silnika:</td>
-                        <td>{foundCar[1].attributes.power}</td>
+                        <td>{foundCar[1].attributes.power} KM</td>
                     </tr>
                     <tr>
                         <td>Poj. silnika:</td>
@@ -99,12 +101,12 @@ export default function CarPage() {
                         <td>Data pierwszej rejestracji:</td>
                         <td>{foundCar[1].attributes.first_registration}</td>
                     </tr>
-                    <tr>
+                    {/* <tr>
                         <td>Liczba właścicieli:</td>
                         <td>{foundCar[1].attributes.owners_number}</td>
-                    </tr>
+                    </tr> */}
                     <tr>
-                        <td>VIN:</td>
+                        <td>Forma sprzedaży:</td>
                         <td>{foundCar[1].attributes.vin}</td>
                     </tr>
                 </tbody>

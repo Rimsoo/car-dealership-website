@@ -11,7 +11,7 @@
     bottom: 0;
 }
 .Footer::before {
-    content: 'Copyright © 2023 Mateusz Czarnota';
+    content: 'Copyright © 2023 Alfa Motors';
     float: left;
     margin-left: 8px;
 }
