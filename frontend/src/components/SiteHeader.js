@@ -3,16 +3,16 @@ import { NavLink } from 'react-router-dom';
 import './SiteHeader.css';    
 
 export default function SiteHeader() {
-    const [menuBtnClicked, setMenuBtnClicked] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
     let menuRef = useRef();
     let buttonRef = useRef();
 
     function toggleMenu() {
-        setMenuBtnClicked(!menuBtnClicked);
+        setMenuOpen(!menuOpen);
     }
 
     function hideMenu() {
-        setMenuBtnClicked(false);
+        setMenuOpen(false);
     }
 
     useEffect(() => {
@@ -27,18 +27,16 @@ export default function SiteHeader() {
 
     return (
         <div className='SiteHeader'>
-                <div className='SiteHeader__name'>
-                    <NavLink to='/' style={{color: 'black'}}>
-                        <h2>ALFA MOTORS</h2>
-                    </NavLink>
-                    <p>Centrum Wyselekcjonowanych Krajowych Samochodów Marek Premium</p>
-                </div>
+            <div className='SiteHeader__name'>
+                <NavLink to='/' style={{color: 'black'}}>
+                    <h2>ALFA MOTORS</h2>
+                </NavLink>
+                <p>Centrum Wyselekcjonowanych Krajowych Samochodów Marek Premium</p>
+            </div>
 
-            <ul className={
-                    menuBtnClicked ? 
-                    'SiteHeader__navbar' : 
-                    'SiteHeader__navbar SiteHeader__navbar--hidden'
-                }
+            <ul 
+                className={`SiteHeader__navbar ${menuOpen ? 
+                'SiteHeader__navbar--shown' : 'SiteHeader__navbar--hidden'}`}
                 ref={menuRef}
             >
                 <li><NavLink onClick={hideMenu} to='/' >Oferta</NavLink></li>

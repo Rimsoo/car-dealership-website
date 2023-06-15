@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import '../components/ImageSlider.css';
 
 export default function ImageSlider(props) {
@@ -25,8 +25,22 @@ export default function ImageSlider(props) {
         marginTop: "-12px"
     }
 
+    // Auto sliding
+    useEffect(() => {
+        console.log(`initializing interval`);
+        const interval = setInterval(() => {
+            goToNextImg();
+        }, 5000);
+      
+        return () => {
+          console.log(`clearing interval`);
+          clearInterval(interval);
+        };
+      }, [currentIndex]); // With empty array it runs only once
+
     return (
         <div className="container-slider">
+            <p></p>
             <div 
                 className='ImageSlide' 
                 style={ImageSlideStyle}
