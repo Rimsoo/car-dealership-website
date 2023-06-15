@@ -21,6 +21,7 @@ export default function ImageSlider(props) {
 
     const dotsStyle = {
         fontSize: '60px',
+        lineHeight: '47px',
         marginTop: "-12px"
     }
 
@@ -68,7 +69,7 @@ export default function ImageSlider(props) {
                 className='gallery-modal__left-arrow gallery-modal__arrow' 
                 onClick={goToPrevImg} 
                 style={isGalleryDisplayed ? {display: 'block'} : {display: 'none'}}
-            >&#8250;</div>
+            >&#8249;</div>
 
             <div
                 id='bigSlide'
@@ -86,8 +87,7 @@ export default function ImageSlider(props) {
                 className='gallery-modal__right-arrow gallery-modal__arrow'
                 onClick={goToNextImg}
                 style={isGalleryDisplayed ? {display: 'block'} : {display: 'none'}}
-            >&#8249;</div>
-            {/* </div> */}
+            >&#8250;</div>
         </div>
     )
 }

@@ -135,28 +135,41 @@
         font-size: 25px;
     }
 }
-@media(max-width: 580px) {
+@media(max-width: 620px) {
+    .CarPage__price__number {
+        display: block;
+    }
+    .CarPage__price__dash {
+        display: none;
+    }
     .CarPage__table {
         width: 90vw;
+        top: 90px;
     }
     .CarPage__table tbody {
         display: inline-block; /* crucial for squeezing this element */
+    }
+    .CarPage__description {
+        margin-top: 120px;
     }
 }
 @media(max-width: 450px) {
     .CarPage {
         padding-bottom: 80px;
     }
+    .CarPage h1 {
+        padding: 0 16px;
+    }
+    .CarPage__table {
+        top: 120px;
+    }
+    .CarPage__description {
+        margin-top: 140px;
+    }
 }
 @media(max-width: 420px) {
     .CarPage h1 {
         margin-bottom: 8px;
-    }
-    .CarPage__price__number {
-        display: block;
-    }
-    .CarPage__price__dash {
-        display: none;
     }
 }
 @media(max-width: 320px) {

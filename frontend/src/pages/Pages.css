@@ -15,11 +15,11 @@
 #About h1 {
     font-family: bebasFont;
     font-weight: 500;
-    /* text-decoration: underline 2px;
-    text-underline-offset: 8px; */
     text-align: center;     
     font-size: 35px;
     margin-bottom: 0;
+    text-decoration: underline 2px;
+    text-underline-offset: 8px;
 }
 #About h2 {
     font-family: bebasFont;
@@ -67,9 +67,9 @@
 #Financing h1 {
     font-family: bebasFont;
     font-weight: 500;
-    /* text-decoration: underline 2px;
-    text-underline-offset: 8px; */
     text-align: center;
+    text-decoration: underline 2px;
+    text-underline-offset: 8px;
 }
 #Financing li {
     margin: 20px 0;
@@ -91,8 +91,6 @@
     width: 1200px;
     margin: 0 auto;
     padding-bottom: 50px;
-    /* justify-content: center;
-    align-items: center; */
 }
 .car-windows-area h1 {
     font-family: bebasFont;
@@ -101,6 +99,8 @@
     text-decoration: underline 2px;
     text-underline-offset: 8px;
 }
+/* #Offer .car-windows-area h1 {
+} */
 @media(max-width: 1200px) {
     .car-windows-area {
         width: 900px;
@@ -257,13 +257,13 @@
 #Buy {
     padding-bottom: 80px;
 }
-#Buy .buy-area {
+#Buy__area {
     width: 1200px;
     margin: 40px auto 0px;
     background: hsl(0, 0%, 90%);
     box-shadow: 5px 5px 5px 5px hsl(0, 0%, 80%);
 }
-#Buy .buy-area h3 {
+#Buy__area h3 {
     font-family: bebasFont;
     font-size: 22px;
     font-weight: 500;
@@ -272,19 +272,19 @@
     padding-top: 5px;
     padding-left: 5px;
 }
-#Buy .buy-area p {
+#Buy__area p {
     margin: 5px;
     padding-left: 5px;
 }
-#Buy .buy-area form {
+#Buy__area form {
     display: flex;
     /* flex-direction: column; */
     height: 200px;
 }
-#Buy .buy-area form span {
+#Buy__area form span {
     width: 400px;
 }
-#Buy .buy-area input {
+#Buy__area input {
     font-family: bebasFont;
     font-size: 18px;
     height: 26px;
@@ -296,69 +296,85 @@
     padding-top: 3px;
     width: 370px;
 }
-#Buy .buy-area textarea {
+#Buy__area textarea {
     font-family: bebasFont;
     font-size: 18px;
     width: 370px;
-    height: 140px;
+    height: 103px;
     border: 2px solid black;
     border-radius: 5px;
-    margin: 5px;
+    margin: 5px 5px 2px;
 }
-#Buy .buy-area button {
+#third-span__attachments input {
+    /* margin: 0 0 4px 7px; */
+    margin: 3px;
+    padding: 2px;
+    width: 180px;
+    height: 22px;
+    font-size: 14px;
+    display: inline-block;
+}
+/* #Buy__area #third-span input button {
+    background-color: red;
+} */
+#Buy__area button {
     font-family: bebasFont;
     font-size: 18px;
     letter-spacing: 0.05em;
     width: 70px;
     height: 30px;
     border-radius: 4px;
-    display: block;
-    margin: 0px auto;
+    /* display: block; */
+    /* margin: 0px auto; */
+    margin: 4px 0 0 58px;
     transition-property: color;
     transition-property: background-color;
     /* transition-duration: 0.5s; */
     transition-duration: 1s;
     /* transition-delay: 2s; */
 }
-#Buy .buy-area button:hover {
+#Buy__area button:hover {
     background-color: black;
     color: white;
 }
 
 @media (max-width: 1200px) {
-    #Buy .buy-area {
+    #Buy__area {
         width: 800px;
-        height: 480px;
+        height: 510px;
         margin-bottom: 0px;
         /* padding-bottom: 40px; */
     }
-    /* #Buy .buy-area::after {
-        border: 1px solid red;
-        height: 150px;
-        width: 150px;
-        content: '';
-        background-color: white;
-        position: relative;
-        bottom: -300px;
-    } */
-    #Buy .buy-area form {
+    #Buy__area form {
         flex-wrap: wrap; 
     }
-    #Buy #third-span {
+    #Buy__area #third-span {
         width: 800px;
     }
-    #Buy .buy-area textarea {
+    #Buy__area textarea {
         display: block;
-        width: 97%;
+        width: 780px;
         margin: 0 auto;
     }
-    #Buy .buy-area button {
-        margin-top: 10px;
+    #Buy__area #third-span__attachments {
+        width: 615px;
+        margin: 0 auto;
+        padding: 3px 5px;
+        display: flex;
+        justify-content: space-between;
+    }
+    #Buy__area #third-span__attachments input {
+        width: 190px;
+    }
+    #Buy__area button {
+        display: block;
+        margin: 10px auto;
     }
 }
 @media (max-width: 800px) {
-    #Buy .buy-area {
+    #Buy__area {
         width: 550px;
+        height: 530px;
     }
     .column-inputs {
         width: 270px !important;
@@ -366,24 +382,53 @@
     #Buy #third-span {
         width: 540px;
     }
-    #Buy .buy-area input {
+    #Buy__area input {
         width: 250px;
+    }
+    #Buy__area textarea {
+        width: 525px;
+    }
+    #Buy__area #third-span__attachments {
+        width: 410px;
+        margin: 0 0 0 50px;
+        padding: 3px 0px;
+        display: inline-flex;
+        flex-wrap: wrap;
+    }
+    #Buy__area #third-span button {
+        display: inline-block;
+        position: relative;
+        top: 37px;
+        right: 150px;
+        height: 27px;
     }
 }
 @media (max-width: 570px) {
-    #Buy .buy-area {
+    #Buy__area {
         width: 270px;
-        height: 740px;
+        height: 870px;
     }
     #Buy #third-span {
         width: 270px;
     }
-    #Buy .buy-area textarea {
+    #Buy__area textarea {
         width: 250px;
+    }
+    #Buy__area #third-span__attachments {
+        width: 200px;
+        margin: 3px auto;
+        padding: 3px 0px;
+        display: flex;
+        justify-content: space-between;
+    }
+    #Buy__area #third-span button {
+        display: block;
+        position: static;
+        margin: 0 auto;
     }
 }
 /* @media (max-width: 450px) {
-    #Buy .buy-area {
+    #Buy__area {
         padding-bottom: 60px;
     }
 } */

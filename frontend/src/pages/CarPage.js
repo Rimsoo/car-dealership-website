@@ -32,7 +32,7 @@ export default function CarPage() {
     // let foundCar = data.find(fetchedCar => fetchedCar[1].id === Number(idCar));
     let foundCar = data.find(isThatCar);
 
-    console.log(foundCar);
+    // console.log(foundCar);
     
     foundCar[1].attributes.gallery.data.map(car => (
         imagesURLs.push(strapiURL + car.attributes.url)
@@ -42,9 +42,17 @@ export default function CarPage() {
         <div className='CarPage'>
             <h1>
                 {foundCar[1].attributes.title}
-                <span className='CarPage__price' style={foundCar[1].attributes.state==='sold' || foundCar[1].attributes.state==='soon' ? {display: 'none'} : {}}>
+
+                <span className='CarPage__price' style={
+                    foundCar[1].attributes.state==='sold' || 
+                    foundCar[1].attributes.state==='soon' ? {display: 'none'} : {}
+                }>
                     <span className='CarPage__price__dash'>{foundCar[1].attributes.price ? ' - ' : ''}</span> 
-                    <span className='CarPage__price__number'>{foundCar[1].attributes.price} PLN</span>
+                    <span className='CarPage__price__number'>
+                        {foundCar[1].attributes.state==='zarezerwowane' ? 
+                        'ZAREZERWOWANE' : 
+                        foundCar[1].attributes.price + ' PLN'}
+                    </span>
                 </span>
             </h1>
 

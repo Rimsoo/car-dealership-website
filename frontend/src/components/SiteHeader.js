@@ -44,7 +44,7 @@ export default function SiteHeader() {
                 <li><NavLink onClick={hideMenu} to='/' >Oferta</NavLink></li>
                 <li><NavLink onClick={hideMenu} to='/Sold' >Sprzedane</NavLink></li>
                 <li><NavLink onClick={hideMenu} to='/About' >O nas</NavLink></li>
-                <li><NavLink onClick={hideMenu} to='/Buy' >Skup aut</NavLink></li>
+                <li><NavLink onClick={hideMenu} to='/Buy' >Odkup pojazdów</NavLink></li>
                 <li><NavLink onClick={hideMenu} to='/Financing' >Finansowanie</NavLink> </li>
                 <li><NavLink onClick={hideMenu} to='/Contact' >Kontakt</NavLink></li>
             </ul>

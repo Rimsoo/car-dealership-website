@@ -24,7 +24,7 @@ export default function Sold() {
     return (
         <div id="Sold">
             <div className='car-windows-area'>
-                <h1>SPRZEDANE</h1>
+                <h1>POJAZDY, KTÓRE ZNALAZŁY JUŻ NOWEGO WŁAŚCICIELA:</h1>
 
                 {filteredData.map((car, index) => (
                         <Car 

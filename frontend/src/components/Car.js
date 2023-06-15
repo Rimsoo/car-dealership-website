@@ -34,20 +34,21 @@ export default function Car(props) {
 
             <img src={props.imageSource} />
 
-            <p className='Car__title'>{props.title}</p>
+            <p className='Car__title'><div>{props.title}</div></p>
+            {/* <p className='Car__title'>{props.title}</p> */}
 
             <div className='Car__description'>
-                <div>
-                    <img className='Car__description__icons' 
-                        src={require('../assets/mileage.png')}
-                    />
-                     {props.mileage}
-                </div>
                 <div>                    
                     <img className='Car__description__icons' 
                         src={require('../assets/calendar.png')}
                     />
                     {props.year}
+                </div>
+                <div>
+                    <img className='Car__description__icons' 
+                        src={require('../assets/mileage.png')}
+                    />
+                     {props.mileage}{' km'}
                 </div>
                 <div>
                     <img className='Car__description__icons' 
@@ -60,6 +61,7 @@ export default function Car(props) {
                         src={require('../assets/gasoline.png')}
                     />
                     {props.fuel}
+                    {/* Benzyna + LPG */}
                 </div>
             </div>
 

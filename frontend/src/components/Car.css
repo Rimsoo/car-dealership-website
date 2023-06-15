@@ -2,9 +2,6 @@
     font-family: bebasFont;
     src: url(../fonts/BebasNeue-Regular.ttf);
 }
-* {
-    /* border: 2px solid red; */
-}
 .Car {
     width: 270px;
     height: 370px;
@@ -13,8 +10,11 @@
     font-family: bebasFont;
     display: inline-block;
     margin: 10px 13px;
-    position: relative; /* seems unnecessary but it stops .Car span of going out of the area due to its absolute: position */
+    position: relative; /* seems unnecessary but it stops .Car__ribbon of going out of the area due to its absolute: position */
 }
+/* .container-ribbon--yellow,
+.container-ribbon--red,
+.container-ribbon--green { */
 .Car span {
     position: absolute;
     top: -8px;
@@ -28,6 +28,9 @@
     align-items: center;
     overflow: hidden;
 }
+/* .container-ribbon--yellow span,
+.container-ribbon--red span,
+.container-ribbon--green span { */
 .Car span span {
     position: absolute;
     /* position: relative; */
@@ -81,32 +84,46 @@
     object-fit: cover;
 }
 .Car__title {
-    font-size: 24px;
+    margin: 4px 0 5px;
+    padding: 0 3px;
+
+    height: 54px;
+    line-height: 54px;
     text-align: center;
-    margin: 10px 0;
+}
+.Car__title div {
+    display: inline-block;
+    vertical-align: middle;
+    /* line-height: normal; */
+    line-height: 27px;
+    font-size: 24px;
+}
+
+* {
+    /* border: 1px solid red; */
 }
 .Car__description {
-    width: 160px;
+    width: 170px;
     height: 60px;
     margin: 0 auto;
-    /* justify-content: center; */
 }
 .Car__description div {
-    width: 80px;
+    width: 70px;
     display: inline-block;
     height: 30px;
 }
+/* .Car__description div:nth-child(2) {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} */
 /* In case of "Benzyna + LPG" description the 4th div needs more space, so that's why the code below */
-.Car__description div:nth-child(4) {
+.Car__description div:nth-child(even) {
     position: relative;
-    width: 120px;
-    bottom: 30px;
-    left: 80px;
+    width: 100px;
 }
 .Car__description__icons {
     max-width: 20px;
     max-height: 16px;
-    margin-right: 8px;
+    margin-right: 6px;
 }
 .Car button {
     font-size: 20px;
@@ -115,7 +132,7 @@
     border-radius: 5px;
     display: block;
     width: 100px;
-    margin: 10px auto;
+    margin: 0px auto;
     
     background-color: white;
     color: black;

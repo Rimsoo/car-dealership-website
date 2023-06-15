@@ -19,9 +19,9 @@ export default function Offer() {
     
     if (loading) return <p>Loading...</p>
     if (error) return <p>Error!!!</p>
-    
-    console.log(data)
 
+    console.log((0>null))
+    
     const filteredData = data.filter(car => car[1].attributes.state !== 'sold')
 
     return (
@@ -30,7 +30,6 @@ export default function Offer() {
                 <h1>SPRAWDŹ NASZĄ OFERTĘ</h1>
 
                 {filteredData.map((car, index) => (
-                    
                         <Car
                             key={'Car no ' + index}
                             id={car[1].id}

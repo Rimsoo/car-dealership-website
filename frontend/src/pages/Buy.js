@@ -4,29 +4,37 @@ import './Pages.css';
 export default function Buy() {
     return (
         <div id="Buy">
-            <div className='buy-area'>
+            <div id="Buy__area">
                 <h3>Formularz odkupu</h3>
-                <p>Jeżeli są Państwo zainteresowani sprzedażą swojego samochodu, prosimy kontakt telefoniczny, lub wypełnienie i przesłanie poniższego formularza.</p>
+                <p>Jeżeli są Państwo zainteresowani sprzedażą swojego samochodu, prosimy o kontakt telefoniczny lub wypełnienie i przesłanie poniższego formularza z uwzględnieniem podstawowych danych pojazdu, własnym opisem oraz poglądowymi zdjęciami.</p>
 
-                <form action="https://formsubmit.co/alfamotors.kontakt@gmail.com" method="POST">
+                <form action="https://formsubmit.co/alfamotors.kontakt@gmail.com" method="POST" enctype="multipart/form-data"> 
+                {/* enctype has been set for sending images */}
                     <span className='column-inputs'>
                         <input type="text" name="Imię" placeholder='Imię' required/>
                         <input type="text" name="Nazwisko" placeholder='Nazwisko' required/>
                         <input type="text" name="Numer telefonu" placeholder='Numer telefonu' />
                         <input type="email" name="Adres e-mail" placeholder='Adres e-mail' required/>
-                        <input type="text" name="Cena" placeholder='Proponowana cena (opcjonalnie)'/>
+                        <input type="text" name="Cena" placeholder='Proponowana cena'/>
                     </span>
 
                     <span className='column-inputs'>
-                        <input type="text" name="Model" placeholder='Model' required/>
-                        <input type="text" name="Rok" placeholder='Rok' required/>
-                        <input type="text" name="Paliwo" placeholder='Paliwo' required/>
+                        <input type="text" name="Marka i model" placeholder='Marka i model' required/>
+                        <input type="text" name="Rok produkcji" placeholder='Rok produkcji' required/>
+                        <input type="text" name="Wersja silnikowa" placeholder='Wersja silnikowa' required/>
                         <input type="text" name="Przebieg" placeholder='Przebieg' required/>
-                        <input type="text" name="Marka" placeholder='Marka' required/>
+                        <input type="text" name="Kraj" placeholder='Kraj pochodzenia' required/>
                     </span>
 
+
+
                     <span id='third-span'>
-                        <textarea type="text" name="message" placeholder='Treść' required rows='4' />
+                        <textarea type="text" name="Wiadomość" placeholder='Własny opis pojazdu/komentarz/uwag' required rows='4' />
+                        <span id='third-span__attachments'>
+                            <input type="file" name="Załącznik 1" accept="image/png, image/jpeg"/>
+                            <input type="file" name="Załącznik 2" accept="image/png, image/jpeg"/>
+                            <input type="file" name="Załącznik 3" accept="image/png, image/jpeg"/>
+                        </span>    
                         <button type="submit">WYŚLIJ</button>
                     </span>
 
