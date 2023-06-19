@@ -88,7 +88,8 @@
 /* Traditional navbar is replaced by menu button */
 @media (max-width: 1200px) {
     .SiteHeader {
-        width: 100vw;
+        /* width: 90vw; */
+        width: 100%;
     }
     /* .SiteHeader__navbar--hidden, */
     .SiteHeader__navbar {
@@ -160,7 +161,7 @@
         display: none;
     }
 }
-@media (max-width: 575px) {
+@media (max-width: 600px) {
     .SiteHeader__name {
         width: 100%;
         padding: 0;

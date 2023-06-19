@@ -27,20 +27,19 @@ export default function ImageSlider(props) {
 
     // Auto sliding
     useEffect(() => {
-        console.log(`initializing interval`);
+        // console.log(`initializing interval`);
         const interval = setInterval(() => {
             goToNextImg();
         }, 5000);
       
         return () => {
-          console.log(`clearing interval`);
+        //   console.log(`clearing interval`);
           clearInterval(interval);
         };
-      }, [currentIndex]); // With empty array it runs only once
+      }, [currentIndex]); // goToNextImg changes currentIndex invoking this effect which invokes goToNextImg making loop.
 
     return (
         <div className="container-slider">
-            <p></p>
             <div 
                 className='ImageSlide' 
                 style={ImageSlideStyle}

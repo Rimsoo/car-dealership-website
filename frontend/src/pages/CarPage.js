@@ -20,7 +20,6 @@ export default function CarPage() {
     //const idCar = useParams(); // Results in e.g. "{id: '6'}"
     let imagesURLs = []; // here will be stored URLs of images
     let idCar = Number(id); // turninig string into number
-    // console.log(typeof data[0][1].id); // result is Number
 
     function isThatCar(fetchedCar) {
         return fetchedCar[1].id === idCar;
@@ -31,8 +30,6 @@ export default function CarPage() {
 
     // let foundCar = data.find(fetchedCar => fetchedCar[1].id === Number(idCar));
     let foundCar = data.find(isThatCar);
-
-    // console.log(foundCar);
     
     foundCar[1].attributes.gallery.data.map(car => (
         imagesURLs.push(strapiURL + car.attributes.url)
@@ -40,15 +37,15 @@ export default function CarPage() {
 
     return (
         <div className='CarPage'>
-            <h1>
+            <h1 className='CarPage__price__area'>
                 {foundCar[1].attributes.title}
 
-                <span className='CarPage__price' style={
+                <span className='CarPage__price__area' style={
                     foundCar[1].attributes.state==='sold' || 
                     foundCar[1].attributes.state==='soon' ? {display: 'none'} : {}
                 }>
-                    <span className='CarPage__price__dash'>{foundCar[1].attributes.price ? ' - ' : ''}</span> 
-                    <span className='CarPage__price__number'>
+                    <span className='CarPage__price__area__dash'>{foundCar[1].attributes.price ? ' - ' : ''}</span> 
+                    <span className='CarPage__price__area__number'>
                         {foundCar[1].attributes.state==='zarezerwowane' ? 
                         'ZAREZERWOWANE' : 
                         foundCar[1].attributes.price + ' PLN'}
@@ -56,7 +53,6 @@ export default function CarPage() {
                 </span>
             </h1>
 
-            {/* <img src={imagesURLs[0]}></img> */}
             <ImageSlider id='ImageSlider' slides={imagesURLs} />
 
             <table className='CarPage__table'>

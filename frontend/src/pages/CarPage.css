@@ -3,12 +3,17 @@
     /* src: url(../fonts/gotham-ssm-book.otf); */
     /* src: url(../fonts/GothamMedium.ttf); */
 }
+
+* {
+    /* border: 1px solid red; */
+}
 .CarPage {
     width: 1190px;
     margin: 0 auto;
     padding-bottom: 60px;
 }
-.CarPage h1 {
+/* .CarPage h1 { */
+.CarPage .CarPage__price__area {
     font-family: bebasFont;
     font-weight: 500;
 }
@@ -17,8 +22,8 @@
     height: 500px;
     object-fit: cover;
 }
-.CarPage__price__number,
-.CarPage__price__dash {
+.CarPage__price__area__number,
+.CarPage__price__area__dash {
     color: hsl(0, 100%, 40%);
 }
 .CarPage__table {
@@ -86,10 +91,10 @@
 }
 @media(max-width: 1250px) {
     .CarPage {
-        width: 100vw;
+        width: 100%;
     }
-    .CarPage h1 {
-        width: 100vw;
+    .CarPage .CarPage__price__area {
+        width: 100%;
         text-align: center;
     }
     .CarPage .container-slider {
@@ -130,16 +135,11 @@
         width: 100%;
     }
 }
-@media(max-width: 600px) {
-    .CarPage h1 {
-        font-size: 25px;
-    }
-}
 @media(max-width: 620px) {
-    .CarPage__price__number {
+    .CarPage__price__area__number {
         display: block;
     }
-    .CarPage__price__dash {
+    .CarPage__price__area__dash {
         display: none;
     }
     .CarPage__table {
@@ -153,12 +153,19 @@
         margin-top: 120px;
     }
 }
+@media(max-width: 550px) {
+    .CarPage .CarPage__price__area {
+        font-size: 25px;
+    }
+}
 @media(max-width: 450px) {
     .CarPage {
         padding-bottom: 80px;
     }
-    .CarPage h1 {
-        padding: 0 16px;
+    .CarPage .CarPage__price__area {
+        /* padding: 0 16px; */
+        margin: 17px auto;
+        max-width: 90%;
     }
     .CarPage__table {
         top: 120px;
@@ -168,16 +175,16 @@
     }
 }
 @media(max-width: 420px) {
-    .CarPage h1 {
+    .CarPage .CarPage__price__area {
         margin-bottom: 8px;
     }
 }
 @media(max-width: 320px) {
-    .CarPage__price__number,
-    .CarPage__price__dash {
+    .CarPage__price__area__number,
+    .CarPage__price__area__dash {
         font-size: 22px;
     }
-    .CarPage h1 {
+    .CarPage .CarPage__price__area {
         padding: 0 5px;
     }
 }
