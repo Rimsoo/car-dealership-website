@@ -4,7 +4,7 @@
 }
 
 * {
-    /* border: 1px solid red; */
+    /* border: 1px solid red;   */
 }
 
 .SiteHeader {
@@ -40,9 +40,12 @@
     margin: 0;
     display: inline-block;
 }
+.SiteHeader__navbar a {
+    /* padding: 5px 16px 10px; */
+    margin: 5px 16px 10px;
+}
 .SiteHeader__navbar li {
     display: inline-block;
-    padding: 5px 16px 10px;
     text-decoration: none;
     color: black;
 }
@@ -102,9 +105,13 @@
     .SiteHeader__navbar {
         position: absolute;
         width: 250px;
-        top: 73.4px;
+        top: 73px;
         right: 0;
         z-index: 2;
+    }
+    .SiteHeader__navbar a {
+        /* padding: 5px 16px 10px; */
+        margin: 13px 0;
     }
     .SiteHeader__navbar li {
         background-color: rgb(255, 255, 255);
