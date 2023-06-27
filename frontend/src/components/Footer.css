@@ -2,12 +2,10 @@
     background-color: hsl(0, 0%, 40%);
     color: white;
     height: 40px;
-    /* width: 90vw; */
     width: 100%;
     line-height: 40px;
     font-family: bebasFont;
     margin-top: 40px;
-    /* position: fixed; */
     position: absolute;
     bottom: 0;
 }

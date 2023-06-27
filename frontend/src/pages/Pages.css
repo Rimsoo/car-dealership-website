@@ -324,8 +324,6 @@
     width: 70px;
     height: 30px;
     border-radius: 4px;
-    /* display: block; */
-    /* margin: 0px auto; */
     margin: 4px 0 0 58px;
     transition-property: color;
     transition-property: background-color;

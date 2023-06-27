@@ -12,15 +12,12 @@
     margin: 0 auto;
     padding-bottom: 60px;
 }
-/* .CarPage h1 { */
 .CarPage .CarPage__price__area {
     font-family: bebasFont;
     font-weight: 500;
 }
-.CarPage img {
-    width: 790px;
-    height: 500px;
-    object-fit: cover;
+.CarPage .container-slider {
+    margin-left: 40px;
 }
 .CarPage__price__area__number,
 .CarPage__price__area__dash {
@@ -40,13 +37,11 @@
 }
 .CarPage__table tbody {
     display: inline-block;
-    /* width: 100vw; */
 }
 .CarPage__table tr {
     display: flex;
 }
 .CarPage__table tr:nth-child(n+2) {
-    /* display: flex; */
     border-top: 0.1px solid hsl(0, 0%, 30%);
 }
 .CarPage__table td {
@@ -72,7 +67,7 @@
 }
 .CarPage__description {
     width: 1080px;
-    margin-top: -180px;
+    margin: -180px auto 0;
     background-color: hsl(0, 0%, 95%);
     box-shadow: 5px 5px 5px 5px hsl(0, 0%, 70%);
 }

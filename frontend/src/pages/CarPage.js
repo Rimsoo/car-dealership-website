@@ -28,7 +28,6 @@ export default function CarPage() {
     if (loading) return <p>Loading...</p>
     if (error) return <p>Error!!!</p>
 
-    // let foundCar = data.find(fetchedCar => fetchedCar[1].id === Number(idCar));
     let foundCar = data.find(isThatCar);
     
     foundCar[1].attributes.gallery.data.map(car => (

@@ -43,14 +43,12 @@
 .SiteHeader__navbar li {
     display: inline-block;
     padding: 5px 16px 10px;
-}
-.SiteHeader__navbar li a {
     text-decoration: none;
     color: black;
 }
-.SiteHeader__navbar li a:hover {
+.SiteHeader__navbar li span:hover {
     color: rgb(208, 208, 208);
-    transition: color 0.25s;
+    transition: color 0.5s;
 }
 .SiteHeader .active {
     color: rgb(208, 208, 208);
@@ -114,8 +112,6 @@
         text-align: center;
         z-index: 2;
         padding: 13px 0;
-        /* border-top: 0.1px solid black; */
-        /* border-left: 0.1px solid black; */
     }
     .SiteHeader__navbar li {
         background-color: rgb(255, 255, 255);
@@ -125,7 +121,7 @@
         background-color: rgb(229, 229, 229);
         transition: color 0.5s;
     }
-    .SiteHeader__navbar :nth-child(6) {
+    .SiteHeader__navbar :nth-child(6) li {
         border-bottom-left-radius: 20px;
     }
     .SiteHeader__phoneData {
@@ -183,7 +179,7 @@
         top: 101px;
         width: 100%;
     }
-    .SiteHeader__navbar :nth-child(6) {
+    .SiteHeader__navbar :nth-child(6) li {
         border-bottom-left-radius: 0;
     }
 }
@@ -198,8 +194,4 @@
     .SiteHeader__navbar {
         top: 115px;
     }
-}
-
-@media (max-width: 310px) {
-
 }

@@ -21,7 +21,6 @@ export default function SiteHeader() {
                 hideMenu();
             }
         }
-
         document.addEventListener('mousedown', handler);
     })
 
@@ -39,12 +38,12 @@ export default function SiteHeader() {
                 'SiteHeader__navbar--shown' : 'SiteHeader__navbar--hidden'}`}
                 ref={menuRef}
             >
-                <li><NavLink onClick={hideMenu} to='/' >Oferta</NavLink></li>
-                <li><NavLink onClick={hideMenu} to='/Sold' >Sprzedane</NavLink></li>
-                <li><NavLink onClick={hideMenu} to='/About' >O nas</NavLink></li>
-                <li><NavLink onClick={hideMenu} to='/Buy' >Odkup pojazdów</NavLink></li>
-                <li><NavLink onClick={hideMenu} to='/Financing' >Finansowanie</NavLink> </li>
-                <li><NavLink onClick={hideMenu} to='/Contact' >Kontakt</NavLink></li>
+                <NavLink onClick={hideMenu} to='/' ><li><span>Oferta</span></li></NavLink>
+                <NavLink onClick={hideMenu} to='/Sold' ><li><span>Sprzedane</span></li></NavLink>
+                <NavLink onClick={hideMenu} to='/About' > <li><span>O nas</span></li></NavLink>
+                <NavLink onClick={hideMenu} to='/Buy' > <li><span>Odkup pojazdów</span></li></NavLink>
+                <NavLink onClick={hideMenu} to='/Financing' > <li><span>Finansowanie</span></li></NavLink> 
+                <NavLink onClick={hideMenu} to='/Contact' > <li><span>Kontakt</span></li></NavLink>
             </ul>
 
             <img 
