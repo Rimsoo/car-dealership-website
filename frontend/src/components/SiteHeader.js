@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import './SiteHeader.css';    
 
@@ -15,6 +15,7 @@ export default function SiteHeader() {
         setMenuOpen(false);
     }
 
+    // useEffect below closes menu whenever sth not being NavBar is clicked
     useEffect(() => {
         function handler(e) {
             if (!menuRef.current.contains(e.target) && !buttonRef.current.contains(e.target)) {
@@ -44,7 +45,7 @@ export default function SiteHeader() {
                 <NavLink onClick={hideMenu} to='/Buy' > <li><span>Odkup pojazdów</span></li></NavLink>
                 <NavLink onClick={hideMenu} to='/Financing' > <li><span>Finansowanie</span></li></NavLink> 
                 <NavLink onClick={hideMenu} to='/Contact' > <li><span>Kontakt</span></li></NavLink>
-                                {/* <li><NavLink onClick={hideMenu} to='/Sold' >Sprzedane</NavLink></li>
+                {/* <li><NavLink onClick={hideMenu} to='/Sold' >Sprzedane</NavLink></li>
                 <li><NavLink onClick={hideMenu} to='/About' >O nas</NavLink></li>
                 <li><NavLink onClick={hideMenu} to='/Buy' >Odkup pojazdów</NavLink></li>
                 <li><NavLink onClick={hideMenu} to='/Financing' >Finansowanie</NavLink> </li>
@@ -56,10 +57,11 @@ export default function SiteHeader() {
                 src={require('../assets/menuBtn.png')}
                 onClick={toggleMenu}
                 ref={buttonRef}
+                alt='Najlepsze samochody używane w Małopolsce'
             />
 
             <div className='SiteHeader__phoneData'>
-                <img src={require('../assets/phoneIcon.png')} alt="phone icon" />
+                <img src={require('../assets/phoneIcon.png')} alt="Znajdź auto klasy premium" />
                 <p>+48 505 964 955</p>
             </div>
         </div>

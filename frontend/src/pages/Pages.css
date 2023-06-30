@@ -190,22 +190,34 @@
     line-height: 28px;
     font-size: 18px;    
 }
-.contact-area button {
+#contact-area__button {
+    /* -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; */
+    width: 66px;
+    height: 30px;
+    line-height: 24px;
+    background-color: white;
+    color: black;
+    padding: 3px 11px;
+
+    /* -webkit-padding: 0 0 0 10px; */
+    /* -webkit-color-correction: red; */
+    /* text-align: center; */
+    /* Styling above added because <p> alement substituted a <button> for Safari Browsers */
     font-family: bebasFont;
     font-size: 18px;
-    letter-spacing: 0.05em;
-    width: 70px;
-    height: 30px;
+    letter-spacing: 0.03em;
+    border: 2px solid black;
     border-radius: 4px;
     display: block;
     margin: 10px auto;
     transition-property: color;
     transition-property: background-color;
-    /* transition-duration: 0.5s; */
     transition-duration: 1s;
-    /* transition-delay: 2s; */
+    cursor: pointer;
 }
-.contact-area button:hover {
+#contact-area__button:hover {
     background-color: black;
     color: white;
 }
@@ -331,7 +343,7 @@
     transition-duration: 1s;
     /* transition-delay: 2s; */
 }
-#Buy__area button:hover {
+#Buy__area__button:hover {
     background-color: black;
     color: white;
 }

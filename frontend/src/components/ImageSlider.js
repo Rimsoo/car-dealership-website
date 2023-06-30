@@ -27,13 +27,11 @@ export default function ImageSlider(props) {
 
     // Auto sliding
     useEffect(() => {
-        // console.log(`initializing interval`);
         const interval = setInterval(() => {
             goToNextImg();
         }, 5000);
       
         return () => {
-        //   console.log(`clearing interval`);
           clearInterval(interval);
         };
       }, [currentIndex]); // goToNextImg changes currentIndex invoking this effect which invokes goToNextImg making loop.
@@ -88,7 +86,7 @@ export default function ImageSlider(props) {
                 id='bigSlide'
                 style={isGalleryDisplayed ? {display: 'block'} : {display: 'none'}}
             >
-                <img src={props.slides[currentIndex]}/>  
+                <img src={props.slides[currentIndex]} alt='Dobre auta używane, zaufany dealer' />  
                 <div 
                     id='close-gallery'
                     style={isGalleryDisplayed ? {display: 'block'} : {display: 'none'}} 

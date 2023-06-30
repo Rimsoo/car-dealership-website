@@ -3,7 +3,6 @@
     height: 500px;
     position: relative;
     display: inline-block;
-    /* background-color: red; */
 }
 .ImageSlide {
     width: 100%;
@@ -13,12 +12,7 @@
     background-size: cover;
     object-fit: cover;
     z-index: 3;
-
     transition: background-image 800ms linear 0.1s;
-    /* transition-property: background-image;
-    transition-duration: 800ms;
-    transition-timing-function: linear;
-    transition-delay: 0.2s; */
 }
 .container-slider__left-arrow,
 .container-slider__right-arrow {

@@ -1,12 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';   
 import Car from '../components/Car';
 import './Pages.css';
 import useFetch from '../hooks/useFetch';
 
 const strapiURL = 'https://kokpit.alfamotors.pl';
 // const apiURL = 'https://kokpit.alfamotors.pl/api/cars?populate=*'; 
-// The one below should get more than 25 given by a default
+// The code line below gets more than 25 records given by a default
 const apiURL = 'https://kokpit.alfamotors.pl/api/cars?sort=date&pagination[pageSize]=200&populate=*'; 
 
 // const strapiURL = 'http://localhost:1337';

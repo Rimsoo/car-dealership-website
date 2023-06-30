@@ -36,6 +36,8 @@ export default function Buy() {
                             <input type="file" name="Załącznik 3" accept="image/png, image/jpeg"/>
                         </span>    
                         <button type="submit">WYŚLIJ</button>
+                        {/* Button replaced with <p> for Safari browser */}
+                        {/* <p id='Buy-area__button' type='submit'>WYŚLIJ</p> */}
                     </span>
 
                     <input type="hidden" name="_subject" value="Oferta od klienta"></input>

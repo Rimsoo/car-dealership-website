@@ -19,8 +19,6 @@ export default function Offer() {
     
     if (loading) return <p>Loading...</p>
     if (error) return <p>Error!!!</p>
-
-    console.log((0>null))
     
     const filteredData = data.filter(car => car[1].attributes.state !== 'sold')
 
