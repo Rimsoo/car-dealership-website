@@ -26,8 +26,6 @@ export default function Buy() {
                         <input type="text" name="Kraj" placeholder='Kraj pochodzenia' required/>
                     </span>
 
-
-
                     <span id='third-span'>
                         <textarea type="text" name="Wiadomość" placeholder='Własny opis pojazdu/komentarz/uwag' required rows='4' />
                         <span id='third-span__attachments'>
@@ -35,13 +33,14 @@ export default function Buy() {
                             <input type="file" name="Załącznik 2" accept="image/png, image/jpeg"/>
                             <input type="file" name="Załącznik 3" accept="image/png, image/jpeg"/>
                         </span>    
-                        <button type="submit">WYŚLIJ</button>
-                        {/* Button replaced with <p> for Safari browser */}
+                        {/* <button type="submit">WYŚLIJ</button> */}
+                        {/* Button replaced with <input> for Safari browser */}
+                        <input id='Buy__area__button' type='submit' value='WYŚLIJ' />
                         {/* <p id='Buy-area__button' type='submit'>WYŚLIJ</p> */}
                     </span>
 
                     <input type="hidden" name="_subject" value="Oferta od klienta"></input>
-                    <input type="hidden" name="_next" value="https://yourdomain.co/thanks.html"></input>
+                    <input type="hidden" name="_next" value="https://alfamotors.pl/thanks"></input>
                 </form>
             </div>
         </div>

@@ -318,7 +318,6 @@
     margin: 5px 5px 2px;
 }
 #third-span__attachments input {
-    /* margin: 0 0 4px 7px; */
     margin: 3px;
     padding: 2px;
     width: 180px;
@@ -329,21 +328,27 @@
 /* #Buy__area #third-span input button {
     background-color: red;
 } */
-#Buy__area button {
+#Buy__area #Buy__area__button {
+    max-width: 70px;
+    height: 30px;
+    line-height: 24px;
+    position: relative;
+    bottom: 37.5px;
+    left: 90px;
+    background-color: white;
+    color: black;
+    /* Styling above added because <input> alement substituted a <button> for Safari Browsers */
     font-family: bebasFont;
     font-size: 18px;
     letter-spacing: 0.05em;
-    width: 70px;
-    height: 30px;
     border-radius: 4px;
-    margin: 4px 0 0 58px;
+    /* margin: 4px 0 0 58px; */
     transition-property: color;
     transition-property: background-color;
-    /* transition-duration: 0.5s; */
     transition-duration: 1s;
-    /* transition-delay: 2s; */
+    cursor: pointer;
 }
-#Buy__area__button:hover {
+#Buy__area #Buy__area__button:hover {
     background-color: black;
     color: white;
 }
@@ -351,9 +356,8 @@
 @media (max-width: 1200px) {
     #Buy__area {
         width: 800px;
-        height: 510px;
+        height: 500px;
         margin-bottom: 0px;
-        /* padding-bottom: 40px; */
     }
     #Buy__area form {
         flex-wrap: wrap; 
@@ -376,9 +380,8 @@
     #Buy__area #third-span__attachments input {
         width: 190px;
     }
-    #Buy__area button {
-        display: block;
-        margin: 10px auto;
+    #Buy__area #Buy__area__button {
+        position: static;
     }
 }
 @media (max-width: 800px) {
@@ -405,12 +408,10 @@
         display: inline-flex;
         flex-wrap: wrap;
     }
-    #Buy__area #third-span button {
-        display: inline-block;
+    #Buy__area #Buy__area__button {
         position: relative;
-        top: 37px;
-        right: 150px;
-        height: 27px;
+        left: 90px;
+        bottom: 40px;
     }
 }
 @media (max-width: 570px) {
@@ -431,7 +432,7 @@
         display: flex;
         justify-content: space-between;
     }
-    #Buy__area #third-span button {
+    #Buy__area #third-span #Buy__area__button {
         display: block;
         position: static;
         margin: 0 auto;
