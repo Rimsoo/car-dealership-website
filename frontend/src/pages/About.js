@@ -7,7 +7,7 @@ export default function About() {
         <div id="About">
             <h1>O nas</h1>
 
-            <div class="About__box">
+            <div className="About__box">
                 <h2>Historia</h2>
                 <p>
                     <span>ALFA MOTORS</span> to rodzinna firma specjalizująca się w sprzedaży luksusowych samochodów marek premium, której tradycja sięga już prawie trzydziestu lat.
@@ -17,7 +17,7 @@ export default function About() {
                 </p>
             </div>
 
-            <div class="About__box">
+            <div className="About__box">
                 <h2>Cel</h2>
                 <p>
                     Naszym głównym założeniem jest indywidualne, szczere i uczciwe podejście do każdego klienta, aby świadomie wybrał najlepszy dla siebie samochód.
@@ -27,7 +27,7 @@ export default function About() {
                 </p>
             </div>
 
-            <div class="About__box">
+            <div className="About__box">
                 <h2>Podstawa działalności</h2>
                 <p>
                     Wszystkie samochody są naszą własnością. Decyzja o zakupie poprzedzona jest zawsze gruntownym sprawdzeniem pojazdu oraz spełnieniem ostrych kryteriów selekcyjnych.
@@ -40,7 +40,7 @@ export default function About() {
                 </p>
             </div>
 
-            <div class="About__box">
+            <div className="About__box">
                 <h2>Zmiana samochodu - kompleksowe podejście</h2>
                 <p>
                     Podchodzimy kompleksowo do zagadnienia jakim jest zmiana samochodu przez potencjalnego Klienta:

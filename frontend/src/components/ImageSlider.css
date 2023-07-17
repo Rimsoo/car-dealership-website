@@ -45,9 +45,6 @@
     color: hsl(0, 100%, 40%);
     transition-duration: 1s;
 }
-* {
-    /* border: 1px solid red; */
-}
 .container-slider__dots-area {
     display: flex;
     justify-content: center;
@@ -97,7 +94,6 @@
     top: 100px;
     left: 10%;
     z-index: 7;
-    /* width: calc(80% - 180px); */
 }
 #bigSlide img {
     object-fit: scale-down;
@@ -164,7 +160,6 @@
     .gallery-modal__arrow {
         top: 42%;
         font-size: 100px;
-        /* color: hsl(0, 0%, 0%, 0.8); */
     }
     .gallery-modal__arrow {
         font-size: 80px;
@@ -186,7 +181,6 @@
 @media (max-width: 350px) {
     .gallery-modal__arrow {
         top: 47%;
-        /* font-size: 80px; */
     }
     .gallery-modal__arrow {
         font-size: 40px;

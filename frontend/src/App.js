@@ -30,7 +30,6 @@ function App() {
           <SiteHeader />
           <Wallpaper />
           <Routes>
-            {/* There must be 'exact' below due to fact every other route suits to '/' route */}
             <Route path='/about' element={<About />} /> 
             <Route path='/buy' element={<Buy />} /> 
             <Route path='/carpage/:id' element={<CarPage />} /> 

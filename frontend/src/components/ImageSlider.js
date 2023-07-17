@@ -61,7 +61,6 @@ export default function ImageSlider(props) {
                     <div 
                         key={index}
                         onClick={() => setCurrentIndex(index)}
-                        // style={dotsStyle}
                         style={currentIndex === index ? dotsStyle : {}}
                     >
                         &#8226;

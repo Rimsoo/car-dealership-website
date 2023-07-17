@@ -1,6 +1,5 @@
 import React from 'react';
 import './Wallpaper.css';
-// import video from './assets/cars-video.mp4';
 
 export default function Wallpaper() {
 

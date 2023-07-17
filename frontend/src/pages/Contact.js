@@ -15,9 +15,7 @@ export default function Contact() {
                     <input type="email" name="Adres e-mail" placeholder='Adres e-mail' required/>
                     <textarea type="text" name="Wiadomość" placeholder='Treść' required rows='4' />
 
-                    {/* <button type="submit">WYŚLIJ</button> */}
                     {/* Button replaced with <p> for Safari browser */}
-                    {/* <p class='contact-area__button' type='submit'>WYŚLIJ</p> */}
                     <input id='contact-area__button' type='submit' value='WYŚLIJ' />
 
                     <input type="hidden" name="_subject" value="Klient przysłał zapytanie"></input>

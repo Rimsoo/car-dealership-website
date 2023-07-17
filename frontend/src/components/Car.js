@@ -53,7 +53,6 @@ export default function Car(props) {
                         alt='Auta używane Miechów'
                     />
                     {props.fuel}
-                    {/* Benzyna + LPG */}
                 </div>
             </div>
 

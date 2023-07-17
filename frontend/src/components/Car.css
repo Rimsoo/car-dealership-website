@@ -8,25 +8,18 @@
     margin: 10px 13px;
     position: relative; /* seems unnecessary but it stops .Car__ribbon of going out of the area due to its absolute: position */
 }
-/* .container-ribbon--yellow,
-.container-ribbon--red,
-.container-ribbon--green { */
 .Car span {
     position: absolute;
     top: -8px;
     left: -8px;
     width: 150px;
     height: 150px;
-    /* background-color: red; */
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
 }
-/* .container-ribbon--yellow span,
-.container-ribbon--red span,
-.container-ribbon--green span { */
 .Car span span {
     position: absolute;
     left: -60px;
@@ -93,9 +86,6 @@
     font-weight: 100;
 }
 
-* {
-    /* border: 1px solid red; */
-}
 .Car__description {
     width: 170px;
     height: 60px;

@@ -45,11 +45,6 @@ export default function SiteHeader() {
                 <NavLink onClick={hideMenu} to='/Buy' > <li><span>Odkup pojazdów</span></li></NavLink>
                 <NavLink onClick={hideMenu} to='/Financing' > <li><span>Finansowanie</span></li></NavLink> 
                 <NavLink onClick={hideMenu} to='/Contact' > <li><span>Kontakt</span></li></NavLink>
-                {/* <li><NavLink onClick={hideMenu} to='/Sold' >Sprzedane</NavLink></li>
-                <li><NavLink onClick={hideMenu} to='/About' >O nas</NavLink></li>
-                <li><NavLink onClick={hideMenu} to='/Buy' >Odkup pojazdów</NavLink></li>
-                <li><NavLink onClick={hideMenu} to='/Financing' >Finansowanie</NavLink> </li>
-                <li><NavLink onClick={hideMenu} to='/Contact' >Kontakt</NavLink></li> */}
             </ul>
 
             <img 

@@ -6,15 +6,6 @@ export default function Financing() {
     return (
         <div id='Financing'>
             <h1>FINANSOWANIE</h1>
-            {/* <p>
-                Jesteśmy w stanie zorganizować wszystkie formy finansowania na bardzo korzystnych warunkach.
-            </p>
-            <p>
-                Produkty finansowe dla firm oraz osób prywatnych (leasing operacyjny, leasing finansowy, pożyczka leasingowa czy kredyt).
-            </p>
-            <p>
-                Współpracujemy z największymi bankami oraz firmami leasingowymi, co gwarantuje szeroki wybór oferty oraz kompleksową pomoc.
-            </p> */}
             <ul>
                 <li>
                     Jesteśmy w stanie zorganizować wszystkie formy finansowania na bardzo korzystnych warunkach.

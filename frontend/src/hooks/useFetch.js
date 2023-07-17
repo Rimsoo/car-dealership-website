@@ -13,10 +13,7 @@ const useFetch = (url) => {
                 const res = await fetch(url)
                 const dataObject = await res.json()
                 const json = await Object.entries(dataObject.data)
-                // const json = await res.json()
 
-                // console.log("review: ", json[0], "type of ", typeof json);   
-                // console.log("id of one review: ", json[0][0], "type of ", typeof json);
                 setData(json)
                 setLoading(false)
             } catch (error) {

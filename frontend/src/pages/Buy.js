@@ -8,8 +8,8 @@ export default function Buy() {
                 <h3>Formularz odkupu</h3>
                 <p>Jeżeli są Państwo zainteresowani sprzedażą swojego samochodu, prosimy o kontakt telefoniczny lub wypełnienie i przesłanie poniższego formularza z uwzględnieniem podstawowych danych pojazdu, własnym opisem oraz poglądowymi zdjęciami.</p>
 
-                <form action="https://formsubmit.co/alfamotors.kontakt@gmail.com" method="POST" enctype="multipart/form-data"> 
                 {/* enctype has been set for sending images */}
+                <form action="https://formsubmit.co/alfamotors.kontakt@gmail.com" method="POST" encType="multipart/form-data"> 
                     <span className='column-inputs'>
                         <input type="text" name="Imię" placeholder='Imię' required/>
                         <input type="text" name="Nazwisko" placeholder='Nazwisko' required/>
@@ -33,10 +33,9 @@ export default function Buy() {
                             <input type="file" name="Załącznik 2" accept="image/png, image/jpeg"/>
                             <input type="file" name="Załącznik 3" accept="image/png, image/jpeg"/>
                         </span>    
-                        {/* <button type="submit">WYŚLIJ</button> */}
+
                         {/* Button replaced with <input> for Safari browser */}
                         <input id='Buy__area__button' type='submit' value='WYŚLIJ' />
-                        {/* <p id='Buy-area__button' type='submit'>WYŚLIJ</p> */}
                     </span>
 
                     <input type="hidden" name="_subject" value="Oferta od klienta"></input>

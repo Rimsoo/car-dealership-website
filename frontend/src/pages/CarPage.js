@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 
 const strapiURL = 'https://kokpit.alfamotors.pl/';
-// const apiURL = 'https://kokpit.alfamotors.pl/api/cars?populate=*';
+
 // The one below should get more than 25 given by a default
 const apiURL = 'https://kokpit.alfamotors.pl/api/cars?sort=date&pagination[pageSize]=200&populate=*'; 
 
@@ -14,10 +14,8 @@ const apiURL = 'https://kokpit.alfamotors.pl/api/cars?sort=date&pagination[pageS
 // const apiURL = 'http://localhost:1337/api/cars?populate=*'; 
 
 export default function CarPage() {
-    // Some code lines below commented out till the app will be deployed width databases
     const { loading, error, data } = useFetch(apiURL);
     const { id } = useParams();
-    //const idCar = useParams(); // Results in e.g. "{id: '6'}"
     let imagesURLs = []; // here will be stored URLs of images
     let idCar = Number(id); // turninig string into number
 
@@ -108,10 +106,6 @@ export default function CarPage() {
                         <td>Data pierwszej rejestracji:</td>
                         <td>{foundCar[1].attributes.first_registration}</td>
                     </tr>
-                    {/* <tr>
-                        <td>Liczba właścicieli:</td>
-                        <td>{foundCar[1].attributes.owners_number}</td>
-                    </tr> */}
                     <tr>
                         <td>Forma sprzedaży:</td>
                         <td>{foundCar[1].attributes.vin}</td>
@@ -119,8 +113,6 @@ export default function CarPage() {
                 </tbody>
             </table>
 
-            {/* <span className='equipment'>
-            </span> */}
             <div className='CarPage__description'>
                 <div id='description-title'>Opis pojazdu</div>
                 <ReactMarkdown className='CarPage__description__text'>
@@ -130,59 +122,3 @@ export default function CarPage() {
         </div>
     )
 }
-
-// ID
-// Stan     <CENA> || wkrótce || sprzedane
-// Tytuł        
-// Marka	 Kia
-// Model	 Stinger
-// Wersja	 GT
-// INTEGER Przebieg (KM)	 69000
-// Rocznik	 2019
-// Rodzaj paliwa	 Benzyna
-// Pojemność silnika	 1.8
-// INTEGER Moc (KM)	 366
-// Skrzynia biegów	 Automatyczna
-// Kolor	 Czarny ???
-// ??? Kraj pochodzenia	 Polska ???
-// Pierwsza rejestracja	 05.2019
-// ??? napęd tył ???
-// INTEGER ??? liczba drzwi 5???
-// INTEGER ??? liczba miejsc 5???
-// ??? VIN xxxxxxxxxxx ???
-// OPIS
-// WYPOSAŻENIE
-
-// In relational database:
-// ZDJĘCIA
-
-// ==== DANE ====
-// ROK PRODUKCJI:
-// 2016
-// NADWOZIE:
-// SEDAN (LIMUZYNA)
-// PALIWO:
-// BENZYNA
-// POJ. SILNIKA:
-// 3.0
-// MOC SILNIKA:
-// 367 KM
-// PRZEBIEG:
-// 131 000 KM
-// SKRZYNIA BIEGÓW:
-// AUTOMATYCZNA
-// NAPĘD:
-// 4X4 (AWD)_PERMANENT
-// LICZBA DRZWI:
-// 5
-// LICZBA MIEJSC:
-// 5
-// LICZBA WŁAŚCICIELI:
-// 3
-// PIERWSZA REJESTRACJA:
-// 2016-01-01
-// KRAJ POCHODZENIA:
-// KOLOR:
-// SZARY
-// VIN:
-// 55SWF6EB0GU141859

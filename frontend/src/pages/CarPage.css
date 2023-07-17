@@ -1,6 +1,3 @@
-* {
-    /* border: 1px solid red; */
-}
 .CarPage {
     width: 1190px;
     margin: 0 auto;
@@ -46,7 +43,6 @@
 .CarPage__table td:nth-child(1) {
     width: 145px;
     padding-left: 3px;
-    /* color: hsl(0, 100%, 40%); */
     font-weight: 500;
     color: hsl(0, 0%, 30%);
     vertical-align: bottom;
@@ -152,7 +148,6 @@
         padding-bottom: 80px;
     }
     .CarPage .CarPage__price__area {
-        /* padding: 0 16px; */
         margin: 17px auto;
         max-width: 90%;
     }

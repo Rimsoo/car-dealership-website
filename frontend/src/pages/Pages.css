@@ -2,10 +2,6 @@
     min-height: 100vh;
     position: relative;
 }
-
-* {
-    /* border: 1px solid red; */
-}
 /* The About page */
 #About {
     width: 1000px;
@@ -27,7 +23,6 @@
     margin: 0 0 4px;
     text-decoration: underline 2px;
     text-underline-offset: 4px;
-    /* font-size:  */
 }
 #About h3 {
     font-family: bebasFont;
@@ -35,7 +30,6 @@
     margin: 40px auto 20px;
     text-align: center;
     font-size: 28px;
-    /* font-size:  */
 }
 #About p {
     margin: 0;
@@ -54,7 +48,6 @@
 @media(max-width: 1100px) {
     #About {
         width: 90vw;
-        /* margin: 0 auto 230px; */
         padding-bottom: 80px;
     }
 }
@@ -78,15 +71,11 @@
 @media(max-width: 1000px) {
     #Financing {
         width: 90vw;
-        /* margin: 0 auto 230px; */
         padding-bottom: 80px;
     }
 }
 
 /* Offer page */
-* {
-    /* border: 1px solid red; */
-}
 .car-windows-area {
     width: 1200px;
     margin: 0 auto;
@@ -99,8 +88,6 @@
     text-decoration: underline 2px;
     text-underline-offset: 8px;
 }
-/* #Offer .car-windows-area h1 {
-} */
 @media(max-width: 1200px) {
     .car-windows-area {
         width: 900px;
@@ -177,7 +164,6 @@
 .contact-area__info {
     display: block;
     width: 420px;
-    /* height: 200px; */
 }
 .contact-area__info img {
     height: 15px;
@@ -186,24 +172,16 @@
     top: 1px;
 }
 .contact-area__info span {
-    /* width: 570px; */
     line-height: 28px;
     font-size: 18px;    
 }
 #contact-area__button {
-    /* -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none; */
     width: 66px;
     height: 30px;
     line-height: 24px;
     background-color: white;
     color: black;
     padding: 3px 11px;
-
-    /* -webkit-padding: 0 0 0 10px; */
-    /* -webkit-color-correction: red; */
-    /* text-align: center; */
     /* Styling above added because <p> alement substituted a <button> for Safari Browsers */
     font-family: bebasFont;
     font-size: 18px;
@@ -263,9 +241,6 @@
 }
 
 /* Buy page */
-* {
-    /* border: 1px solid red;    */
-}
 #Buy {
     padding-bottom: 80px;
 }
@@ -290,7 +265,6 @@
 }
 #Buy__area form {
     display: flex;
-    /* flex-direction: column; */
     height: 200px;
 }
 #Buy__area form span {
@@ -325,9 +299,6 @@
     font-size: 14px;
     display: inline-block;
 }
-/* #Buy__area #third-span input button {
-    background-color: red;
-} */
 #Buy__area #Buy__area__button {
     max-width: 70px;
     height: 30px;
@@ -342,7 +313,6 @@
     font-size: 18px;
     letter-spacing: 0.05em;
     border-radius: 4px;
-    /* margin: 4px 0 0 58px; */
     transition-property: color;
     transition-property: background-color;
     transition-duration: 1s;
@@ -438,8 +408,3 @@
         margin: 0 auto;
     }
 }
-/* @media (max-width: 450px) {
-    #Buy__area {
-        padding-bottom: 60px;
-    }
-} */
