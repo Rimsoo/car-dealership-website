@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import './Wallpaper.css';
 
 export default function Wallpaper() {
     const [background, setBackground] = useState(1);
