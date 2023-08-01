@@ -4,24 +4,17 @@ import './Wallpaper.css';
 export default function Wallpaper() {
     const [background, setBackground] = useState(1);
     let newBackground = 0;
-    let stylingTo = {
+    let styling = {
         height: 350,
         width: "100%",
-        objectFit: "cover",
         display: "block",
-        margin: "0 auto",
-        opacity: 1,
-        transition: "opacity 1s"
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        objectFit: "cover",
+        backgroundImage: `url(${require('../assets/backgrounds/wallpaper' + background + '.jpg')})`,
+        transition: "all 1000ms linear 0.02s",
+        // transition: "background-image 1000ms linear 0.02s",
     }
-    // let stylingFrom = {
-    //     height: 350px,
-    //     width: 100%,
-    //     object-fit: cover,
-    //     display: block,
-    //     margin: 0 auto,
-    //     opacity: 1,
-    //     transition: opacity 1s
-    // }
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -35,11 +28,10 @@ export default function Wallpaper() {
 
     return (
         // <video src={require('../assets/cars-video.mp4')} autoPlay muted loop preload='true' playsInline />
-        <img 
+        <div
             id='wallpaper' 
-            src={require(`../assets/wallpaper${background}.jpg`)} 
             alt="Auta używane premium" 
-            style={stylingTo}
+            style={styling}
         />
     )
 }
