@@ -11,8 +11,8 @@ export default function Wallpaper() {
         backgroundSize: "cover",
         objectFit: "cover",
         backgroundImage: `url(${require('../assets/backgrounds/wallpaper' + background + '.jpg')})`,
-        transition: "all 1000ms linear 0.02s",
-        // transition: "background-image 1000ms linear 0.02s",
+        transition: "background-image 1000ms linear",
+        // transition: "all 1000ms linear",
     }
 
     useEffect(() => {

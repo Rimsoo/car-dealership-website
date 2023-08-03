@@ -1,0 +1,20 @@
+.loading-area .spinner {
+    width: 100px;
+    margin: 20px auto;
+    display: block;
+    animation: spinner-spin infinite 5s linear;
+}
+@keyframes spinner-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-area p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}

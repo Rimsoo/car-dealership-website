@@ -12,7 +12,8 @@
     background-size: cover;
     object-fit: cover;
     z-index: 3;
-    transition: background-image 800ms linear 0.1s;
+    /* transition: all 800ms linear; */
+    transition: background-image 800ms linear;
 }
 .container-slider__left-arrow,
 .container-slider__right-arrow {

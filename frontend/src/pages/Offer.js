@@ -1,5 +1,6 @@
 import React from 'react';
 import Car from '../components/Car';
+import Loader from '../components/Loader';
 import './Pages.css';
 // import { useQuery, gql } from '@apollo/client';
 import useFetch from '../hooks/useFetch';
@@ -14,15 +15,16 @@ const apiURL = 'https://kokpit.alfamotors.pl/api/cars?sort=date&pagination[pageS
 export default function Offer() {
     const { loading, error, data } = useFetch(apiURL);
     
-    if (loading) return <p>Loading...</p>
+    if (loading) return <Loader/>
     if (error) return <p>Error!!!</p>
     
     const filteredData = data.filter(car => car[1].attributes.state !== 'sold')
-
+    
     return (
         <div id="Offer">
             <div className='car-windows-area'>
                 <h1>SPRAWDŹ NASZĄ OFERTĘ</h1>
+        
 
                 {filteredData.map((car, index) => (
                         <Car

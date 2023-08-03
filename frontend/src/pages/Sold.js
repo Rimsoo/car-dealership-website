@@ -1,5 +1,6 @@
 import React from 'react';
 import Car from '../components/Car';
+import Loader from '../components/Loader';
 import './Pages.css';
 import useFetch from '../hooks/useFetch';
 
@@ -14,7 +15,7 @@ const apiURL = 'https://kokpit.alfamotors.pl/api/cars?sort=date&pagination[pageS
 export default function Sold() {
     const { loading, error, data } = useFetch(apiURL);
     
-    if (loading) return <p>Loading...</p>
+    if (loading) return <Loader/>
     if (error) return <p>Error!!!</p>
     
     const filteredData = data.filter(car => car[1].attributes.state === 'sold')
