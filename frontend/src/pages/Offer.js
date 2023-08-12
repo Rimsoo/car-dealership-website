@@ -1,6 +1,7 @@
 import React from 'react';
 import Car from '../components/Car';
 import Loader from '../components/Loader';
+import mergeSort from '../hooks/mergeSort';
 import './Pages.css';
 // import { useQuery, gql } from '@apollo/client';
 import useFetch from '../hooks/useFetch';
@@ -18,7 +19,8 @@ export default function Offer() {
     if (loading) return <Loader/>
     if (error) return <p>Error!!!</p>
     
-    const filteredData = data.filter(car => car[1].attributes.state !== 'sold')
+    const filteredData = data.filter(car => car[1].attributes.state !== 'sold');
+    const sortedFilteredData = mergeSort(filteredData);
     
     return (
         <div id="Offer">

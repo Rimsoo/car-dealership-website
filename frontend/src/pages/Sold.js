@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Car from '../components/Car';
 import Loader from '../components/Loader';
-import './Pages.css';
 import useFetch from '../hooks/useFetch';
+import mergeSort from '../hooks/mergeSort';
+import './Pages.css';
 
 const strapiURL = 'https://kokpit.alfamotors.pl';
 
@@ -19,36 +20,9 @@ export default function Sold() {
     if (error) return <p>Error!!!</p>
     
     const filteredData = data.filter(car => car[1].attributes.state === 'sold')
-    // console.log(filteredData[<number of car>][1].attributes.owners_number);
-    // console.log(-1 < null);
 
     // Using merge sort for setting cars in the order basing on "owners_number" attribute. It's treated as "kolejność" atttribute in the user's panel
-    const mergeSortSplitting = (arrayToSplit) => {
-        if (arrayToSplit.length === 1) return arrayToSplit;
-
-        const arrayMiddleOne = arrayToSplit.length / 2;
-        const arrayLeft = arrayToSplit.slice(0, arrayMiddleOne);
-        const arrayRight = arrayToSplit.slice(arrayMiddleOne);
-
-        return mergeSortComparing(mergeSortSplitting(arrayLeft), mergeSortSplitting(arrayRight));
-    }
-
-    const mergeSortComparing = (arrayLeft, arrayRight) => {
-        const arraySorted = [];
-
-        while(arrayLeft.length && arrayRight.length) {
-            if (arrayLeft[0][1].attributes.owners_number > arrayRight[0][1].attributes.owners_number) {
-                arraySorted.push(arrayLeft.shift());
-            } else {
-                arraySorted.push(arrayRight.shift());
-            }
-        }
-
-        return arraySorted.concat(arrayLeft.slice()).concat(arrayRight.slice());
-    }
-
-    const sortedFilteredData = mergeSortSplitting(filteredData);
-    console.log(sortedFilteredData);
+    const sortedFilteredData = mergeSort(filteredData);
 
     return (
         <div id="Sold">
