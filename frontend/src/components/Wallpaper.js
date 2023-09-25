@@ -1,18 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import '../components/Wallpaper.css';
 
 export default function Wallpaper() {
     const [background, setBackground] = useState(1);
     let newBackground = 0;
+    // let styling = {
+    //     display: 'block',
+    //     backgroundImage: `url(${require('../assets/backgrounds/wallpaper' + background + '.webp')})`
+    // }
     let styling = {
-        height: 350,
-        width: "100%",
-        display: "block",
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        objectFit: "cover",
-        backgroundImage: `url(${require('../assets/backgrounds/wallpaper' + background + '.jpg')})`,
-        transition: "background-image 1000ms linear",
-        // transition: "all 1000ms linear",
+        backgroundImage: `url(${require('../assets/backgrounds/wallpaper' + background + '.webp')})`
     }
 
     useEffect(() => {

@@ -29,7 +29,7 @@ export default function ImageSlider(props) {
     useEffect(() => {
         const interval = setInterval(() => {
             goToNextImg();
-        }, 5000);
+        }, 7000);
       
         return () => {
           clearInterval(interval);

@@ -34,7 +34,7 @@ export default function CarPage() {
 
     return (
         <div className='CarPage'>
-            <h1 className='CarPage__price__area'>
+            <h1 className='CarPage__price__area CarPage__price__area-header'>
                 {foundCar[1].attributes.title}
 
                 <span className='CarPage__price__area' style={
@@ -44,7 +44,7 @@ export default function CarPage() {
                     <span className='CarPage__price__area__dash'>{foundCar[1].attributes.price ? ' - ' : ''}</span> 
                     <span className='CarPage__price__area__number'>
                         {foundCar[1].attributes.state==='zarezerwowane' ? 
-                        'ZAREZERWOWANE' : 
+                        ' - ZAREZERWOWANE' : 
                         foundCar[1].attributes.price + ' PLN'}
                     </span>
                 </span>

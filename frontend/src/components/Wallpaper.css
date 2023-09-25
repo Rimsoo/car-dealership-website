@@ -1,0 +1,11 @@
+/* *{border: 1px solid red} */
+#wallpaper {
+    height: 350px;
+    width: 100%;
+    display: block;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    transition: background-image 800ms linear;
+    /* transition: background-image 800ms linear; */
+}

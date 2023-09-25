@@ -1,3 +1,4 @@
+/* *{border: 1px solid red;} */
 .CarPage {
     width: 1190px;
     margin: 0 auto;
@@ -6,6 +7,9 @@
 .CarPage .CarPage__price__area {
     font-family: bebasFont;
     font-weight: 500;
+}
+.CarPage .CarPage__price__area-header {
+    padding: 0 40px;
 }
 .CarPage .container-slider {
     margin-left: 40px;
@@ -81,6 +85,9 @@
     .CarPage .CarPage__price__area {
         width: 100%;
         text-align: center;
+    }
+    .CarPage .CarPage__price__area-header {
+        padding: 0;
     }
     .CarPage .container-slider {
         display: block;
