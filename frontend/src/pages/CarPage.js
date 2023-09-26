@@ -2,6 +2,7 @@ import React from 'react';
 import './CarPage.css';
 import useFetch from '../hooks/useFetch';
 import ImageSlider from '../components/ImageSlider';
+import Loader from '../components/Loader';
 import { useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 
@@ -23,7 +24,7 @@ export default function CarPage() {
         return fetchedCar[1].id === idCar;
     }
     
-    if (loading) return <p>Loading...</p>
+    if (loading) return <Loader />
     if (error) return <p>Error!!!</p>
 
     let foundCar = data.find(isThatCar);
