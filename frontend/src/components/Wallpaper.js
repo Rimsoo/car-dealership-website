@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../components/Wallpaper.css';
 
 export default function Wallpaper() {
@@ -16,7 +16,6 @@ export default function Wallpaper() {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            console.log("conditional " + shouldUpdateBackground1);
             if (shouldUpdateBackground1) {
                 setBackground1(prevValue => {
                     if (prevValue <  4) {

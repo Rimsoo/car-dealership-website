@@ -34,7 +34,7 @@ export default function ImageSlider(props) {
         return () => {
           clearInterval(interval);
         };
-      }, [currentIndex]); // goToNextImg changes currentIndex invoking this effect which invokes goToNextImg making loop.
+    }, [currentIndex]); // goToNextImg changes currentIndex invoking this effect which invokes goToNextImg making loop.
 
     return (
         <div className="container-slider">
@@ -73,7 +73,6 @@ export default function ImageSlider(props) {
                 style={isGalleryDisplayed ? {display: 'block'} : {display: 'none'}} 
                 onClick={() => setIsGalleryDisplayed(false)}
             ></div>
-
 
             <div 
                 className='gallery-modal__left-arrow gallery-modal__arrow' 

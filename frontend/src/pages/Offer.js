@@ -26,8 +26,6 @@ export default function Offer() {
         <div id="Offer">
             <div className='car-windows-area'>
                 <h1>SPRAWDŹ NASZĄ OFERTĘ</h1>
-        
-
                 {filteredData.map((car, index) => (
                         <Car
                             key={'Car no ' + index}
