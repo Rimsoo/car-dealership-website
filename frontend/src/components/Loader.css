@@ -1,5 +1,5 @@
 .loading-area .spinner {
-    width: 100px;
+    width: 80px;
     margin: 30px auto 20px;
     display: block;
     animation: spinner-spin infinite 5s linear;
