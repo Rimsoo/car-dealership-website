@@ -63,13 +63,20 @@
 .Car .ribbon--red {
     background: red;
 }
-.Car img,
-.Car iframe {
+.Car__photo {
     width: 100%;
     height: 200px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     object-fit: cover;
+}
+.Car__loader {
+    box-sizing: border-box;
+    height: 200px;
+    display: block;
+    margin: 0 auto;
+    padding: 70px;
+    border-bottom: 2px solid black;
 }
 .Car__title {
     margin: 4px 0 5px;

@@ -4,21 +4,12 @@ import './Car.css';
 import gif from "../assets/loading.gif";
 
 export default function Car(props) {
-    const [websiteLoaded, setWebsiteLoaded] = useState(false);
+    const [isImageLoaded, setIsImageLoaded] = useState(false);
 
-    useEffect(() => {
-        const handleLoad = () => {
-            setWebsiteLoaded(true);
-        };
-
-        // Add event listener for the 'load' event on the window
-        window.addEventListener('load', handleLoad);
-
-        // Cleanup the event listener on component unmount
-        return () => {
-            window.removeEventListener('load', handleLoad);
-        };
-    }, []);
+    const handleImageLoad = () => {
+      setIsImageLoaded(true);
+      console.log(isImageLoaded)
+    };
 
     return (
         <div className='Car'>
@@ -39,10 +30,25 @@ export default function Car(props) {
             </span>
 
             {/* Main photo */}
-            <img src={props.imageSource} alt='Solidne auta używane' loading="lazy" />
-            {/* <img src={props.imageSource} alt='Solidne auta używane' /> */}
-            {/* <img src={require("../assets/loading.gif")} alt='Solidne auta używane' /> */}
-            {/* <img src={websiteLoaded ? gif : props.imageSource} alt='Solidne auta używane' /> */}
+            <img 
+                className="Car__photo"
+                src={props.imageSource}
+                alt='Solidne auta używane'
+                style={isImageLoaded ? {display: 'block'} : {display: 'none'}}
+                // loading="lazy"
+                onLoad={handleImageLoad}
+            />
+            <img 
+                className="Car__loader"
+                src={gif} 
+                alt='Solidne auta używane' 
+                style={isImageLoaded ? {display: 'none'} : {display: 'block'}}
+            />
+            {/* <img 
+                className="Car__loader"
+                src={gif} 
+                alt='Solidne auta używane' 
+            /> */}
 
             {/* Infobox */}
             <p className='Car__title'><strong>{props.title}</strong></p>
