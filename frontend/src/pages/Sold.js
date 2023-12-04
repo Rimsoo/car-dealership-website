@@ -19,37 +19,30 @@ export default function Sold() {
     if (loading) return <Loader/>
     if (error) return <p>Error!!!</p>
     
-    const filteredData = data.filter(car => car[1].attributes.state === 'sold');
+    const filteredData = data.filter(car => car[1].attributes.state === 'sold')
 
     // Using merge sort for setting cars in the order basing on "owners_number" attribute. It's treated as "kolejność" atttribute in the user's panel
     const sortedFilteredData = mergeSort(filteredData);
-    let initialTwelve = sortedFilteredData.slice(0, 6);
-
-    const showMore = () => {
-        initialTwelve = sortedFilteredData.slice(0, initialTwelve.length + 12);
-    }
 
     return (
         <div id="Sold">
             <div className='car-windows-area'>
                 <h1>POJAZDY, KTÓRE ZNALAZŁY JUŻ NOWEGO WŁAŚCICIELA:</h1>
-                <div className='car-windows-area__cars'>
-                    {initialTwelve.map((car, index) => (
-                            <Car 
-                                key={'Car no ' + index}
-                                id={car[1].id}
-                                state={car[1].attributes.state}
-                                title={car[1].attributes.title}
-                                mileage={car[1].attributes.mileage} 
-                                year={car[1].attributes.year} 
-                                fuel={car[1].attributes.fuel} 
-                                power={car[1].attributes.power} 
-                                imageSource={strapiURL + car[1].attributes.gallery.data[0].attributes.url}
-                            />
-                        )
-                    )}
-                </div>
-                <div onClick={showMore}>Pokaż więcej</div>
+
+                {sortedFilteredData.map((car, index) => (
+                        <Car 
+                            key={'Car no ' + index}
+                            id={car[1].id}
+                            state={car[1].attributes.state}
+                            title={car[1].attributes.title}
+                            mileage={car[1].attributes.mileage} 
+                            year={car[1].attributes.year} 
+                            fuel={car[1].attributes.fuel} 
+                            power={car[1].attributes.power} 
+                            imageSource={strapiURL + car[1].attributes.gallery.data[0].attributes.url}
+                        />
+                    )
+                )}
             </div>
         </div>
     )

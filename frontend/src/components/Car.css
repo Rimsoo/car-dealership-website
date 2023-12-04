@@ -63,7 +63,8 @@
 .Car .ribbon--red {
     background: red;
 }
-.Car img {
+.Car img,
+.Car iframe {
     width: 100%;
     height: 200px;
     border-top-left-radius: 20px;
