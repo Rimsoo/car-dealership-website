@@ -14,13 +14,46 @@ const apiURL = 'https://kokpit.alfamotors.pl/api/cars?sort=date&pagination[pageS
 // const strapiURL = 'http://localhost:1337';
 // const apiURL = 'http://localhost:1337/api/cars?populate=*'; 
 
+interface CarAttributes {
+    title: string;
+    state: string;
+    price?: number;
+    year: number;
+    mileage: number;
+    fuel: string;
+    power: number;
+    engine_size: string;
+    doors: number;
+    seats?: number;
+    gearbox: string;
+    drive: string;
+    body: string;
+    color: string;
+    country: string;
+    first_registration: string;
+    vin: string;
+    gallery: {
+        data: {
+            attributes: {
+                url: string;
+            };
+        }[];
+    };
+    description: string;
+}
+
+interface Car {
+    id: string;
+    attributes: CarAttributes;
+}
+
 export default function CarPage() {
     const { loading, error, data } = useFetch(apiURL);
     const { id } = useParams();
-    let imagesURLs = []; // here will be stored URLs of images
+    let imagesURLs: string[] = []; // here will be stored URLs of images
     let idCar = Number(id); // turninig string into number
 
-    function isThatCar(fetchedCar) {
+    function isThatCar(fetchedCar: Car[]) {
         return fetchedCar[1].id === idCar;
     }
     
@@ -32,6 +65,8 @@ export default function CarPage() {
     foundCar[1].attributes.gallery.data.map(car => (
         imagesURLs.push(strapiURL + car.attributes.url)
     ));
+
+    console.log(data)
 
     return (
         <div className='CarPage'>
