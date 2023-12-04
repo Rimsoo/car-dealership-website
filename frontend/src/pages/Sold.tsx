@@ -1,33 +1,56 @@
-import React from 'react';
 import Car from '../components/Car';
 import Loader from '../components/Loader';
+import useFetch from '../hooks/useFetch';
 import mergeSort from '../hooks/mergeSort';
 import './Pages.css';
-// import { useQuery, gql } from '@apollo/client';
-import useFetch from '../hooks/useFetch';
 
 const strapiURL = 'https://kokpit.alfamotors.pl';
+
+// The code line below gets more than 25 records given by a default
 const apiURL = 'https://kokpit.alfamotors.pl/api/cars?sort=date&pagination[pageSize]=200&populate=*'; 
 
-// Local version:
 // const strapiURL = 'http://localhost:1337';
-// const apiURL = 'http://localhost:1337/api/cars?populate=*';
+// const apiURL = 'http://localhost:1337/api/cars?populate=*'; 
 
-export default function Offer() {
+interface CarAttributes {
+    state: string;
+    title: string;
+    mileage: number;
+    year: number;
+    fuel: string;
+    power: number;
+    gallery: {
+        data: {
+            attributes: {
+                url: string;
+            };
+        }[];
+    };
+}
+  
+interface CarData {
+    id: string;
+    attributes: CarAttributes;
+}
+
+export default function Sold() {
     const { loading, error, data } = useFetch(apiURL);
     
     if (loading) return <Loader/>
     if (error) return <p>Error!!!</p>
     
-    const filteredData = data.filter(car => car[1].attributes.state !== 'sold');
+    const filteredData = data.filter((car: CarData[]) => car[1].attributes.state === 'sold')
+
+    // Using merge sort for setting cars in the order basing on "owners_number" attribute. It's treated as "kolejność" atttribute in the user's panel
     const sortedFilteredData = mergeSort(filteredData);
-    
+
     return (
-        <div id="Offer">
+        <div id="Sold">
             <div className='car-windows-area'>
-                <h1>SPRAWDŹ NASZĄ OFERTĘ</h1>
-                {filteredData.map((car, index) => (
-                        <Car
+                <h1>POJAZDY, KTÓRE ZNALAZŁY JUŻ NOWEGO WŁAŚCICIELA:</h1>
+
+                {sortedFilteredData.map((car: CarData[], index: number) => (
+                        <Car 
                             key={'Car no ' + index}
                             id={car[1].id}
                             state={car[1].attributes.state}

@@ -35,7 +35,7 @@ function App() {
             <Route path='/carpage/:id' element={<CarPage />} /> 
             <Route path='/contact' element={<Contact />} /> 
             <Route path='/financing' element={<Financing />} /> 
-            <Route exact path='/' element={<Offer />} /> 
+            <Route path='/' element={<Offer />} /> 
             <Route path='/sold' element={<Sold />} /> 
             <Route path='/thanks' element={<Thanks />} /> 
           </Routes>
