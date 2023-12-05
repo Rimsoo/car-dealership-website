@@ -43,30 +43,61 @@ interface CarAttributes {
 }
 
 interface Car {
-    id: string;
+    id: number;
     attributes: CarAttributes;
 }
+
+interface ImageAttributes {
+    alternativeText: null;
+    caption: null;
+    createdAt: string;
+    ext: string;
+    formats: any;
+    hash: string;
+    height: number;
+    mime: string;
+    name: string;
+    previewUrl: null;
+    provider: string;
+    provider_metadata: null;
+    size: number;
+    updatedAt: string;
+    url: string;
+    width: number;
+}
+
+interface Image {
+    attributes: ImageAttributes;
+    id: number;
+  }
 
 export default function CarPage() {
     const { loading, error, data } = useFetch(apiURL);
     const { id } = useParams();
     let imagesURLs: string[] = []; // here will be stored URLs of images
-    let idCar = Number(id); // turninig string into number
+    let idCar: number = Number(id); // turninig string into number
 
+    
     function isThatCar(fetchedCar: Car[]) {
+        // Checking if ID in URL is same as currently checked car from db
         return fetchedCar[1].id === idCar;
     }
     
     if (loading) return <Loader />
     if (error) return <p>Error!!!</p>
 
-    let foundCar = data.find(isThatCar);
-    
-    foundCar[1].attributes.gallery.data.map(car => (
-        imagesURLs.push(strapiURL + car.attributes.url)
-    ));
+    let foundCar: Car | undefined = data.find(isThatCar);
 
-    console.log(data)
+    if (foundCar) {    
+        foundCar[1].attributes.gallery.data.map((image: Image) => (
+            imagesURLs.push(strapiURL + image.attributes.url)
+        ));
+    } else {
+        // if url has ID which is not in db
+        return <p>No car with such ID</p>
+    }
+
+    console.log(foundCar);
 
     return (
         <div className='CarPage'>
