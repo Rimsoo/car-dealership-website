@@ -1,9 +1,13 @@
-import React, { useEffect, useState} from 'react';
+import { useState} from 'react';
 import { NavLink } from 'react-router-dom';    
-import './Car.css';
+import calendar from '../assets/calendar.png';
+import engineering from '../assets/engineering.png';
+import gasoline from '../assets/gasoline.png';
+import mileage from '../assets/mileage.png';
 import gif from "../assets/loading.gif";
+import './Car.css';
 
-export default function Car(props) {
+export default function Car(props: any) {
     const [isImageLoaded, setIsImageLoaded] = useState(false);
 
     const handleImageLoad = () => {
@@ -44,11 +48,6 @@ export default function Car(props) {
                 alt='Solidne auta używane' 
                 style={isImageLoaded ? {display: 'none'} : {display: 'block'}}
             />
-            {/* <img 
-                className="Car__loader"
-                src={gif} 
-                alt='Solidne auta używane' 
-            /> */}
 
             {/* Infobox */}
             <p className='Car__title'><strong>{props.title}</strong></p>
@@ -57,7 +56,7 @@ export default function Car(props) {
                 <div>                    
                     <img 
                         className='Car__description__icons' 
-                        src={require('../assets/calendar.png')}
+                        src={calendar}
                         alt='Dealer samochodów premium'
                     />
                     {props.year}
@@ -65,7 +64,7 @@ export default function Car(props) {
                 <div>
                     <img 
                         className='Car__description__icons' 
-                        src={require('../assets/mileage.png')}
+                        src={mileage}
                         alt='Samochody z niskim przebiegiem'
                     />
                     {props.mileage}{' km'}
@@ -73,7 +72,7 @@ export default function Car(props) {
                 <div>
                     <img 
                         className='Car__description__icons' 
-                        src={require('../assets/engineering.png')}
+                        src={engineering}
                         alt='Dealer aut klasy premium w Miechowie'
                     />
                     {props.power}{' KM'}
@@ -81,7 +80,7 @@ export default function Car(props) {
                 <div>
                     <img 
                         className='Car__description__icons' 
-                        src={require('../assets/gasoline.png')}
+                        src={gasoline}
                         alt='Auta używane Miechów'
                     />
                     {props.fuel}

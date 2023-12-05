@@ -1,11 +1,13 @@
-import React, { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
+import menuBtn from '../assets/menuBtn.png';    
+import phoneIcon from '../assets/phoneIcon.png';    
 import './SiteHeader.css';    
 
 export default function SiteHeader() {
     const [menuOpen, setMenuOpen] = useState(false);
-    let menuRef = useRef();
-    let buttonRef = useRef();
+    let menuRef: any = useRef();
+    let buttonRef: any = useRef();
 
     function toggleMenu() {
         setMenuOpen(!menuOpen);
@@ -17,7 +19,7 @@ export default function SiteHeader() {
 
     // useEffect below closes menu whenever sth not being NavBar is clicked
     useEffect(() => {
-        function handler(e) {
+        function handler(e: any) {
             if (!menuRef.current.contains(e.target) && !buttonRef.current.contains(e.target)) {
                 hideMenu();
             }
@@ -49,14 +51,14 @@ export default function SiteHeader() {
 
             <img 
                 id='SiteHeader__menuBtn' 
-                src={require('../assets/menuBtn.png')}
+                src={menuBtn}
                 onClick={toggleMenu}
                 ref={buttonRef}
                 alt='Najlepsze samochody używane w Małopolsce'
             />
 
             <div className='SiteHeader__phoneData'>
-                <img src={require('../assets/phoneIcon.png')} alt="Znajdź auto klasy premium" />
+                <img src={phoneIcon} alt="Znajdź auto klasy premium" />
                 <p>+48 505 964 955</p>
             </div>
         </div>

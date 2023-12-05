@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import '../components/ImageSlider.css';
 
-export default function ImageSlider(props) {
+export default function ImageSlider(props: any) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isGalleryDisplayed, setIsGalleryDisplayed] = useState(false);
 
@@ -57,7 +57,7 @@ export default function ImageSlider(props) {
             <div
                 className="container-slider__dots-area"
             >
-                {props.slides.map((slide, index) => (
+                {props.slides.map((slide: string, index: number) => (
                     <div 
                         key={index}
                         onClick={() => setCurrentIndex(index)}
