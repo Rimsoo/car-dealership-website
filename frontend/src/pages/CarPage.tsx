@@ -1,4 +1,3 @@
-import React from 'react';
 import './CarPage.css';
 import useFetch from '../hooks/useFetch';
 import ImageSlider from '../components/ImageSlider';
@@ -47,6 +46,11 @@ interface Car {
     attributes: CarAttributes;
 }
 
+interface StrapiCar {
+    0: string;
+    1: Car;
+}
+
 interface ImageAttributes {
     alternativeText: null;
     caption: null;
@@ -86,9 +90,10 @@ export default function CarPage() {
     if (loading) return <Loader />
     if (error) return <p>Error!!!</p>
 
-    let foundCar: Car | undefined = data.find(isThatCar);
+    // let foundCar: StrapiCar | undefined = data.find(isThatCar);
+    let foundCar: any = data.find(isThatCar);
 
-    if (foundCar) {    
+    if (foundCar && foundCar[1]) {    
         foundCar[1].attributes.gallery.data.map((image: Image) => (
             imagesURLs.push(strapiURL + image.attributes.url)
         ));
@@ -96,8 +101,6 @@ export default function CarPage() {
         // if url has ID which is not in db
         return <p>No car with such ID</p>
     }
-
-    console.log(foundCar);
 
     return (
         <div className='CarPage'>

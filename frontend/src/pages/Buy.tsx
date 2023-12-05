@@ -1,4 +1,3 @@
-import React from 'react';
 import './Pages.css';
 
 export default function Buy() {
@@ -27,7 +26,7 @@ export default function Buy() {
                     </span>
 
                     <span id='third-span'>
-                        <textarea type="text" name="Wiadomość" placeholder='Własny opis pojazdu/komentarz/uwag' required rows='4' />
+                        <textarea name="Wiadomość" placeholder='Własny opis pojazdu/komentarz/uwag' required rows={4} />
                         <span id='third-span__attachments'>
                             <input type="file" name="Załącznik 1" accept="image/png, image/jpeg"/>
                             <input type="file" name="Załącznik 2" accept="image/png, image/jpeg"/>
