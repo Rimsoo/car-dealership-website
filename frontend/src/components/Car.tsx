@@ -12,7 +12,6 @@ export default function Car(props: any) {
 
     const handleImageLoad = () => {
       setIsImageLoaded(true);
-      console.log(isImageLoaded)
     };
 
     return (

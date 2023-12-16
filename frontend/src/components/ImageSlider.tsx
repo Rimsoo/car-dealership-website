@@ -35,25 +35,29 @@ export default function ImageSlider(props: any) {
           clearInterval(interval);
         };
     }, [currentIndex]); // goToNextImg changes currentIndex invoking this effect which invokes goToNextImg making loop.
-
+    
     return (
         <div className="container-slider">
+            {/* Smaller slider without modal */}
             <div 
                 className='ImageSlide' 
                 style={ImageSlideStyle}
                 onClick={() => setIsGalleryDisplayed(true)}
             ></div>
-
+            
+            {/*  Left arrow */}
             <div 
                 className='container-slider__left-arrow' 
                 onClick={goToPrevImg}
             ><p>&#8249;</p></div>
 
+            {/*  Right arrow */}
             <div 
                 className='container-slider__right-arrow' 
                 onClick={goToNextImg}
             ><p>&#8250;</p></div>
 
+            {/* Dots */}
             <div
                 className="container-slider__dots-area"
             >
@@ -68,7 +72,7 @@ export default function ImageSlider(props: any) {
                 ))} 
             </div>
 
-            {/* Bigger slider with modal */}
+            {/* --- Bigger slider with modal --- */}
             <div id='gallery-modal-overlay' 
                 style={isGalleryDisplayed ? {display: 'block'} : {display: 'none'}} 
                 onClick={() => setIsGalleryDisplayed(false)}
