@@ -11,6 +11,7 @@ import Financing from "./pages/Financing";
 import Footer from "./components/Footer";
 import Offer from "./pages/Offer";
 import Sold from "./pages/Sold";
+import ScrollPagesTop from "./components/ScrollPagesTop";
 import SiteHeader from "./components/SiteHeader";
 import Thanks from "./pages/Thanks";
 import Wallpaper from "./components/Wallpaper";
@@ -26,6 +27,7 @@ function App() {
     <Router>
       <ApolloProvider client={client}>
         <div className="App">
+          <ScrollPagesTop />
           <SiteHeader />
           <Wallpaper />
           <Routes>
