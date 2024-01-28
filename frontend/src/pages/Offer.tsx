@@ -1,12 +1,17 @@
-import React from 'react';
 import Car from '../components/Car';
 import Loader from '../components/Loader';
 import mergeSort from '../hooks/mergeSort';
 import './Pages.css';
 import useFetch from '../hooks/useFetch';
 
-const strapiURL = 'https://kokpit.alfamotors.pl';
-const apiURL = 'https://kokpit.alfamotors.pl/api/cars?sort=date&pagination[pageSize]=200&populate=*'; 
+const strapiURL: string = 'https://kokpit.alfamotors.pl';
+
+// The code line below gets more than 25 records given by a default, the limit is 100. The string below used for fetching records 80-180 from db
+const apiURL: string = 'https://kokpit.alfamotors.pl/api/cars?sort=date&pagination[start]=80&pagination[limit]=100&populate=*'; 
+
+
+// const apiURL: string = 'https://kokpit.alfamotors.pl/api/cars?sort=date&' + 'pagination[page]=1&pagination[pageSize]=10' + '&populate=*'; 
+// const apiURL: string = 'https://kokpit.alfamotors.pl/api/cars?sort=date&populate=*'; 
 
 interface CarAttributes {
   state: string;
@@ -35,8 +40,13 @@ export default function Offer() {
   if (loading) return <Loader />;
   if (error) return <p>Error!!!</p>;
 
+  // console.log(data.slice(98))
+  // console.log(data);
+  
   const filteredData = data.filter((car: CarData[]) => car[1].attributes.state !== 'sold');
   const sortedFilteredData = mergeSort(filteredData);
+
+  // console.log(sortedFilteredData);
 
   return (
     <div id="Offer">

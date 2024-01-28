@@ -10,7 +10,7 @@ const useFetch = (url) => {
             setLoading(true)
 
             try {
-                const res = await fetch(url)
+                const res = await fetch(url);
                 const dataObject = await res.json()
                 const json = await Object.entries(dataObject.data)
 

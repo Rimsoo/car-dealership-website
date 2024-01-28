@@ -4,10 +4,10 @@ import useFetch from '../hooks/useFetch';
 import mergeSort from '../hooks/mergeSort';
 import './Pages.css';
 
-const strapiURL = 'https://kokpit.alfamotors.pl';
+const strapiURL: string = 'https://kokpit.alfamotors.pl';
 
-// The code line below gets more than 25 records given by a default
-const apiURL = 'https://kokpit.alfamotors.pl/api/cars?sort=date&pagination[pageSize]=200&populate=*'; 
+// The code line below gets more than 25 records given by a default, the Strapi's limit is 100 (can't be increased)
+const apiURL: string = 'https://kokpit.alfamotors.pl/api/cars?sort=date&pagination[pageSize]=200&populate=*'; 
 
 // const strapiURL = 'http://localhost:1337';
 // const apiURL = 'http://localhost:1337/api/cars?populate=*'; 
