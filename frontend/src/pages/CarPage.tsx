@@ -74,16 +74,20 @@ interface Image {
     id: number;
   }
 
-  export default function CarPage() {
+export default function CarPage() {
     const { id } = useParams();
-
+    // IDs of cars are not like the order due to deleted records (e.g. first record from db has ID = 12). This why the program uses pagination
+    let pagination: number = Number(id) - 20; // TS doesn't accept substracting number from string
+    if (pagination < 0) pagination = 0;
+    const apiURL = 'https://kokpit.alfamotors.pl/api/cars?sort=date&pagination[start]=' + pagination + '&pagination[limit]=100&populate=* '; 
+    
     const { loading, error, data } = useFetch(apiURL);
     let imagesURLs: string[] = []; // here will be stored URLs of images
     let idCar: number = Number(id); // turninig string into number
 
-    
+    // A function checking if ID in URL is same as currently checked car from db
     function isThatCar(fetchedCar: Car[]) {
-        // Checking if ID in URL is same as currently checked car from db
+        // console.log(fetchedCar[1].id, idCar, pagination)
         return fetchedCar[1].id === idCar;
     }
     

@@ -9,21 +9,6 @@ const strapiURL: string = 'https://kokpit.alfamotors.pl';
 // The code line below gets more than 25 records given by a default, the limit is 100. The string below used for fetching records 80-180 from db
 const apiURL: string = 'https://kokpit.alfamotors.pl/api/cars?sort=date&pagination[start]=80&pagination[limit]=100&populate=*'; 
 
-// interface CarAttributes {
-//   state: string;
-//   title: string;
-//   mileage: number;
-//   year: number;
-//   fuel: string;
-//   power: number;
-//   gallery: {
-//     data: {
-//       attributes: {
-//         url: string;
-//       };
-//     }[];
-//   };
-// }
 interface CarAttributes {
   state: string;
   title: string;
@@ -31,22 +16,25 @@ interface CarAttributes {
   year: number;
   fuel: string;
   power: number;
-  gallery: {
-    data: {
-      attributes: any;
-      // {
-      //   formats: {
-      //     thumbnail: {
-      //       url: string;
-      //     }
-      // };
-    }[];
-  };
+  gallery: GalleryItem;
+}
+
+interface GalleryItem {
+  data: {
+      attributes: {
+          formats: {
+              small: {
+                  url: string;
+              };
+          };
+      };
+      id: number;
+  }[];
 }
 
 interface CarData {
-    id: string;
-    attributes: CarAttributes;
+  id: string;
+  attributes: CarAttributes;
 }
 
 export default function Offer() {

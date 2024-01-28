@@ -20,11 +20,20 @@ interface CarAttributes {
     year: number;
     fuel: string;
     power: number;
-    gallery: {
-        data: {
-            attributes: any;
-        }[];
-    };
+    gallery: GalleryItem;
+}
+
+interface GalleryItem {
+    data: {
+        attributes: {
+            formats: {
+                small: {
+                    url: string;
+                };
+            };
+        };
+        id: number;
+    }[];
 }
   
 interface CarData {
