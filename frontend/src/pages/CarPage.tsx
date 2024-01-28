@@ -8,7 +8,7 @@ import ReactMarkdown from 'react-markdown';
 const strapiURL = 'https://kokpit.alfamotors.pl/';
 
 // The one below should get more than 25 given by a default
-const apiURL = 'https://kokpit.alfamotors.pl/api/cars?sort=date&pagination[pageSize]=200&populate=*'; 
+const apiURL = 'https://kokpit.alfamotors.pl/api/cars?sort=date&pagination[start]=12&pagination[limit]=100&populate=* '; 
 
 // const strapiURL = 'http://localhost:1337';
 // const apiURL = 'http://localhost:1337/api/cars?populate=*'; 
@@ -93,13 +93,14 @@ export default function CarPage() {
     // let foundCar: StrapiCar | undefined = data.find(isThatCar);
     let foundCar: any = data.find(isThatCar);
 
+    // Collecting an array of car's images
     if (foundCar && foundCar[1]) {    
         foundCar[1].attributes.gallery.data.map((image: Image) => (
             imagesURLs.push(strapiURL + image.attributes.url)
         ));
     } else {
         // if url has ID which is not in db
-        return <p>No car with such ID</p>
+        return <h3 style={{textAlign: 'center', marginTop: 50}}>Brak samochodu o takim ID</h3>
     }
 
     return (

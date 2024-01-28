@@ -9,6 +9,7 @@ const strapiURL: string = 'https://kokpit.alfamotors.pl';
 // The code line below gets more than 25 records given by a default, the Strapi's limit is 100 (can't be increased)
 const apiURL: string = 'https://kokpit.alfamotors.pl/api/cars?sort=date&pagination[pageSize]=200&populate=*'; 
 
+    // Local:
 // const strapiURL = 'http://localhost:1337';
 // const apiURL = 'http://localhost:1337/api/cars?populate=*'; 
 
@@ -21,9 +22,7 @@ interface CarAttributes {
     power: number;
     gallery: {
         data: {
-            attributes: {
-                url: string;
-            };
+            attributes: any;
         }[];
     };
 }
@@ -59,7 +58,9 @@ export default function Sold() {
                             year={car[1].attributes.year} 
                             fuel={car[1].attributes.fuel} 
                             power={car[1].attributes.power} 
-                            imageSource={strapiURL + car[1].attributes.gallery.data[0].attributes.url}
+                            // imageSource={strapiURL + car[1].attributes.gallery.data[0].attributes.url}
+                            imageSource={strapiURL + car[1].attributes.gallery.data[0].attributes.formats.small.url}
+
                         />
                     )
                 )}
