@@ -10,8 +10,9 @@ const strapiURL = 'https://kokpit.alfamotors.pl/';
 // The one below should get more than 25 given by a default
 const apiURL = 'https://kokpit.alfamotors.pl/api/cars?sort=date&pagination[start]=12&pagination[limit]=100&populate=* '; 
 
+    // Local
 // const strapiURL = 'http://localhost:1337';
-// const apiURL = 'http://localhost:1337/api/cars?populate=*'; 
+// const apiURL = 'http://localhost:1337/api/cars?populate=*';
 
 interface CarAttributes {
     title: string;
