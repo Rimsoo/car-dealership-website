@@ -6,9 +6,7 @@ import { useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 
 const strapiURL = 'https://kokpit.alfamotors.pl/';
-
-// The one below should get more than 25 given by a default
-const apiURL = 'https://kokpit.alfamotors.pl/api/cars?sort=date&pagination[start]=12&pagination[limit]=100&populate=* '; 
+const apiURL = 'https://kokpit.alfamotors.pl/api/cars?sort=date&pagination[start]=12&pagination[limit]=100&populate=* ';
 
     // Local
 // const strapiURL = 'http://localhost:1337';
@@ -76,9 +74,10 @@ interface Image {
     id: number;
   }
 
-export default function CarPage() {
-    const { loading, error, data } = useFetch(apiURL);
+  export default function CarPage() {
     const { id } = useParams();
+
+    const { loading, error, data } = useFetch(apiURL);
     let imagesURLs: string[] = []; // here will be stored URLs of images
     let idCar: number = Number(id); // turninig string into number
 
