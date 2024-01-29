@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import '../components/ImageSlider.css';
+import chevron from '../assets/chevron-left-red.png';
 
 export default function ImageSlider(props: any) {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -49,13 +50,17 @@ export default function ImageSlider(props: any) {
             <div 
                 className='container-slider__left-arrow' 
                 onClick={goToPrevImg}
-            ><p>&#8249;</p></div>
+            >
+                <img src={chevron} alt='Samochody premium Miechów'></img>
+            </div>
 
             {/*  Right arrow */}
             <div 
                 className='container-slider__right-arrow' 
                 onClick={goToNextImg}
-            ><p>&#8250;</p></div>
+            >
+                <img src={chevron} alt='Samochody premium Kraków'></img>
+            </div>
 
             {/* Dots */}
             <div

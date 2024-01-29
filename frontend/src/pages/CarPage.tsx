@@ -87,7 +87,7 @@ export default function CarPage() {
 
     // A function checking if ID in URL is same as currently checked car from db
     function isThatCar(fetchedCar: Car[]) {
-        // console.log(fetchedCar[1].id, idCar, pagination)
+        console.log(fetchedCar[1])
         return fetchedCar[1].id === idCar;
     }
     
@@ -100,7 +100,7 @@ export default function CarPage() {
     // Collecting an array of car's images
     if (foundCar && foundCar[1]) {    
         foundCar[1].attributes.gallery.data.map((image: Image) => (
-            imagesURLs.push(strapiURL + image.attributes.url)
+            imagesURLs.push(strapiURL + image.attributes.formats.large.url)
         ));
     } else {
         // if url has ID which is not in db
@@ -125,6 +125,7 @@ export default function CarPage() {
                 </span>
             </h1>
 
+            {/* Mini slider */}
             <ImageSlider id='ImageSlider' slides={imagesURLs} />
 
             <table className='CarPage__table'>
