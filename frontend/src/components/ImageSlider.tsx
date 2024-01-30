@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import '../components/ImageSlider.css';
 import chevron from '../assets/chevron-left-red.png';
+import chevronBig from '../assets/chevron-left-grey.png';
 
 export default function ImageSlider(props: any) {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -77,35 +78,42 @@ export default function ImageSlider(props: any) {
                 ))} 
             </div>
 
-            {/* --- Bigger slider with modal --- */}
+            {/* Background for the modal */}
             <div id='gallery-modal-overlay' 
                 style={isGalleryDisplayed ? {display: 'block'} : {display: 'none'}} 
                 onClick={() => setIsGalleryDisplayed(false)}
             ></div>
 
-            <div 
+            {/* Left arrow */}
+            <img 
                 className='gallery-modal__left-arrow gallery-modal__arrow' 
+                src={chevronBig}
+                alt='Wyselekcjonowane auta premium'
                 onClick={goToPrevImg} 
                 style={isGalleryDisplayed ? {display: 'block'} : {display: 'none'}}
-            >&#8249;</div>
+                />
 
-            <div
-                id='bigSlide'
-                style={isGalleryDisplayed ? {display: 'block'} : {display: 'none'}}
-            >
-                <img src={props.slides[currentIndex]} alt='Dobre auta używane, zaufany dealer' />  
+            {/* --- Bigger slider with modal --- */}
+            <div id='bigSlide' style={isGalleryDisplayed ? {display: 'block'} : {display: 'none'}} >
+                {/* Slide */}
+                <img src={props.slides[currentIndex]} alt='Dobre auta używane, zaufany dealer' />
+                {/*  Closing button */}
                 <div 
                     id='close-gallery'
                     style={isGalleryDisplayed ? {display: 'block'} : {display: 'none'}} 
                     onClick={() => setIsGalleryDisplayed(false)}
-                >+</div>
+                >+</div>/
             </div>
 
-            <div 
+            {/* Right arrow */}
+            <img 
                 className='gallery-modal__right-arrow gallery-modal__arrow'
+                src={chevronBig}
+                alt='Wyselekcjonowane auta topowych marek'
                 onClick={goToNextImg}
                 style={isGalleryDisplayed ? {display: 'block'} : {display: 'none'}}
-            >&#8250;</div>
+            />
+            
         </div>
     )
 }

@@ -85,19 +85,6 @@
     z-index: 5;
     background: hsl(0, 0%, 0%, 0.90);
 }
-#close-gallery {
-    height: 60px;
-    width: 60px;
-    transform: rotate(45deg);
-    font-size: 100px;
-    color: hsl(0, 0%, 100%, 0.9);
-    cursor: pointer;
-    
-    position: fixed;
-    top: -32px;
-    right: -32px;
-    z-index: 8;
-}
 #bigSlide,
 #bigSlide img {
     width: 80%;
@@ -112,28 +99,37 @@
     max-width: none;
     max-height: none;
     height: none;
-
+}
+#close-gallery {
+    height: 60px;
+    width: 60px;
+    transform: rotate(45deg);
+    font-size: 100px;
+    color: hsl(0, 0%, 100%, 0.9);
+    cursor: pointer;
+    
+    position: fixed;
+    top: -32px;
+    right: -32px;
+    z-index: 8;
 }
 .gallery-modal__arrow {
-    font-size: 280px;
-    color: hsl(0, 0%, 100%, 0.7);
     position: fixed;
     z-index: 8;
-    top: calc(50vh - 231px);
+    --arrow-height: 60px;
+    height: var(--arrow-height);
+    top: calc(50vh - (var(--arrow-height) / 2));
     cursor: pointer;
-}
-.gallery-modal__right-arrow {
-    right: 3%;
 }
 .gallery-modal__left-arrow {
     left: 3%;
 }
+.gallery-modal__right-arrow {
+    right: 3%;
+    transform: rotate(180deg);
+}
 
 @media (max-width: 1200px) {
-    .gallery-modal__arrow {
-        top: calc(50vh - 148px);
-        font-size: 180px;
-    }
     .gallery-modal__right-arrow {
         right: 1%;
     }
@@ -152,8 +148,9 @@
         width: 90vw;
     }
     .gallery-modal__arrow {
-        top: calc(50vh - 96px);
-        font-size: 120px; 
+        --arrow-height: 40px;
+        height: var(--arrow-height);
+        top: calc(50vh - (var(--arrow-height) / 2));
     }
     .gallery-modal__arrow p {
         position: relative;
@@ -180,8 +177,9 @@
         left: 0;
     }
     .gallery-modal__arrow {
-        top: calc(50vh - 65px);
-        font-size: 100px;
+        --arrow-height: 25px;
+        height: var(--arrow-height);
+        top: calc(50vh - (var(--arrow-height) / 2));
     }
     .gallery-modal__arrow {
         font-size: 80px;
@@ -189,10 +187,6 @@
     
 }
 @media (max-width: 500px) {
-    .gallery-modal__arrow {
-        top: calc(50vh - 45px);
-        font-size: 80px;
-    }
     .gallery-modal__arrow {
         font-size: 60px;
     }
