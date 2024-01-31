@@ -13,7 +13,7 @@
     background-size: cover;
     object-fit: cover;
     z-index: 3;
-    transition: background-image 800ms linear;
+    /* transition: background-image 800ms linear; */
 }
 
     /* ---Arrows--- */
@@ -26,7 +26,7 @@
     height: 100%;   
     z-index: 4;
     background-color: hsl(0, 0%, 0%, 0);
-    transition-duration: 1s;
+    /* transition-duration: 1s; */
 }
 .container-slider__left-arrow img,
 .container-slider__right-arrow img {
