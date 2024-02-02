@@ -96,7 +96,8 @@
 .contact-area {
     font-family: bebasFont;
     width: 1000px;
-    margin: 0 auto 140px;
+    margin: 0 auto;
+    padding-bottom: 50px;
     display: flex;
 }
 .contact-area__info,

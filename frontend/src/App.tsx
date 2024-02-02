@@ -16,6 +16,9 @@ import SiteHeader from "./components/SiteHeader";
 import Thanks from "./pages/Thanks";
 import Wallpaper from "./components/Wallpaper";
 
+// Styling
+import './tailwind.css';
+
 // Graphql
 const client = new ApolloClient({
   uri: 'http://localhost:1337/graphql',
