@@ -1,17 +1,11 @@
-.App {
+/* .App {
     min-height: 100vh;
     position: relative;
 }
-/* The About page */
-#About {
-    width: 1000px;
-    margin: 0 auto;
-    padding-bottom: 50px;
-}
+
 #About h1 {
     font-family: bebasFont;
     font-weight: 500;
-    text-align: center;     
     font-size: 35px;
     margin-bottom: 0;
     text-decoration: underline 2px;
@@ -44,13 +38,7 @@
     padding-left: 25px;
     margin: 3px;
 }
-
-@media(max-width: 1100px) {
-    #About {
-        width: 90vw;
-        padding-bottom: 80px;
-    }
-}
+*/
 
 /* Offer page */
 .car-windows-area {
