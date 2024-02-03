@@ -34,12 +34,6 @@ export default function About() {
                 <p className="font-bold">
                     Samochody wyłącznie krajowe, zakupione w polskich salonach autoryzowanych dealerów.
                 </p>
-                {/* <p>
-                    <span className="font-bold">Kupujemy jedynie takie egzemplarze, które mają w pełni udokumentowaną historię użytkowania i serwisowania, są bezwypadkowe oraz często posiadają fabryczną gwarancję.</span>
-                </p>
-                <p>
-                    <span className="font-bold">Samochody wyłącznie krajowe, zakupione w polskich salonach autoryzowanych dealerów.</span>
-                </p> */}
             </div>
 
             <div className="mb-[20px]">

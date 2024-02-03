@@ -8,6 +8,12 @@ module.exports = {
       fontFamily: {
         bebasFont: ['bebasFont', 'sans-serif'],
       },
+      colors: {
+        grayFooter: '#666666',
+      },
+      screens: {
+        'xs': '470px',
+      },
     },
   },
   plugins: [],
