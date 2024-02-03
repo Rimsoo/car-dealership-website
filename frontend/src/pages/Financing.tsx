@@ -12,13 +12,13 @@ export default function Financing() {
             lg:flex-row">
                 <img src={coins} alt='Pomoc w uzyskaniu leasingu na samochód' className="w-4/5 lg:w-[400px]"/>
                 <ul className="w-4/5 list-disc pl-8 lg:w-[400px]">
-                    <li className="my-5 w-full">
+                    <li className="financing__options">
                         Jesteśmy w stanie zorganizować wszystkie formy finansowania na bardzo korzystnych warunkach.
                     </li>
-                    <li className="my-5 w-full">
+                    <li className="financing__options">
                         Produkty finansowe dla firm oraz osób prywatnych (leasing operacyjny, leasing finansowy, pożyczka leasingowa czy kredyt).
                     </li>
-                    <li className="my-5 w-full">
+                    <li className="financing__options">
                         Współpracujemy z największymi bankami oraz firmami leasingowymi, co gwarantuje szeroki wybór oferty oraz kompleksową pomoc.
                     </li>
                 </ul>
