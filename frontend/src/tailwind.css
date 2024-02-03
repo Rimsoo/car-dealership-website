@@ -1,8 +1,14 @@
 @tailwind base;
 @tailwind components;
 
+.page-title {
+    @apply pt-8 text-3xl font-medium text-center underline decoration-2 underline-offset-[8px] font-bebasFont
+}
 .financing__options {
     @apply my-4 w-full;
+}
+.about__subtitle {
+    @apply text-2xl font-medium underline underline-offset-[4px] mb-[4px] font-bebasFont
 }
 
 @tailwind utilities;

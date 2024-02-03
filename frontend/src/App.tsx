@@ -29,7 +29,7 @@ function App() {
   return (
     <Router>
       <ApolloProvider client={client}>
-        <div className="App">
+        <div className="App min-h-screen relative">
           <ScrollPagesTop />
           <SiteHeader />
           <Wallpaper />

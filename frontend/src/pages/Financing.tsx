@@ -4,8 +4,7 @@ export default function Financing() {
     return (
         <div id='Financing' className="w-[90vw] mx-auto pb-[80px] 
         lg:w-[800px] lg:pb-12">
-            <h1 className="mt-6 mb-0 font-bebasFont text-3xl font-medium text-center underline decoration-2 underline-offset-8 
-            lg:my-6">
+            <h1 className="page-title py-5">
                 FINANSOWANIE
             </h1>
             <div className="box-border w-full items-center p-5 pt-0 flex flex-col-reverse 

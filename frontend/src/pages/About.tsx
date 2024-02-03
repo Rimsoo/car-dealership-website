@@ -1,11 +1,10 @@
 export default function About() {
     return (
-        <div id="About" className="mx-auto w-[90vw] pb-[80px] font-bebasFont
+        <div id="About" className="mx-auto w-[90vw] pb-[80px]
         lg:w-[1000px] lg:pb-[50px]">
-            <h1 className="py-3 mb-0 text-center text-4xl font-medium underline underline-offset-[8px]">O nas</h1>
-
-            <div className="mb-[20px]">
-                <h2 className="text-[35px] font-medium underline underline-offset-[4px] mb-[4px]">Historia</h2>
+            <h1 className="page-title pt-5">O nas</h1>
+            <div className="mb-5">
+                <h2 className="about__subtitle">Historia</h2>
                 <p>
                     <span className="font-bold">ALFA MOTORS</span> to rodzinna firma specjalizująca się w sprzedaży luksusowych samochodów marek premium, której tradycja sięga już prawie trzydziestu lat.
                 </p>
@@ -15,7 +14,7 @@ export default function About() {
             </div>
 
             <div className="mb-[20px]">
-                <h2 className="text-[35px] font-medium underline underline-offset-[4px] mb-[4px]">Cel</h2>
+                <h2 className="about__subtitle">Cel</h2>
                 <p>
                     Naszym głównym założeniem jest indywidualne, szczere i uczciwe podejście do każdego klienta, aby świadomie wybrał najlepszy dla siebie samochód.
                 </p>
@@ -25,20 +24,26 @@ export default function About() {
             </div>
 
             <div className="mb-[20px]">
-                <h2 className="text-[35px] font-medium underline underline-offset-[4px] mb-[4px]">Podstawa działalności</h2>
+                <h2 className="about__subtitle">Podstawa działalności</h2>
                 <p>
                     Wszystkie samochody są naszą własnością. Decyzja o zakupie poprzedzona jest zawsze gruntownym sprawdzeniem pojazdu oraz spełnieniem ostrych kryteriów selekcyjnych.
                 </p>
-                <p>
+                <p className="font-bold">
+                    Kupujemy jedynie takie egzemplarze, które mają w pełni udokumentowaną historię użytkowania i serwisowania, są bezwypadkowe oraz często posiadają fabryczną gwarancję.
+                </p>
+                <p className="font-bold">
+                    Samochody wyłącznie krajowe, zakupione w polskich salonach autoryzowanych dealerów.
+                </p>
+                {/* <p>
                     <span className="font-bold">Kupujemy jedynie takie egzemplarze, które mają w pełni udokumentowaną historię użytkowania i serwisowania, są bezwypadkowe oraz często posiadają fabryczną gwarancję.</span>
                 </p>
                 <p>
                     <span className="font-bold">Samochody wyłącznie krajowe, zakupione w polskich salonach autoryzowanych dealerów.</span>
-                </p>
+                </p> */}
             </div>
 
             <div className="mb-[20px]">
-                <h2 className="text-[35px] font-medium underline underline-offset-[4px] mb-[4px]">Zmiana samochodu - kompleksowe podejście</h2>
+                <h2 className="about__subtitle">Zmiana samochodu - kompleksowe podejście</h2>
                 <p>
                     Podchodzimy kompleksowo do zagadnienia jakim jest zmiana samochodu przez potencjalnego Klienta:
                 </p>
@@ -50,7 +55,7 @@ export default function About() {
                 </ul>
             </div>
             
-            <h3 className="text-center text-[28px] font-medium my-[20px] mx-auto">Zapraszamy do kontaktu przez formularz, mailowo lub telefonicznie!</h3>
+            <h3 className="font-bebasFont text-center text-3xl font-medium pt-2 pb-7 mx-auto my-0">Zapraszamy do kontaktu przez formularz, mailowo lub telefonicznie!</h3>
         </div>
     );
 }
