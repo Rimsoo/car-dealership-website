@@ -8,8 +8,16 @@ module.exports = {
       animation: {
           'spin-slow': 'spinner-spin 5s linear infinite',
       },
+      boxShadow: {
+        'custom-shadow-green': '109.5px -110px 0 0 hsl(120, 100%, 15%)',
+        'custom-shadow-red': '109.5px -110px 0 0 hsl(0, 100%, 40%)',
+        'custom-shadow-yellow': '109.5px -110px 0 0 hsl(39, 100%, 40%)',
+      },
       colors: {
         grayFooter: '#666666',
+        'custom-green': 'hsl(120, 100%, 15%)',
+        'custom-red': 'hsl(0, 100%, 40%)',
+        'custom-yellow': 'hsl(39, 100%, 40%)',
       },
       fontFamily: {
         bebasFont: ['bebasFont', 'sans-serif'],
@@ -35,6 +43,9 @@ module.exports = {
       },
       variants: {
         color: ['active']
+      },
+      zIndex: {
+        '-1': '-1',
       }
     },
   },

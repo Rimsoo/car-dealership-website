@@ -27,10 +27,6 @@ export default function SiteHeader() {
         document.addEventListener('mousedown', handler);
     })
 
-    useEffect(() => {
-        console.log(location)
-    }, [location])
-
     return (
         <div className='w-full relative
         lg:h-[120px]

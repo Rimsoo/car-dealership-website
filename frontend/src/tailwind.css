@@ -16,6 +16,15 @@
 .car__description__container__icons {
     @apply inline-block max-h-4 mr-1;
 }
+.car__container__shadow--green {
+    @apply bg-green-900 shadow-md;
+}
+.car__container__shadow--red {
+    @apply bg-red-500;
+}
+.car__container__shadow--yellow {
+    @apply bg-amber-500 shadow-custom-shadow-yellow;
+}
 
 /* Financing page */
 .financing__options {

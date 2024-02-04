@@ -30,13 +30,19 @@ export default function Car(props: any) {
                         'ribbon--red' : 
                         'ribbon--green')}
                 >
-
                     {/* Text in the ribbon */}
                     {props.state === 'soon' ? 
                         'Już wkrótce!' : (props.state === 'sold' ?
                         'Sprzedane' : props.state === 'zarezerwowane' ?
                         'Zarezerwowane' : props.state)}
                 </span>
+
+                {/* Shadow of the ribbon (quivalent of the ::after element from the older version) */}
+                <span className={`absolute w-[10px] h-[10px] bottom-[30.5px] left-0 -z-1
+                    ${(props.state === 'soon' || props.state === 'zarezerwowane') ? 
+                    'car__container__shadow--yellow' : (props.state === 'sold' ? 
+                    'car__container__shadow--red' : 
+                    'car__container__shadow--green')}`}> </span>
             </span>
 
             {/* Main photo */}

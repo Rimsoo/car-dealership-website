@@ -34,26 +34,26 @@
 .Car .container-ribbon--green::after, 
 .Car .container-ribbon--yellow::after, 
 .Car .container-ribbon--red::after {
-    content: ''; /* must be to show color */
+    /* content: '';
     position: absolute;
     width: 10px;
     height: 10px;
     bottom: 30.5px;
     left: 0;
-    z-index: -1;
+    z-index: -1; */
 }
-.Car .container-ribbon--green::after {
+/* .Car .container-ribbon--green::after {
     background-color: hsl(120, 100%, 15%);
-    box-shadow: 109.5px -110px hsl(120, 100%, 15%); /* Line responsible for the second shadow (the one higher) */
+    box-shadow: 109.5px -110px hsl(120, 100%, 15%);
 }
 .Car .container-ribbon--yellow::after {
     background-color: hsl(39, 100%, 40%);
-    box-shadow: 109.5px -110px hsl(39, 100%, 40%); /* Line responsible for the second shadow (the one higher) */
+    box-shadow: 109.5px -110px hsl(39, 100%, 40%);
 }
 .Car .container-ribbon--red::after {
     background-color: hsl(0, 100%, 40%);
-    box-shadow: 109.5px -110px hsl(0, 100%, 40%); /* Line responsible for the second shadow (the one higher) */
-}
+    box-shadow: 109.5px -110px hsl(0, 100%, 40%);
+} */
 .Car .ribbon--green {
     background: green;
 }
@@ -99,12 +99,3 @@
     height: 60px;
     margin: 0 auto;
 }
-/* .Car__description div {
-    width: 70px;
-    display: inline-block;
-    height: 30px;
-} */
-/* .Car__description div:nth-child(even) {
-    position: relative;
-    width: 100px;
-} */
