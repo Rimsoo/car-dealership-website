@@ -1,5 +1,3 @@
-import './Footer.css';
-
 export default function Footer() {
     return (
         <div id='Footer' className='flex flex-col absolute w-full leading-8 bottom-0 mt-8 bg-grayFooter text-white font-bebasFont

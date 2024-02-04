@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import '../components/Wallpaper.css';
 import wallpaper1 from '../assets/backgrounds/wallpaper1.webp';
 import wallpaper2 from '../assets/backgrounds/wallpaper2.webp';
 import wallpaper3 from '../assets/backgrounds/wallpaper3.webp';
@@ -48,17 +47,17 @@ export default function Wallpaper() {
     }, [shouldUpdateBackground1]);
 
     return (
-        <div id='wallpaper'>
+        <div id='wallpaper' className='h-[350px] relative'>
             {/* Background no. 1 */}
             <div
-                // When background 1 is waiting for being updated - must be hidden then
-                className={shouldUpdateBackground1 ? 'wallpaper__img wallpaper__img-hidden' : 'wallpaper__img wallpaper__img-shown'} 
+                // When background 1 is waiting for being updated - must be hidden
+                className={shouldUpdateBackground1 ? 'wallpaper__pic wallpaper__pic-hidden' : 'wallpaper__pic wallpaper__pic-shown'} 
                 style={styling1}
             />
             {/* Background no. 2 */}
             <div
                 // When background 1 is waiting for being updated - background 2 is shown
-                className={shouldUpdateBackground1 ? 'wallpaper__img wallpaper__img-shown' : 'wallpaper__img wallpaper__img-hidden'}
+                className={shouldUpdateBackground1 ? 'wallpaper__pic wallpaper__pic-shown' : 'wallpaper__pic wallpaper__pic-hidden'}
                 style={styling2}
             />
         </div>

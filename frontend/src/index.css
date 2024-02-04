@@ -15,3 +15,9 @@ code {
   font-family: 'bebasFont';
   src: url(./fonts/BebasNeue-Regular.ttf);
 }
+
+/* Setting Segoe font for Safari */
+/* @font-face {
+  font-family: SegoeUI;
+  src: url(./fonts/SegoeUI.ttf);
+} */

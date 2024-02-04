@@ -2,7 +2,6 @@ import { useEffect, useState, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import menuBtn from '../assets/menuBtn.png';    
 import phoneIcon from '../assets/phoneIcon.png';    
-import './SiteHeader.css';    
 
 export default function SiteHeader() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -28,38 +27,81 @@ export default function SiteHeader() {
     })
 
     return (
-        <div className='SiteHeader'>
-            <div className='SiteHeader__name'>
+        <div className='w-full relative
+        lg:h-[120px]
+        xl:w-[1200px] mx-auto text-17 font-semibold'>
+
+            {/* Logo with a link and description below */}
+            <div className='block w-full max-w-xs my-1 mx-auto py-1 px-0
+                sm:max-w-none sm:inline-block sm:w-[450px] sm:inline-block sm:ml-8
+                lg:p-0 lg:my-0'
+            >
                 <NavLink to='/' style={{color: 'black'}}>
-                    <h2>ALFA MOTORS</h2>
+                    <h2 className='p-0 pt-2 text-center font-bebasFont text-4xl font-thin
+                        sm:inline-block sm:pl-8'
+                    >ALFA MOTORS</h2>
                 </NavLink>
-                <p>Centrum Wyselekcjonowanych Krajowych Samochodów Marek Premium</p>
+                <p className='p-0 text-center font-bebasFont font-thin text-lg
+                lg:'
+                >Centrum Wyselekcjonowanych Krajowych Samochodów Marek Premium</p>
             </div>
 
-            <ul 
-                className={`SiteHeader__navbar ${menuOpen ? 
-                'SiteHeader__navbar--shown' : 'SiteHeader__navbar--hidden'}`}
+            {/* Navbar */}
+            <ul className={`absolute z-20 top-[139px] w-full
+                sm:top-[92px]
+                lg:top-[70px] lg:pl-3
+                ${menuOpen ? 'siteHeader__navbar--shown' : 'siteHeader__navbar--hidden'}`}
                 ref={menuRef}
             >
-                <NavLink onClick={hideMenu} to='/' ><li><span>Oferta</span></li></NavLink>
-                <NavLink onClick={hideMenu} to='/Sold' ><li><span>Sprzedane</span></li></NavLink>
-                <NavLink onClick={hideMenu} to='/About' > <li><span>O nas</span></li></NavLink>
-                <NavLink onClick={hideMenu} to='/Buy' > <li><span>Odkup pojazdów</span></li></NavLink>
-                <NavLink onClick={hideMenu} to='/Financing' > <li><span>Finansowanie</span></li></NavLink> 
-                <NavLink onClick={hideMenu} to='/Contact' > <li><span>Kontakt</span></li></NavLink>
+                <NavLink onClick={hideMenu} to='/' >
+                    <li className='siteHeader__li'>
+                        <span className='siteHeader__li__span'>Oferta</span>
+                    </li>
+                </NavLink>
+                <NavLink onClick={hideMenu} to='/Sold' >
+                    <li className='siteHeader__li'>
+                        <span className='siteHeader__li__span'>Sprzedane</span>
+                    </li>
+                </NavLink>
+                <NavLink onClick={hideMenu} to='/About' > 
+                     <li className='siteHeader__li'>
+                        <span className='siteHeader__li__span'>O nas</span>
+                    </li>
+                </NavLink>
+                <NavLink onClick={hideMenu} to='/Buy' > 
+                    <li className='siteHeader__li'>
+                        <span className='siteHeader__li__span'>Odkup pojazdów</span>
+                    </li>
+                </NavLink>
+                <NavLink onClick={hideMenu} to='/Financing' > 
+                    <li className='siteHeader__li'>
+                        <span className='siteHeader__li__span'>Finansowanie</span>
+                    </li>
+                </NavLink> 
+                <NavLink onClick={hideMenu} to='/Contact' > 
+                    <li className='siteHeader__li'>
+                        <span className='siteHeader__li__span'>Kontakt</span>
+                    </li>
+                </NavLink>
             </ul>
 
+            {/* Menu button */}
             <img 
-                id='SiteHeader__menuBtn' 
+                className='block mx-auto mb-3 h-5 w-5 cursor-pointer
+                sm:inline-block sm:float-right sm:mr-4 sm:mt-4
+                lg:hidden'
                 src={menuBtn}
                 onClick={toggleMenu}
                 ref={buttonRef}
                 alt='Najlepsze samochody używane w Małopolsce'
             />
 
-            <div className='SiteHeader__phoneData'>
-                <img src={phoneIcon} alt="Znajdź auto klasy premium" />
-                <p>+48 505 964 955</p>
+            {/* Phone number with an icon */}
+            <div className='SiteHeader__phoneData hidden relative mt-3 mr-1
+            sm:hidden
+            md:float-right md:inline-block'>
+                <img className='inline-block h-4' src={phoneIcon} alt="Znajdź auto klasy premium" />
+                <p className='inline-block h-4 px-2'>+48 505 964 955</p>
             </div>
         </div>
     )

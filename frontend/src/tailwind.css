@@ -10,5 +10,28 @@
 .about__subtitle {
     @apply text-2xl font-medium underline underline-offset-[4px] mb-[4px] font-bebasFont
 }
-
+.wallpaper__pic {
+    @apply h-full w-full absolute bg-center bg-cover;
+}
+.wallpaper__pic-shown {
+    @apply opacity-100 transition-opacity duration-2500
+}
+.wallpaper__pic-hidden {
+    @apply opacity-0 transition-opacity duration-2500
+}
+.siteHeader__li {
+    @apply p-3 text-center bg-white hover:bg-gray-200 transition-colors
+    lg:inline-block lg:mx-1 lg:hover:bg-white;
+}
+.siteHeader__li__span {
+    @apply hover:text-gray-300 active:text-gray-100 transition-colors duration-500;
+}
+.siteHeader__navbar--shown {
+    @apply opacity-95 transition ease-in-out duration-500
+    lg:opacity-100;
+}
+.siteHeader__navbar--hidden {
+    @apply opacity-0 transition ease-in-out duration-500
+    lg:opacity-100;
+}
 @tailwind utilities;
