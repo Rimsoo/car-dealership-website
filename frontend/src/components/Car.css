@@ -6,7 +6,7 @@
     font-family: bebasFont;
     display: inline-block;
     margin: 10px 13px;
-    position: relative; /* seems unnecessary but it stops .Car__ribbon of going out of the area due to its absolute: position */
+    position: relative; /* it stops .Car__ribbon of going out of the area due to its absolute: position */
 }
 .Car span {
     position: absolute;
@@ -99,49 +99,12 @@
     height: 60px;
     margin: 0 auto;
 }
-.Car__description div {
+/* .Car__description div {
     width: 70px;
     display: inline-block;
     height: 30px;
-}
-/* In case of "Benzyna + LPG" description the 4th div needs more space, so that's why the code below */
-.Car__description div:nth-child(even) {
+} */
+/* .Car__description div:nth-child(even) {
     position: relative;
     width: 100px;
-}
-.Car__description__icons {
-    max-width: 20px;
-    max-height: 16px;
-    margin-right: 6px;
-}
-.Car__button {
-    width: 97px;
-    height: 31px;
-    line-height: 31px;
-    text-align: center;
-    letter-spacing: 0.03em;
-    /* Styling above added because <p> alement substituted a <button> for Safari Browsers */
-    font-size: 20px;
-    font-family: bebasFont;
-    border: 2px solid black;
-    border-radius: 5px;
-    display: block;
-    margin: 0px auto;
-    background-color: white;
-    color: black;
-    transition-property: color;
-    transition-property: background-color;
-    transition-duration: 1s;
-    text-decoration: none;
-    cursor: pointer;
-}
-a:link,
-a:visited,
-a:hover,
-a:active {
-    text-decoration: none;
-}
-.Car__button:hover {
-    background-color: black;
-    color: white;
-}
+} */

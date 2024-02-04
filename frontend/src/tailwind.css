@@ -1,24 +1,33 @@
 @tailwind base;
 @tailwind components;
 
-.page-title {
-    @apply pt-8 text-3xl font-medium text-center underline decoration-2 underline-offset-[8px] font-bebasFont
-}
-.financing__options {
-    @apply my-4 w-full;
-}
 .about__subtitle {
     @apply text-2xl font-medium underline underline-offset-[4px] mb-[4px] font-bebasFont
 }
-.wallpaper__pic {
-    @apply h-full w-full absolute bg-center bg-cover;
+
+/* Car component */
+.car__description__container--odd {
+    @apply inline-block h-8 w-[70px];
 }
-.wallpaper__pic-shown {
-    @apply opacity-100 transition-opacity duration-2500
+/* In case of "Benzyna + LPG" description the 4th div needs more space, so that's why even elements are wider */
+.car__description__container--even {
+    @apply inline-block h-8 w-24 relative;
 }
-.wallpaper__pic-hidden {
-    @apply opacity-0 transition-opacity duration-2500
+.car__description__container__icons {
+    @apply inline-block max-h-4 mr-1;
 }
+
+/* Financing page */
+.financing__options {
+    @apply my-4 w-full;
+}
+
+/* The class for titles in different pages */
+.page-title {
+    @apply pt-8 text-3xl font-medium text-center underline decoration-2 underline-offset-[8px] font-bebasFont
+}
+
+/* Site header component*/
 .siteHeader__li {
     @apply p-3 text-center bg-white hover:bg-gray-200 transition-colors
     lg:inline-block lg:mx-1 lg:hover:bg-white;
@@ -34,4 +43,16 @@
     @apply opacity-0 transition ease-in-out duration-500
     lg:opacity-100;
 }
+
+/* Wallpaper component */
+.wallpaper__pic {
+    @apply h-full w-full absolute bg-center bg-cover;
+}
+.wallpaper__pic-shown {
+    @apply opacity-100 transition-opacity duration-2500
+}
+.wallpaper__pic-hidden {
+    @apply opacity-0 transition-opacity duration-2500
+}
+
 @tailwind utilities;
