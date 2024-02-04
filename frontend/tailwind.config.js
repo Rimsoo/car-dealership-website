@@ -5,15 +5,24 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+          'spin-slow': 'spinner-spin 5s linear infinite',
+      },
+      colors: {
+        grayFooter: '#666666',
+      },
       fontFamily: {
         bebasFont: ['bebasFont', 'sans-serif'],
         segoe: ['SegoeUI', 'sans-serif'],
       },      
       fontSize: {
-          '17': '1.0625rem',
+        '17': '1.0625rem',
       },
-      colors: {
-        grayFooter: '#666666',
+      keyframes: {
+          'spinner-spin': {
+              'from': { transform: 'rotate(0deg)' },
+              'to': { transform: 'rotate(360deg)' },
+          },
       },
       screens: {
         'xs': '470px',
