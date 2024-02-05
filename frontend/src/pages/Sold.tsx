@@ -63,8 +63,8 @@ export default function Sold() {
 
     return (
         <div id="Sold">
-            <div className='car-windows-area'>
-                <h1>POJAZDY, KTÓRE ZNALAZŁY JUŻ NOWEGO WŁAŚCICIELA:</h1>
+            <div className='areaCards'>
+                <h1 className='page-title pb-8'>POJAZDY, KTÓRE ZNALAZŁY JUŻ NOWEGO WŁAŚCICIELA:</h1>
 
                 {sortedFilteredData.map((car: CarData[], index: number) => (
                         <Car 
@@ -76,9 +76,7 @@ export default function Sold() {
                             year={car[1].attributes.year} 
                             fuel={car[1].attributes.fuel} 
                             power={car[1].attributes.power} 
-                            // imageSource={strapiURL + car[1].attributes.gallery.data[0].attributes.url}
                             imageSource={strapiURL + car[1].attributes.gallery.data[0].attributes.formats.small.url}
-
                         />
                     )
                 )}

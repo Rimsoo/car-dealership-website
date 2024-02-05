@@ -57,7 +57,7 @@ export default function Offer() {
 
   return (
     <div id="Offer">
-      <div className='mx-auto pb-12 w-[285px] sm:w-[610px] lg:w-[900px] xl:w-[1200px] pb-16'>
+      <div className='areaCards'>
         <h1 className='page-title pb-8'>SPRAWDŹ NASZĄ OFERTĘ</h1>
         {sortedFilteredData.map((car: CarData[], index: number) => (
           <Car
