@@ -9,9 +9,9 @@ module.exports = {
           'spin-slow': 'spinner-spin 5s linear infinite',
       },
       boxShadow: {
-        'custom-shadow-green': '109.5px -110px 0 0 hsl(120, 100%, 15%)',
-        'custom-shadow-red': '109.5px -110px 0 0 hsl(0, 100%, 40%)',
-        'custom-shadow-yellow': '109.5px -110px 0 0 hsl(39, 100%, 40%)',
+        'custom-shadow-green': '109.5px -110px hsl(120, 100%, 15%)',
+        'custom-shadow-red': '109.5px -110px hsl(0, 100%, 40%)',
+        'custom-shadow-yellow': '0px 70px hsl(39, 100%, 40%)',
       },
       colors: {
         grayFooter: '#666666',
@@ -46,6 +46,7 @@ module.exports = {
       },
       zIndex: {
         '-1': '-1',
+        '10': '10px',
       }
     },
   },

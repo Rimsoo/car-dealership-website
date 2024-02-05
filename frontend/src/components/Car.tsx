@@ -16,33 +16,20 @@ export default function Car(props: any) {
 
     return (
         <div className='Car'>
-            {/* Ribbon's container */}
+            {/* Ribbon */}
             <span className={
                 (props.state === 'soon' || props.state === 'zarezerwowane') ? 
                     'container-ribbon--yellow' : (props.state === 'sold' ? 
-                    'container-ribbon--red' : 
-                    'container-ribbon--green')}
-            > 
-                {/* Ribbon */}
+                        'container-ribbon--red' : 'container-ribbon--green')}> 
                 <span className={
                     (props.state === 'soon' || props.state === 'zarezerwowane') ? 
                         'ribbon--yellow' : (props.state === 'sold' ? 
-                        'ribbon--red' : 
-                        'ribbon--green')}
-                >
-                    {/* Text in the ribbon */}
+                            'ribbon--red' : 'ribbon--green')}>
                     {props.state === 'soon' ? 
                         'Już wkrótce!' : (props.state === 'sold' ?
-                        'Sprzedane' : props.state === 'zarezerwowane' ?
-                        'Zarezerwowane' : props.state)}
+                            'Sprzedane' : props.state === 'zarezerwowane' ?
+                                'Zarezerwowane' : props.state)}
                 </span>
-
-                {/* Shadow of the ribbon (quivalent of the ::after element from the older version) */}
-                <span className={`absolute w-[10px] h-[10px] bottom-[30.5px] left-0 -z-1
-                    ${(props.state === 'soon' || props.state === 'zarezerwowane') ? 
-                    'car__container__shadow--yellow' : (props.state === 'sold' ? 
-                    'car__container__shadow--red' : 
-                    'car__container__shadow--green')}`}> </span>
             </span>
 
             {/* Main photo */}
@@ -64,34 +51,34 @@ export default function Car(props: any) {
             {/* Infobox */}
             <p className='Car__title'><strong>{props.title}</strong></p>
 
-            <div className='Car__description relative right-[10px]'>
-                <div className='car__description__container--odd'>                    
+            <div className='Car__description'>
+                <div>                    
                     <img 
-                        className='car__description__container__icons' 
+                        className='Car__description__icons' 
                         src={calendar}
                         alt='Dealer samochodów premium'
                     />
                     {props.year}
                 </div>
-                <div className='car__description__container--even'>
+                <div>
                     <img 
-                        className='car__description__container__icons' 
+                        className='Car__description__icons' 
                         src={mileage}
                         alt='Samochody z niskim przebiegiem'
                     />
                     {props.mileage}{' km'}
                 </div>
-                <div className='car__description__container--odd'>
+                <div>
                     <img 
-                        className='car__description__container__icons' 
+                        className='Car__description__icons' 
                         src={engineering}
                         alt='Dealer aut klasy premium w Miechowie'
                     />
                     {props.power}{' KM'}
                 </div>
-                <div className='car__description__container--even'>
+                <div>
                     <img 
-                        className='car__description__container__icons' 
+                        className='Car__description__icons' 
                         src={gasoline}
                         alt='Auta używane Miechów'
                     />
@@ -100,9 +87,7 @@ export default function Car(props: any) {
             </div>
 
             <NavLink to={`/CarPage/${props.id}`} >
-                {/* <p className='Car__button'>SZCZEGÓŁY</p> */}
-                <p className='block mx-auto w-[97px] h-[31px] text-center leading-[31px] text-lg font-[bebasFont] border-2 border-black rounded bg-white text-black no-underline cursor-pointer transition-colors duration-500 
-                hover:bg-black hover:text-white'>SZCZEGÓŁY</p>
+                <p className='Car__button'>SZCZEGÓŁY</p>
             </NavLink>
         </div>
     )
