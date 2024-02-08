@@ -34,6 +34,11 @@
     @apply bg-amber-500 shadow-custom-shadow-yellow;
 }
 
+/* Contact page */
+.contact__container__form__input {
+    @apply my-0.5 w-full;
+}
+
 /* Financing page */
 .financing__options {
     @apply my-4 w-full;

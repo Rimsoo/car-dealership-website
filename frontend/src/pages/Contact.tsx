@@ -5,37 +5,40 @@ import emailIcon from '../assets/email.png';
 export default function Contact() {
 
     return (
-        <div className='contact-area'>
-            <span className='contact-area__form'>
-                <h3>Formularz kontaktu</h3>
+        <div id="Contact" className='contact-area flex flex-col-reverse w-full pb-16 font-bebasFont'>
+            <span className='contact-area__form w-11/12 mx-auto'>
+                <h3 className="text-center">Formularz kontaktu</h3>
 
-                <form action="https://formsubmit.co/alfamotors.kontakt@gmail.com" method="POST">
-                    <input type="text" name="Imię" placeholder='Imię' required/>
-                    <input type="text" name="Nazwisko" placeholder='Nazwisko' required/>
-                    <input type="text" name="Numer telefonu" placeholder='Numer telefonu' />
-                    <input type="email" name="Adres e-mail" placeholder='Adres e-mail' required/>
-                    <textarea name="Wiadomość" placeholder='Treść' required rows={4} />
+                <form className="text-lg" action="https://formsubmit.co/alfamotors.kontakt@gmail.com" method="POST">
+                    <input className='contact__container__form__input' type="text" name="Imię" placeholder='Imię' required/>
+                    <input className='contact__container__form__input' type="text" name="Nazwisko" placeholder='Nazwisko' required/>
+                    <input className='contact__container__form__input' type="text" name="Numer telefonu" placeholder='Numer telefonu' />
+                    <input className='contact__container__form__input' type="email" name="Adres e-mail" placeholder='Adres e-mail' required/>
+                    <textarea className='contact__container__form__input' name="Wiadomość" placeholder='Treść' required rows={4} />
 
-                    {/* Button replaced with <p> for Safari browser */}
-                    <input id='contact-area__button' type='submit' value='WYŚLIJ' />
+                    {/* Button replaced with <input> for Safari browser */}
+                    <input className="border-2 my-2 mx-auto w-16 tracking-wide border-black rounded-md block border-black rounded-md block mx-autoduration-1000 transition-colors cursor-pointer
+                    hover:bg-black hover:text-white" id='contact-area__button' type='submit' value='WYŚLIJ' />
 
-                    <input type="hidden" name="_subject" value="Klient przysłał zapytanie"></input>
-                    <input type="hidden" name="_next" value="https://alfamotors.pl/thanks"></input>
+                    <input className='contact__container__form__input' type="hidden" name="_subject" value="Klient przysłał zapytanie"></input>
+                    <input className='contact__container__form__input' type="hidden" name="_next" value="https://alfamotors.pl/thanks"></input>
                 </form>
             </span>
 
-            <span className='contact-area__info'>
-                <h3>Informacje kontaktowe</h3>
+            <span className='contact-area__info w-full'>
+                <h3 className='text-center'>Informacje kontaktowe</h3>
                 
-                <div>
-                    <img src={phoneIcon} alt="Wiarygodni dealerzy samochodów używanych" />
+                <div className="flex text-center">
+                    <img className="relative top-1 h-4 pr-2" src={phoneIcon} alt="Wiarygodni dealerzy samochodów używanych" />
                     <span>Telefon: +48 505 964 955</span>
                 </div>
-                <div>
-                    <img src={emailIcon} alt="Używane auta dobrej jakości" />
+                <div className="flex text-center">
+                    <img className="relative top-1 h-4 pr-2" src={emailIcon} alt="Używane auta dobrej jakości" />
                     <span>E-mail: alfamotors.kontakt@gmail.com</span>
                 </div>
-                <iframe title='Map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1555473.3398993865!2d19.0236861221721!3d50.1859647846431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4717abd77be7063d%3A0x6bf2110444b3d159!2s32-200%20Miech%C3%B3w!5e0!3m2!1spl!2spl!4v1682497385509!5m2!1spl!2spl"></iframe>
+
+                {/* Map */}
+                <iframe className="block my-2 mx-auto h-72 w-11/12 border border-black rounded-md" title='Map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1555473.3398993865!2d19.0236861221721!3d50.1859647846431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4717abd77be7063d%3A0x6bf2110444b3d159!2s32-200%20Miech%C3%B3w!5e0!3m2!1spl!2spl!4v1682497385509!5m2!1spl!2spl"></iframe>
             </span>        
         </div>
     )
