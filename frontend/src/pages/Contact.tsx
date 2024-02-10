@@ -1,6 +1,6 @@
 import './Pages.css';
-import phoneIcon from '../assets/phoneIcon.png';
-import emailIcon from '../assets/email.png';
+import phoneIcon from '../assets/contact/phoneIcon.png';
+import emailIcon from '../assets/contact/email.png';
 
 export default function Contact() {
 

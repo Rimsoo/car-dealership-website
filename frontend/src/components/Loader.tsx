@@ -1,4 +1,4 @@
-import wheel from '../assets/tire.png';
+import wheel from '../assets/loader/tire.png';
 
 export default function Loader() {
     return (

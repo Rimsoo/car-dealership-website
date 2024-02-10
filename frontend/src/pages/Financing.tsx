@@ -1,4 +1,4 @@
-import coins from '../assets/coins.webp';
+import coins from '../assets/financing/coins.webp';
 
 export default function Financing() {
     return (

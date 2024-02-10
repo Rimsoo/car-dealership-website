@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import '../components/ImageSlider.css';
-import chevron from '../assets/chevron-left-red.png';
-import chevronBig from '../assets/chevron-left-grey.png';
+import chevron from '../assets/imageSlider/chevron-left-red.png';
+import chevronBig from '../assets/imageSlider/chevron-left-grey.png';
 
 export default function ImageSlider(props: any) {
     const [currentIndex, setCurrentIndex] = useState(0);

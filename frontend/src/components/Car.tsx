@@ -1,10 +1,10 @@
 import { useState} from 'react';
 import { NavLink } from 'react-router-dom';    
-import calendar from '../assets/calendar.png';
-import engineering from '../assets/engineering.png';
-import gasoline from '../assets/gasoline.png';
-import mileage from '../assets/mileage.png';
-import gif from "../assets/loading.gif";
+import calendar from '../assets/card/calendar.png';
+import engineering from '../assets/card/engineering.png';
+import gasoline from '../assets/card/gasoline.png';
+import mileage from '../assets/card/mileage.png';
+import gif from "../assets/card/loading.gif";
 import './Car.css';
 
 export default function Car(props: any) {

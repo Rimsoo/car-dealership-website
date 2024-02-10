@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
 import { useLocation, NavLink } from 'react-router-dom';
-import menuBtn from '../assets/menuBtn.png';    
-import phoneIcon from '../assets/phoneIcon.png';    
+import menuBtn from '../assets/siteHeader/menuBtn.png';    
+import phoneIcon from '../assets/contact/phoneIcon.png';    
 
 export default function SiteHeader() {
     const [menuOpen, setMenuOpen] = useState(false);
