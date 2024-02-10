@@ -1,4 +1,3 @@
-import './Pages.css';
 import phoneIcon from '../assets/contact/phoneIcon.png';
 import emailIcon from '../assets/contact/email.png';
 

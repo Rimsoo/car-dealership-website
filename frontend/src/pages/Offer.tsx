@@ -1,7 +1,6 @@
 import Car from '../components/Car';
 import Loader from '../components/Loader';
 import mergeSort from '../hooks/mergeSort';
-import './Pages.css';
 import useFetch from '../hooks/useFetch';
 
 const strapiURL: string = 'https://kokpit.alfamotors.pl';

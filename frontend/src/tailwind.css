@@ -5,6 +5,11 @@
     @apply text-2xl font-medium underline underline-offset-[4px] mb-[4px] font-bebasFont
 }
 
+/* Buy */
+.buy__area__form__input {
+    @apply block w-full my-1 mx-auto pl-1 border-2 border-black rounded-md;
+}
+
 .cards-area {
     @apply mx-auto pb-12 w-[285px] sm:w-[610px] lg:w-[900px] xl:w-[1200px] pb-16;
 }

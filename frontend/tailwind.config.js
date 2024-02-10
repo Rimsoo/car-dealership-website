@@ -12,9 +12,10 @@ module.exports = {
         'custom-shadow-green': '109.5px -110px hsl(120, 100%, 15%)',
         'custom-shadow-red': '109.5px -110px hsl(0, 100%, 40%)',
         'custom-shadow-yellow': '0px 70px hsl(39, 100%, 40%)',
+        'custom-gray': '5px 5px 5px 5px hsl(0, 0%, 80%)',
       },
       colors: {
-        grayFooter: '#666666',
+        'gray-footer': '#666666',
         'custom-green': 'hsl(120, 100%, 15%)',
         'custom-red': 'hsl(0, 100%, 40%)',
         'custom-yellow': 'hsl(39, 100%, 40%)',
