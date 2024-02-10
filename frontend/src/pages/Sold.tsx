@@ -63,8 +63,8 @@ export default function Sold() {
 
     return (
         <div id="Sold">
-            <div className='areaCards'>
-                <h1 className='page-title pb-8'>POJAZDY, KTÓRE ZNALAZŁY JUŻ NOWEGO WŁAŚCICIELA:</h1>
+            <div className='cards-area'>
+                <h1 className='page-title pb-8'>POJAZDY, KTÓRE ZNALAZŁY JUŻ NOWEGO WŁAŚCICIELA</h1>
 
                 {sortedFilteredData.map((car: CarData[], index: number) => (
                         <Car 

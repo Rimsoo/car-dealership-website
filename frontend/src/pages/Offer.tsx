@@ -57,7 +57,7 @@ export default function Offer() {
 
   return (
     <div id="Offer">
-      <div className='areaCards'>
+      <div className='cards-area'>
         <h1 className='page-title pb-8'>SPRAWDŹ NASZĄ OFERTĘ</h1>
         {sortedFilteredData.map((car: CarData[], index: number) => (
           <Car
