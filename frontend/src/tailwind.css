@@ -6,6 +6,9 @@
 }
 
 /* Buy */
+.buy__area__form__attachment {
+    @apply block w-40 my-1 mx-auto p-0.5 border-2 border-black rounded-md text-sm xl:my-px;
+}
 .buy__area__form__input {
     @apply block w-full my-1 mx-auto pl-1 border-2 border-black rounded-md text-lg;
 }
