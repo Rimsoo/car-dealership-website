@@ -108,16 +108,16 @@ export default function CarPage() {
     }
 
     return (
-        <div className='CarPage'>
-            <h1 className='CarPage__price__area CarPage__price__area-header'>
+        <div className='CarPage pb-64'>
+            <h1 className='py-4 px-2 font-bebasFont text-2xl text-center'>
                 {foundCar[1].attributes.title}
 
-                <span className='CarPage__price__area' style={
+                <span className='CarPage__price__area font-medium' style={
                     foundCar[1].attributes.state==='sold' || 
                     foundCar[1].attributes.state==='soon' ? {display: 'none'} : {}
                 }>
-                    <span className='CarPage__price__area__dash'>{foundCar[1].attributes.price ? ' - ' : ''}</span> 
-                    <span className='CarPage__price__area__number'>
+                    <span className='CarPage__price__area__dash px-1'>{foundCar[1].attributes.price ? ` - ` : ''}</span> 
+                    <span className='CarPage__price__area__number sm:block'>
                         {foundCar[1].attributes.state==='zarezerwowane' ? 
                         ' - ZAREZERWOWANE' : 
                         foundCar[1].attributes.price + ' PLN'}
@@ -128,70 +128,70 @@ export default function CarPage() {
             {/* Mini slider */}
             <ImageSlider id='ImageSlider' slides={imagesURLs} />
 
-            <table className='CarPage__table'>
+            <table className='CarPage__table relative top-16 w-90vw max-w-sm mx-auto bg-gray-100 border border-black shadow-car-page-shadow text-[15px] font-medium'>
                 <tbody>
-                    <tr>
-                        <td>Rok produkcji:</td>
-                        <td>{foundCar[1].attributes.year}</td>
+                    <tr className="CarPage__table__body__row">
+                        <td className="CarPage__table__body__row__cell-first">Rok produkcji:</td>
+                        <td className="CarPage__table__body__row__cell-second">{foundCar[1].attributes.year}</td>
                     </tr>
-                    <tr>
-                        <td>Przebieg:</td>
-                        <td>{foundCar[1].attributes.mileage} km</td>
+                    <tr className="CarPage__table__body__row">
+                        <td className="CarPage__table__body__row__cell-first">Przebieg:</td>
+                        <td className="CarPage__table__body__row__cell-second">{foundCar[1].attributes.mileage} km</td>
                     </tr>
-                    <tr>
-                        <td>Paliwo:</td>
-                        <td>{foundCar[1].attributes.fuel}</td>
+                    <tr className="CarPage__table__body__row">
+                        <td className="CarPage__table__body__row__cell-first">Paliwo:</td>
+                        <td className="CarPage__table__body__row__cell-second">{foundCar[1].attributes.fuel}</td>
                     </tr>
-                    <tr>
-                        <td>Moc silnika:</td>
-                        <td>{foundCar[1].attributes.power} KM</td>
+                    <tr className="CarPage__table__body__row">
+                        <td className="CarPage__table__body__row__cell-first">Moc silnika:</td>
+                        <td className="CarPage__table__body__row__cell-second">{foundCar[1].attributes.power} KM</td>
                     </tr>
-                    <tr>
-                        <td>Poj. silnika:</td>
-                        <td>{foundCar[1].attributes.engine_size}</td>
+                    <tr className="CarPage__table__body__row">
+                        <td className="CarPage__table__body__row__cell-first">Poj. silnika:</td>
+                        <td className="CarPage__table__body__row__cell-second">{foundCar[1].attributes.engine_size}</td>
                     </tr>
-                    <tr>
-                        <td>Liczba drzwi:</td>
-                        <td>{foundCar[1].attributes.doors}</td>
+                    <tr className="CarPage__table__body__row">
+                        <td className="CarPage__table__body__row__cell-first">Liczba drzwi:</td>
+                        <td className="CarPage__table__body__row__cell-second">{foundCar[1].attributes.doors}</td>
                     </tr>
-                    <tr>
-                        <td>Liczba miejsc:</td>
-                        <td>{foundCar[1].attributes.seats}</td>
+                    <tr className="CarPage__table__body__row">
+                        <td className="CarPage__table__body__row__cell-first">Liczba miejsc:</td>
+                        <td className="CarPage__table__body__row__cell-second">{foundCar[1].attributes.seats}</td>
                     </tr>
-                    <tr>
-                        <td>Skrzynia biegów:</td>
-                        <td>{foundCar[1].attributes.gearbox}</td>
+                    <tr className="CarPage__table__body__row">
+                        <td className="CarPage__table__body__row__cell-first">Skrzynia biegów:</td>
+                        <td className="CarPage__table__body__row__cell-second">{foundCar[1].attributes.gearbox}</td>
                     </tr>
-                    <tr>
-                        <td>Napęd:</td>
-                        <td>{foundCar[1].attributes.drive}</td>
+                    <tr className="CarPage__table__body__row">
+                        <td className="CarPage__table__body__row__cell-first">Napęd:</td>
+                        <td className="CarPage__table__body__row__cell-second">{foundCar[1].attributes.drive}</td>
                     </tr>
-                    <tr>
-                        <td>Nadwozie:</td>
-                        <td>{foundCar[1].attributes.body}</td>
+                    <tr className="CarPage__table__body__row">
+                        <td className="CarPage__table__body__row__cell-first">Nadwozie:</td>
+                        <td className="CarPage__table__body__row__cell-second">{foundCar[1].attributes.body}</td>
                     </tr>
-                    <tr>
-                        <td>Kolor:</td>
-                        <td>{foundCar[1].attributes.color}</td>
+                    <tr className="CarPage__table__body__row">
+                        <td className="CarPage__table__body__row__cell-first">Kolor:</td>
+                        <td className="CarPage__table__body__row__cell-second">{foundCar[1].attributes.color}</td>
                     </tr>
-                    <tr>
-                        <td>Kraj pochodzenia:</td>
-                        <td>{foundCar[1].attributes.country}</td>
+                    <tr className="CarPage__table__body__row">
+                        <td className="CarPage__table__body__row__cell-first">Kraj pochodzenia:</td>
+                        <td className="CarPage__table__body__row__cell-second">{foundCar[1].attributes.country}</td>
                     </tr>
-                    <tr>
-                        <td>Data pierwszej rejestracji:</td>
-                        <td>{foundCar[1].attributes.first_registration}</td>
+                    <tr className="CarPage__table__body__row">
+                        <td className="CarPage__table__body__row__cell-first">Data pierwszej rejestracji:</td>
+                        <td className="CarPage__table__body__row__cell-second">{foundCar[1].attributes.first_registration}</td>
                     </tr>
-                    <tr>
-                        <td>Forma sprzedaży:</td>
-                        <td>{foundCar[1].attributes.vin}</td>
+                    <tr className="CarPage__table__body__row">
+                        <td className="CarPage__table__body__row__cell-first">Forma sprzedaży:</td>
+                        <td className="CarPage__table__body__row__cell-second">{foundCar[1].attributes.vin}</td>
                     </tr>
                 </tbody>
             </table>
 
-            <div className='CarPage__description'>
-                <div id='description-title'>Opis pojazdu</div>
-                <ReactMarkdown className='CarPage__description__text'>
+            <div className='CarPage__description relative top-32 w-90vw max-w-[1080px] mx-auto bg-gray-100 shadow-car-page-shadow'>
+                <div className="pt-3 pb-7 font-medium text-3xl text-center underline underline-offset-[12px]">Opis pojazdu</div>
+                <ReactMarkdown className='px-2'>
                     {foundCar[1].attributes.description}
                 </ReactMarkdown>
             </div>

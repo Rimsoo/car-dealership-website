@@ -1,7 +1,7 @@
 export default function Buy() {
     return (
         <div id="Buy" className="pt-8 pb-32 font-bebasFont">
-            <div className="max-w-72 w-10/12 px-2 pb-4 mx-auto bg-gray-200 shadow-custom-gray
+            <div className="max-w-72 w-10/12 px-2 pb-4 mx-auto bg-gray-200 shadow-buy-form
             sm:max-w-none sm:w-[530px]
             md:w-[680px]
             xl:w-[1100px] xl:pb-0">

@@ -12,10 +12,12 @@ module.exports = {
         'custom-shadow-green': '109.5px -110px hsl(120, 100%, 15%)',
         'custom-shadow-red': '109.5px -110px hsl(0, 100%, 40%)',
         'custom-shadow-yellow': '0px 70px hsl(39, 100%, 40%)',
-        'custom-gray': '5px 5px 5px 5px hsl(0, 0%, 80%)',
+        'buy-form': '5px 5px 5px 5px hsl(0, 0%, 80%)',
+        'car-page-shadow': '5px 5px 5px 5px hsl(0, 0%, 70%)',
       },
       colors: {
-        'gray-footer': '#666666',
+        'footer-gray': '#666666',
+        'car-page-red': 'hsl(0, 100%, 40%)',
         'custom-green': 'hsl(120, 100%, 15%)',
         'custom-red': 'hsl(0, 100%, 40%)',
         'custom-yellow': 'hsl(39, 100%, 40%)',
@@ -32,6 +34,10 @@ module.exports = {
               'from': { transform: 'rotate(0deg)' },
               'to': { transform: 'rotate(360deg)' },
           },
+      },
+      width: {
+        '80vw': '80vw',
+        '90vw': '90vw',
       },
       screens: {
         'xs': '470px',

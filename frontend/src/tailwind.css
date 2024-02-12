@@ -53,6 +53,22 @@
     @apply pt-6 pb-4 text-2xl text-center underline underline-offset-4 lg:text-left lg:pb-2 lg:pl-1 lg:underline-offset-[6px];
 }
 
+/* Car page */
+.CarPage__table__body__row {
+    @apply flex justify-between;
+
+}
+.CarPage__price__area__dash {
+    @apply hidden xs:inline-block;
+}
+.CarPage__table__body__row__cell-first {
+    @apply pl-1 text-gray-700;    
+
+}
+.CarPage__table__body__row__cell-second {
+    @apply pr-1 text-right text-car-page-red;    
+}
+
 /* Financing page */
 .financing__options {
     @apply my-4 w-full;

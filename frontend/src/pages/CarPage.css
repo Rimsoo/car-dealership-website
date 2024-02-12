@@ -4,37 +4,13 @@
     margin: 0 auto;
     padding-bottom: 60px;
 }
-.CarPage .CarPage__price__area {
-    font-family: bebasFont;
-    font-weight: 500;
-}
-.CarPage .CarPage__price__area-header {
-    padding: 0 40px;
-}
+
 .CarPage .container-slider {
     margin-left: 40px;
 }
 .CarPage__price__area__number,
 .CarPage__price__area__dash {
     color: hsl(0, 100%, 40%);
-}
-.CarPage__table {
-    font-size: 15px;
-    background-color: hsl(0, 0%, 95%);
-    display: inline-block;
-    margin-left: 15px;
-    width: 300px;
-    position: relative;
-    bottom: 295px;
-    border: 0.1px solid black;
-    border-radius: 3px;
-    box-shadow: 5px 5px 5px 5px hsl(0, 0%, 70%);
-}
-.CarPage__table tbody {
-    display: inline-block;
-}
-.CarPage__table tr {
-    display: flex;
 }
 .CarPage__table tr:nth-child(n+2) {
     border-top: 0.1px solid hsl(0, 0%, 30%);
@@ -45,135 +21,24 @@
 }
 /* Data cells of first column */
 .CarPage__table td:nth-child(1) {
-    width: 145px;
-    padding-left: 3px;
-    font-weight: 500;
+    /* font-weight: 500;
     color: hsl(0, 0%, 30%);
-    vertical-align: bottom;
+    vertical-align: bottom; */
 }
 /* Data cells of second column */
-.CarPage__table td:nth-child(2) {
-    width: 145px;
-    text-align: right;
-    font-weight: 500;
-    padding-right: 3px;
-    color: hsl(0, 100%, 40%);
-}
-.CarPage__description {
-    width: 1080px;
-    margin: -180px auto 0;
-    background-color: hsl(0, 0%, 95%);
-    box-shadow: 5px 5px 5px 5px hsl(0, 0%, 70%);
-}
-#description-title {
-    display: block;
-    font-size: 32px;
-    font-weight: 500;
-    padding-bottom: 5px;
-    border-bottom: 3px solid black;
-    margin: 15px auto;
-    width: 200px;
-}
-.CarPage__description__text {
-    padding: 5px 10px;
-    margin: 0;
-}
 @media(max-width: 1250px) {
     .CarPage {
         width: 100%;
     }
-    .CarPage .CarPage__price__area {
-        width: 100%;
-        text-align: center;
-    }
-    .CarPage .CarPage__price__area-header {
-        padding: 0;
-    }
+
     .CarPage .container-slider {
         display: block;
         width: 790px;
         margin: 0 auto;
-    }
-    .CarPage__description {
-        margin: 0;
-        width: 790px;
-        margin: 0 auto;
-        position: relative;
-        margin-top: 0px;
-        margin-top: 80px;
-    }
-    .CarPage__table {
-        margin: 0;
-        display: block;
-        top: 60px;
-        width: 515px;
-        margin: 0 auto;
-    }
-    .CarPage__table tbody {
-        width: 100%;
-    }
-    /* Must be :nth-child() below. Seems unnecessary but it doesn't overwrite without it */
-    .CarPage__table tr td:nth-child(n) {
-        width: 250px;
     }
 }
 @media(max-width: 900px) {
-    .CarPage__description {
-        width: 88vw;
-    }
     .CarPage .container-slider {
         width: 100%;
-    }
-}
-@media(max-width: 620px) {
-    .CarPage__price__area__number {
-        display: block;
-    }
-    .CarPage__price__area__dash {
-        display: none;
-    }
-    .CarPage__table {
-        width: 90vw;
-        top: 90px;
-    }
-    .CarPage__table tbody {
-        display: inline-block; /* crucial for squeezing this element */
-    }
-    .CarPage__description {
-        margin-top: 120px;
-    }
-}
-@media(max-width: 550px) {
-    .CarPage .CarPage__price__area {
-        font-size: 25px;
-    }
-}
-@media(max-width: 450px) {
-    .CarPage {
-        padding-bottom: 80px;
-    }
-    .CarPage .CarPage__price__area {
-        margin: 17px auto;
-        max-width: 90%;
-    }
-    .CarPage__table {
-        top: 120px;
-    }
-    .CarPage__description {
-        margin-top: 140px;
-    }
-}
-@media(max-width: 420px) {
-    .CarPage .CarPage__price__area {
-        margin-bottom: 8px;
-    }
-}
-@media(max-width: 320px) {
-    .CarPage__price__area__number,
-    .CarPage__price__area__dash {
-        font-size: 22px;
-    }
-    .CarPage .CarPage__price__area {
-        padding: 0 5px;
     }
 }
