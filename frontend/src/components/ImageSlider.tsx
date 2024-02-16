@@ -75,7 +75,7 @@ export default function ImageSlider(props: any) {
 
                 {/* --- Bigger slider with modal --- */}
             {/* Background for the modal */}
-            <div id='gallery-modal-overlay' 
+            <div className="fixed top-0 left-0 w-screen h-screen z-30 bg-black bg-opacity-90"
                 style={isGalleryDisplayed ? {display: 'block'} : {display: 'none'}} 
                 onClick={() => setIsGalleryDisplayed(false)}
             ></div>
@@ -87,7 +87,7 @@ export default function ImageSlider(props: any) {
                 alt='Wyselekcjonowane auta premium'
                 onClick={goToPrevImg} 
                 style={isGalleryDisplayed ? {display: 'block'} : {display: 'none'}}
-                />
+            />
 
             {/* Slide */}
             <div id='bigSlide' style={isGalleryDisplayed ? {display: 'block'} : {display: 'none'}} >

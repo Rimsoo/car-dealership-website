@@ -98,10 +98,10 @@
 
 /* Slider component */
 .container-slider__arrow {
-    @apply absolute flex items-center top-0 h-full z-10 bg-transparent duration-1000;
+    @apply absolute flex items-center top-0 h-full z-20 bg-transparent duration-1000;
 }
 .container-slider__arrow__img {
-    @apply relative w-8 px-2 opacity-0 transition-opacity duration-1000;
+    @apply relative w-5 px-1 opacity-0 transition-opacity duration-1000 xs:w-8 xs:px-2;
 }
 
 /* Wallpaper component */
