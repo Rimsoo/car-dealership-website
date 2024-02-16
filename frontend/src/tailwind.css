@@ -96,6 +96,14 @@
     lg:opacity-100;
 }
 
+/* Slider component */
+.container-slider__arrow {
+    @apply absolute flex items-center top-0 h-full z-10 bg-transparent duration-1000;
+}
+.container-slider__arrow__img {
+    @apply relative w-8 px-2 opacity-0 transition-opacity duration-1000;
+}
+
 /* Wallpaper component */
 .wallpaper__pic {
     @apply h-full w-full absolute bg-center bg-cover;

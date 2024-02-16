@@ -110,14 +110,13 @@ export default function CarPage() {
     return (
         <div className='CarPage pb-64'>
             <h1 className='py-4 px-2 font-bebasFont text-2xl text-center'>
-                {foundCar[1].attributes.title}
-
-                <span className='CarPage__price__area font-medium' style={
+                {foundCar[1].attributes.title + ' '}
+                <span className='CarPage__price__area font-medium sm:inline-block' style={
                     foundCar[1].attributes.state==='sold' || 
                     foundCar[1].attributes.state==='soon' ? {display: 'none'} : {}
                 }>
-                    <span className='CarPage__price__area__dash px-1'>{foundCar[1].attributes.price ? ` - ` : ''}</span> 
-                    <span className='CarPage__price__area__number sm:block'>
+                    <span className='CarPage__price__area__dash px-1'>{foundCar[1].attributes.price ? ` - ` : ' '}</span> 
+                    <span className='CarPage__price__area__number'>
                         {foundCar[1].attributes.state==='zarezerwowane' ? 
                         ' - ZAREZERWOWANE' : 
                         foundCar[1].attributes.price + ' PLN'}

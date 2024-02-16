@@ -23,8 +23,8 @@ export default function ImageSlider(props: any) {
 
     const dotsStyle = {
         fontSize: '60px',
-        lineHeight: '47px',
-        marginTop: "-12px"
+        lineHeight: '48px',
+        marginTop: "-7.5px"
     }
 
     // Auto sliding
@@ -34,41 +34,36 @@ export default function ImageSlider(props: any) {
         }, 7000);
       
         return () => {
-          clearInterval(interval);
+            clearInterval(interval);
         };
     }, [currentIndex]); // goToNextImg changes currentIndex invoking this effect which invokes goToNextImg making loop.
     
     return (
-        <div className="container-slider">
-            {/* Smaller slider without modal */}
+        <div className="relative h-72 max-w-[620px] mx-auto cursor-pointer 
+        xs:h-96
+        lg:inline-block">
+                {/* ---Smaller slider without modal--- */}
+            {/* Slide */}
             <div 
-                className='ImageSlide' 
+                className='ImageSlide w-full h-full rounded-md bg-center object-cover bg-cover z-10' 
                 style={ImageSlideStyle}
                 onClick={() => setIsGalleryDisplayed(true)}
             ></div>
             
             {/*  Left arrow */}
-            <div 
-                className='container-slider__left-arrow' 
-                onClick={goToPrevImg}
-            >
-                <img src={chevron} alt='Samochody premium Miechów'></img>
+            <div className='container-slider__left-arrow container-slider__arrow' onClick={goToPrevImg}>
+                <img className="container-slider__arrow__img" src={chevron} alt='Samochody premium Miechów'></img>
             </div>
 
             {/*  Right arrow */}
-            <div 
-                className='container-slider__right-arrow' 
-                onClick={goToNextImg}
-            >
-                <img src={chevron} alt='Samochody premium Kraków'></img>
+            <div className='container-slider__right-arrow container-slider__arrow right-0' onClick={goToNextImg}>
+                <img className="container-slider__arrow__img rotate-180" src={chevron} alt='Samochody premium Kraków'></img>
             </div>
 
             {/* Dots */}
-            <div
-                className="container-slider__dots-area"
-            >
+            <div className="flex justify-center flex-wrap px-5 max-w-full mb-5">
                 {props.slides.map((slide: string, index: number) => (
-                    <div 
+                    <div className='mx-0.5 my-px h-5 text-4xl text-red-600 leading-none cursor-pointer'
                         key={index}
                         onClick={() => setCurrentIndex(index)}
                         style={currentIndex === index ? dotsStyle : {}}
@@ -78,6 +73,7 @@ export default function ImageSlider(props: any) {
                 ))} 
             </div>
 
+                {/* --- Bigger slider with modal --- */}
             {/* Background for the modal */}
             <div id='gallery-modal-overlay' 
                 style={isGalleryDisplayed ? {display: 'block'} : {display: 'none'}} 
@@ -93,7 +89,7 @@ export default function ImageSlider(props: any) {
                 style={isGalleryDisplayed ? {display: 'block'} : {display: 'none'}}
                 />
 
-            {/* --- Bigger slider with modal --- */}
+            {/* Slide */}
             <div id='bigSlide' style={isGalleryDisplayed ? {display: 'block'} : {display: 'none'}} >
                 {/* Slide */}
                 <img src={props.slides[currentIndex]} alt='Dobre auta używane, zaufany dealer' />
@@ -113,7 +109,6 @@ export default function ImageSlider(props: any) {
                 onClick={goToNextImg}
                 style={isGalleryDisplayed ? {display: 'block'} : {display: 'none'}}
             />
-            
         </div>
     )
 }

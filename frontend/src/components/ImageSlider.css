@@ -1,47 +1,5 @@
-.container-slider {
-    width: 790px;
-    height: 500px;
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-}
-.ImageSlide {
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-    background-position: center;
-    background-size: cover;
-    object-fit: cover;
-    z-index: 3;
-    /* transition: background-image 800ms linear; */
-}
 
     /* ---Arrows--- */
-.container-slider__left-arrow,
-.container-slider__right-arrow {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    top: 0px;
-    height: 100%;   
-    z-index: 4;
-    background-color: hsl(0, 0%, 0%, 0);
-    transition-duration: 1s;
-}
-.container-slider__left-arrow img,
-.container-slider__right-arrow img {
-    position: relative;
-    width: 30px;
-    padding: 0 10px;
-    opacity: 0;
-    transition: opacity 1s;
-}
-.container-slider__right-arrow {
-    right: 0;
-}
-.container-slider__right-arrow img {
-    transform: rotate(180deg);
-}
 .ImageSlide:hover  ~ .container-slider__right-arrow,     
 .ImageSlide:hover  ~ .container-slider__left-arrow,
 .container-slider__left-arrow:hover,
@@ -57,22 +15,6 @@
     transition: opacity 1s;
 }
 
-    /* ---Dots--- */
-.container-slider__dots-area {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 0 20px;
-    max-width: 100%;
-    margin-bottom: 20px;
-}
-.container-slider__dots-area div {
-    margin: 3px 1px;
-    font-size: 40px;
-    color: hsl(0, 100%, 40%);
-    height: 20px;
-    line-height: 20px;
-}
 /* ================= Fullscreen gallery ================== */
 #gallery-modal-overlay {
     width: 100vw;
@@ -137,16 +79,8 @@
         left: 1%;
     }
 }
-@media(max-width: 1160px) {
-    .container-slider {
-        display: block;
-        margin: 0 auto;
-    }
-}
+
 @media (max-width: 900px) {
-    .container-slider {
-        width: 90vw;
-    }
     .gallery-modal__arrow {
         --arrow-height: 40px;
         height: var(--arrow-height);
@@ -158,14 +92,7 @@
     }
 }
 @media (max-width: 750px) {
-    .container-slider {
-        height: 70vw;
-    }
-    .container-slider__left-arrow img,
-    .container-slider__right-arrow img {
-        width: 20px;
-        padding: 0 8px;
-    }
+
     #close-gallery {
         font-size: 60px;
         top: -20px;
@@ -195,11 +122,7 @@
     }
 }
 @media (max-width: 350px) {
-    .container-slider__left-arrow img,
-    .container-slider__right-arrow img {
-        width: 10px;
-        padding: 0 5px;
-    }
+
     .gallery-modal__arrow {
         top: calc(50vh - 22px);
     }
