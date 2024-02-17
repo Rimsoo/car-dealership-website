@@ -1,4 +1,3 @@
-import './CarPage.css';
 import useFetch from '../hooks/useFetch';
 import ImageSlider from '../components/ImageSlider';
 import Loader from '../components/Loader';
@@ -87,7 +86,6 @@ export default function CarPage() {
 
     // A function checking if ID in URL is same as currently checked car from db
     function isThatCar(fetchedCar: Car[]) {
-        console.log(fetchedCar[1])
         return fetchedCar[1].id === idCar;
     }
     
@@ -104,14 +102,17 @@ export default function CarPage() {
         ));
     } else {
         // if url has ID which is not in db
-        return <h3 style={{textAlign: 'center', marginTop: 50}}>Brak samochodu o takim ID</h3>
+        return <h3 style={{textAlign: 'center', fontSize: '22px', fontWeight: '700', marginTop: 50, paddingInline: '5px'}}>Brak samochodu o takim identyfikatorze.</h3>
     }
 
     return (
-        <div className='CarPage pb-64'>
-            <h1 className='py-4 px-2 font-bebasFont text-2xl text-center'>
+        <div className='CarPage relative 
+        border-4 border-red-300 
+        pb-64'> {/* Relative position necessary to lock table with absolute position */}
+            <h1 className='py-4 px-2 font-bebasFont text-2xl text-center
+            sm:py-6 sm:text-3xl'>
                 {foundCar[1].attributes.title + ' '}
-                <span className='CarPage__price__area font-medium sm:inline-block' style={
+                <div className='CarPage__price__area font-medium text-red-600 sm:inline-block' style={
                     foundCar[1].attributes.state==='sold' || 
                     foundCar[1].attributes.state==='soon' ? {display: 'none'} : {}
                 }>
@@ -121,15 +122,16 @@ export default function CarPage() {
                         ' - ZAREZERWOWANE' : 
                         foundCar[1].attributes.price + ' PLN'}
                     </span>
-                </span>
+                </div>
             </h1>
 
             {/* Mini slider */}
             <ImageSlider id='ImageSlider' slides={imagesURLs} />
 
-            <table className='CarPage__table relative top-16 w-90vw max-w-sm mx-auto bg-gray-100 border border-black shadow-car-page-shadow text-[15px] font-medium'>
+            <table className='relative top-16 w-90vw max-w-lg mx-auto bg-gray-100 border border-black shadow-car-page-shadow text-[15px] font-medium
+            lg:absolute lg:top-0 lg:right-0'>
                 <tbody>
-                    <tr className="CarPage__table__body__row">
+                    <tr className="CarPage__table__body__row border-0"> {/* The first row must be without border */}
                         <td className="CarPage__table__body__row__cell-first">Rok produkcji:</td>
                         <td className="CarPage__table__body__row__cell-second">{foundCar[1].attributes.year}</td>
                     </tr>

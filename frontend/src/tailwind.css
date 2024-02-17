@@ -55,11 +55,11 @@
 
 /* Car page */
 .CarPage__table__body__row {
-    @apply flex justify-between;
+    @apply flex justify-between border-t border-gray-500;
 
 }
 .CarPage__price__area__dash {
-    @apply hidden xs:inline-block;
+    @apply hidden sm:inline-block;
 }
 .CarPage__table__body__row__cell-first {
     @apply pl-1 text-gray-700;    
@@ -67,6 +67,10 @@
 }
 .CarPage__table__body__row__cell-second {
     @apply pr-1 text-right text-car-page-red;    
+}
+.CarPage__table__body__row__cell-first,
+.CarPage__table__body__row__cell-second {
+    @apply leading-7;
 }
 
 /* Financing page */

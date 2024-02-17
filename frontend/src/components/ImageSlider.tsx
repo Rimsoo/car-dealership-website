@@ -39,7 +39,7 @@ export default function ImageSlider(props: any) {
     }, [currentIndex]); // goToNextImg changes currentIndex invoking this effect which invokes goToNextImg making loop.
     
     return (
-        <div className="relative h-72 max-w-[620px] mx-auto cursor-pointer 
+        <div className="relative h-72 max-w-[620px] mx-auto mb-8 cursor-pointer 
         xs:h-96
         lg:inline-block">
                 {/* ---Smaller slider without modal--- */}
@@ -61,7 +61,7 @@ export default function ImageSlider(props: any) {
             </div>
 
             {/* Dots */}
-            <div className="flex justify-center flex-wrap px-5 max-w-full mb-5">
+            <div className="hidden sm:flex justify-center flex-wrap px-5 max-w-full mb-5">
                 {props.slides.map((slide: string, index: number) => (
                     <div className='mx-0.5 my-px h-5 text-4xl text-red-600 leading-none cursor-pointer'
                         key={index}
