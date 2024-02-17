@@ -28,12 +28,18 @@ module.exports = {
       },      
       fontSize: {
         '17': '1.0625rem',
+      },      
+      inset: {
+        '10p': '10%',
       },
       keyframes: {
           'spinner-spin': {
               'from': { transform: 'rotate(0deg)' },
               'to': { transform: 'rotate(360deg)' },
           },
+      },
+      maxHeight: {
+        '80vh': '80vh',
       },
       width: {
         '80vw': '80vw',

@@ -78,6 +78,11 @@
     @apply my-4 w-full;
 }
 
+/* ImageSlider component */
+.image-slider__big-arrows {
+    @apply z-50 h-8 px-1;
+}
+
 /* The class for titles in different pages */
 .page-title {
     @apply pt-8 text-3xl font-medium text-center underline decoration-2 underline-offset-[8px] font-bebasFont
@@ -103,7 +108,6 @@
 /* Slider component */
 .slider--custom-margin {
     @media (min-width: 1024px) {
-        /* margin-left: 200px; */
         margin-left: calc(50vw - 510px) !important;
     }
 }

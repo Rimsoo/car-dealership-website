@@ -51,12 +51,16 @@ export default function ImageSlider(props: any) {
             ></div>
             
             {/*  Left arrow */}
-            <div className='container-slider__left-arrow container-slider__arrow' onClick={goToPrevImg}>
+            <div className="container-slider__arrow
+            container-slider__left-arrow
+            " onClick={goToPrevImg}>
                 <img className="container-slider__arrow__img" src={chevron} alt='Samochody premium Miechów'></img>
             </div>
 
             {/*  Right arrow */}
-            <div className='container-slider__right-arrow container-slider__arrow right-0' onClick={goToNextImg}>
+            <div className="container-slider__arrow
+            container-slider__right-arrow
+            right-0" onClick={goToNextImg}>
                 <img className="container-slider__arrow__img rotate-180" src={chevron} alt='Samochody premium Kraków'></img>
             </div>
 
@@ -80,35 +84,38 @@ export default function ImageSlider(props: any) {
                 onClick={() => setIsGalleryDisplayed(false)}
             ></div>
 
-            {/* Left arrow */}
-            <img 
-                className='gallery-modal__left-arrow gallery-modal__arrow' 
-                src={chevronBig}
-                alt='Wyselekcjonowane auta premium'
-                onClick={goToPrevImg} 
-                style={isGalleryDisplayed ? {display: 'block'} : {display: 'none'}}
-            />
+            {/*  Closing button */}
+            <div className='fixed -top-4 right-0 rotate-45 text-8xl font-light text-white text-opacity-90 cursor-pointer z-50'
+                style={isGalleryDisplayed ? {display: 'block'} : {display: 'none'}} 
+                onClick={() => setIsGalleryDisplayed(false)}
+            >+</div>
 
             {/* Slide */}
-            <div id='bigSlide' style={isGalleryDisplayed ? {display: 'block'} : {display: 'none'}} >
-                {/* Slide */}
-                <img src={props.slides[currentIndex]} alt='Dobre auta używane, zaufany dealer' />
-                {/*  Closing button */}
-                <div 
-                    id='close-gallery'
-                    style={isGalleryDisplayed ? {display: 'block'} : {display: 'none'}} 
-                    onClick={() => setIsGalleryDisplayed(false)}
-                >+</div>/
-            </div>
+            <div className='flex fixed w-full h-4/5 z-40 top-10p left-0 items-center justify-between
+            sm:justify-evenly'
+                style={isGalleryDisplayed ? {} : {display: 'none'}} 
+            >
+                {/* Left arrow */}
+                <img className='image-slider__big-arrows' 
+                    src={chevronBig}
+                    alt='Wyselekcjonowane auta premium'
+                    onClick={goToPrevImg} 
+                    style={isGalleryDisplayed ? {display: 'block'} : {display: 'none'}}
+                />
 
-            {/* Right arrow */}
-            <img 
-                className='gallery-modal__right-arrow gallery-modal__arrow'
-                src={chevronBig}
-                alt='Wyselekcjonowane auta topowych marek'
-                onClick={goToNextImg}
-                style={isGalleryDisplayed ? {display: 'block'} : {display: 'none'}}
-            />
+                {/* Slide */}
+                <img className='absolute w-full h-auto max-h-80vh object-contain
+                sm:static sm:w-80vw' src={props.slides[currentIndex]} alt='Dobre auta używane, zaufany dealer' />
+
+                {/* Right arrow */}
+                <img 
+                    className='image-slider__big-arrows rotate-180'
+                    src={chevronBig}
+                    alt='Wyselekcjonowane auta topowych marek'
+                    onClick={goToNextImg}
+                    style={isGalleryDisplayed ? {display: 'block'} : {display: 'none'}}
+                />
+            </div>
         </div>
     )
 }

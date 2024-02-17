@@ -106,9 +106,7 @@ export default function CarPage() {
     }
 
     return (
-        <div className='CarPage relative 
-        border-4 border-red-300 
-        pb-64'> {/* Relative position necessary to lock table with absolute position */}
+        <div className='CarPage relative pb-64'> {/* Relative position necessary to lock table with absolute position */}
             <h1 className='py-4 px-2 font-bebasFont text-2xl text-center
             sm:py-6 sm:text-3xl'>
                 {foundCar[1].attributes.title + ' '}
