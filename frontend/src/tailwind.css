@@ -101,6 +101,12 @@
 }
 
 /* Slider component */
+.slider--custom-margin {
+    @media (min-width: 1024px) {
+        /* margin-left: 200px; */
+        margin-left: calc(50vw - 510px) !important;
+    }
+}
 .container-slider__arrow {
     @apply absolute flex items-center top-0 h-full z-20 bg-transparent duration-1000;
 }

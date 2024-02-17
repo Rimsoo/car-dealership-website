@@ -41,7 +41,7 @@ export default function ImageSlider(props: any) {
     return (
         <div className="relative h-72 max-w-[620px] mx-auto mb-8 cursor-pointer 
         xs:h-96
-        lg:inline-block">
+        lg:inline-block slider--custom-margin">
                 {/* ---Smaller slider without modal--- */}
             {/* Slide */}
             <div 

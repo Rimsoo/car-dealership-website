@@ -129,8 +129,11 @@ export default function CarPage() {
             <ImageSlider id='ImageSlider' slides={imagesURLs} />
 
             <table className='relative top-16 w-90vw max-w-lg mx-auto bg-gray-100 border border-black shadow-car-page-shadow text-[15px] font-medium
-            lg:absolute lg:top-0 lg:right-0'>
-                <tbody>
+            lg:inline-block lg:top-0 lg:left-2 lg:max-w-none lg:w-[360px]
+            xl:left-4
+            '>
+                {/* lg:absolute lg:top-[84px] lg:right-3 lg:max-w-none lg:w-[360px] */}
+                <tbody className='block width-full'>
                     <tr className="CarPage__table__body__row border-0"> {/* The first row must be without border */}
                         <td className="CarPage__table__body__row__cell-first">Rok produkcji:</td>
                         <td className="CarPage__table__body__row__cell-second">{foundCar[1].attributes.year}</td>
