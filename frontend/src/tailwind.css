@@ -33,13 +33,56 @@
     @apply absolute w-[10px] h-[10px] bottom-[30.5px] left-0 -z-1;
 }
 .car__container__shadow--green {
-    @apply bg-green-900 shadow-custom-shadow-green;
+    @apply bg-green-900 shadow-car-shadow-green;
 }
 .car__container__shadow--red {
-    @apply bg-red-500 shadow-custom-shadow-red;
+    @apply bg-red-500 shadow-car-shadow-red;
 }
 .car__container__shadow--yellow {
-    @apply bg-amber-500 shadow-custom-shadow-yellow;
+    @apply bg-amber-500 shadow-car-shadow-yellow;
+}
+
+/* Little shadows of ribbon */
+.Car .container-ribbon--green::after, 
+.Car .container-ribbon--yellow::after, 
+.Car .container-ribbon--red::after {
+    content: ''; /* must be to show color */
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    bottom: 30.5px;
+    left: 0;
+    z-index: -1;
+}
+.Car .container-ribbon--green::after {
+    background-color: hsl(120, 100%, 15%);
+    box-shadow: 109.5px -110px hsl(120, 100%, 15%);
+}
+.Car .container-ribbon--yellow::after {
+    background-color: hsl(39, 100%, 40%);
+    box-shadow: 109.5px -110px hsl(39, 100%, 40%);
+}
+.Car .container-ribbon--red::after {
+    background-color: hsl(0, 100%, 40%);
+    box-shadow: 109.5px -110px hsl(0, 100%, 40%);
+}
+
+* {
+    border: 1px solid red;
+}
+/* In case of "Benzyna + LPG" description the 4th div needs more space, so that's why the code below */
+.Car__description__container--odd,
+.Car__description__container--even {
+    @apply inline-block h-8;
+}
+.Car__description__container--odd {
+    @apply relative w-20;
+}
+.Car__description__container--even {
+    @apply relative w-[100px];
+}
+.Car__description__container__img {
+    @apply inline-block max-h-4 mr-1;
 }
 
 /* Contact page */

@@ -9,18 +9,18 @@ module.exports = {
           'spin-slow': 'spinner-spin 5s linear infinite',
       },
       boxShadow: {
-        'custom-shadow-green': '109.5px -110px hsl(120, 100%, 15%)',
-        'custom-shadow-red': '109.5px -110px hsl(0, 100%, 40%)',
-        'custom-shadow-yellow': '0px 70px hsl(39, 100%, 40%)',
+        'car-shadow-green': '109.5px -110px hsl(120, 100%, 15%)',
+        'car-shadow-red': '109.5px -110px hsl(0, 100%, 40%)',
+        'car-shadow-yellow': '0px 70px hsl(39, 100%, 40%)',
         'buy-form': '5px 5px 5px 5px hsl(0, 0%, 80%)',
         'car-page-shadow': '5px 5px 5px 5px hsl(0, 0%, 70%)',
       },
       colors: {
         'footer-gray': '#666666',
         'car-page-red': 'hsl(0, 100%, 40%)',
-        'custom-green': 'hsl(120, 100%, 15%)',
-        'custom-red': 'hsl(0, 100%, 40%)',
-        'custom-yellow': 'hsl(39, 100%, 40%)',
+        'car-green': 'hsl(120, 100%, 15%)',
+        'car-red': 'hsl(0, 100%, 40%)',
+        'car-yellow': 'hsl(39, 100%, 40%)',
       },
       fontFamily: {
         bebasFont: ['bebasFont', 'sans-serif'],
@@ -37,6 +37,9 @@ module.exports = {
               'from': { transform: 'rotate(0deg)' },
               'to': { transform: 'rotate(360deg)' },
           },
+      },
+      lineHeight: {
+        'car-title': '27px',
       },
       maxHeight: {
         '80vh': '80vh',

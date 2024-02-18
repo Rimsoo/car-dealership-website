@@ -23,11 +23,8 @@ export default function ImageSlider(props: any) {
     const dotsStyle: React.CSSProperties = {
         fontSize: '60px',
         position: 'relative',
-        top: '-3px',
+        bottom: '3.5px',
     }
-    // paddingTop: "-7.5px"
-    // marginTop: "-7.5px"
-    // lineHeight: '48px',
 
     // Auto sliding
     useEffect(() => {
