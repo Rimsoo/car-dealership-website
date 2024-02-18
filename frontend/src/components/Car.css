@@ -6,7 +6,7 @@
     font-family: bebasFont;
     display: inline-block;
     margin: 10px 13px;
-    position: relative; /* seems unnecessary but it stops .Car__ribbon of going out of the area due to its absolute: position */
+    position: relative; /* Stops .Car__ribbon of going out of the area due to its absolute: position */
 }
 .Car span {
     position: absolute;

@@ -130,7 +130,6 @@ export default function CarPage() {
             lg:inline-block lg:top-0 lg:left-2 lg:max-w-none lg:w-[360px]
             xl:left-4
             '>
-                {/* lg:absolute lg:top-[84px] lg:right-3 lg:max-w-none lg:w-[360px] */}
                 <tbody className='block width-full'>
                     <tr className="CarPage__table__body__row border-0"> {/* The first row must be without border */}
                         <td className="CarPage__table__body__row__cell-first">Rok produkcji:</td>

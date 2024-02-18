@@ -20,11 +20,14 @@ export default function ImageSlider(props: any) {
         setCurrentIndex(newIndex);
     }
 
-    const dotsStyle = {
+    const dotsStyle: React.CSSProperties = {
         fontSize: '60px',
-        lineHeight: '48px',
-        marginTop: "-7.5px"
+        position: 'relative',
+        top: '-3px',
     }
+    // paddingTop: "-7.5px"
+    // marginTop: "-7.5px"
+    // lineHeight: '48px',
 
     // Auto sliding
     useEffect(() => {
@@ -38,13 +41,15 @@ export default function ImageSlider(props: any) {
     }, [currentIndex]); // goToNextImg changes currentIndex invoking this effect which invokes goToNextImg making loop.
     
     return (
-        <div className="relative h-72 max-w-[620px] mx-auto mb-8 cursor-pointer 
+        <div className="relative h-72 max-w-[620px] mx-auto mb-8
         xs:h-96
-        lg:inline-block slider--custom-margin">
+        lg:inline-block lg:min-w-[620px] slider--custom-margin">
+            {/* When there are very few dots (less than one full row) - image shrinks. Must be min-width set above */}
+
                 {/* ---Smaller slider without modal--- */}
             {/* Slide */}
             <div 
-                className='container-slider__slider w-full h-full rounded-md bg-center object-cover bg-cover z-10' 
+                className='container-slider__slider w-full h-full rounded-md bg-center object-cover bg-cover z-10 cursor-pointer' 
                 style={ImageSlideStyle}
                 onClick={() => setIsGalleryDisplayed(true)}
             ></div>
@@ -60,9 +65,10 @@ export default function ImageSlider(props: any) {
             </div>
 
             {/* Dots */}
-            <div className="hidden sm:flex justify-center flex-wrap px-5 max-w-full mb-5">
+            <div className="hidden justify-center flex-wrap px-5
+            sm:flex">
                 {props.slides.map((slide: string, index: number) => (
-                    <div className='mx-0.5 my-px h-5 text-4xl text-red-600 leading-none cursor-pointer'
+                    <div className='px-0.5 text-3xl leading-6 text-red-600 cursor-pointer'
                         key={index}
                         onClick={() => setCurrentIndex(index)}
                         style={currentIndex === index ? dotsStyle : {}}
