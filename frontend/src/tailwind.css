@@ -117,6 +117,20 @@
 .container-slider__arrow__img {
     @apply relative w-5 px-1 opacity-0 transition-opacity duration-1000 xs:w-8 xs:px-2;
 }
+.container-slider__slider:hover  ~ .container-slider__right-arrow,     
+.container-slider__slider:hover  ~ .container-slider__left-arrow,
+.container-slider__left-arrow:hover,
+.container-slider__right-arrow:hover {      
+    background-color: hsl(0, 0%, 0%, 0.4);
+    transition-duration: 1s;
+}
+.container-slider__slider:hover ~ .container-slider__right-arrow img,     
+.container-slider__slider:hover ~ .container-slider__left-arrow img,
+.container-slider__left-arrow:hover > img,
+.container-slider__right-arrow:hover > img {
+    opacity: 1;
+    transition: opacity 1s;
+}
 
 /* Wallpaper component */
 .wallpaper__pic {

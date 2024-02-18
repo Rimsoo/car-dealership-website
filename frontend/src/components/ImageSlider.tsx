@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import '../components/ImageSlider.css';
 import chevron from '../assets/imageSlider/chevron-left-red.png';
 import chevronBig from '../assets/imageSlider/chevron-left-grey.png';
 
@@ -45,22 +44,18 @@ export default function ImageSlider(props: any) {
                 {/* ---Smaller slider without modal--- */}
             {/* Slide */}
             <div 
-                className='ImageSlide w-full h-full rounded-md bg-center object-cover bg-cover z-10' 
+                className='container-slider__slider w-full h-full rounded-md bg-center object-cover bg-cover z-10' 
                 style={ImageSlideStyle}
                 onClick={() => setIsGalleryDisplayed(true)}
             ></div>
             
             {/*  Left arrow */}
-            <div className="container-slider__arrow
-            container-slider__left-arrow
-            " onClick={goToPrevImg}>
+            <div className="container-slider__arrow container-slider__left-arrow" onClick={goToPrevImg}>
                 <img className="container-slider__arrow__img" src={chevron} alt='Samochody premium Miechów'></img>
             </div>
 
             {/*  Right arrow */}
-            <div className="container-slider__arrow
-            container-slider__right-arrow
-            right-0" onClick={goToNextImg}>
+            <div className="container-slider__arrow container-slider__right-arrow right-0" onClick={goToNextImg}>
                 <img className="container-slider__arrow__img rotate-180" src={chevron} alt='Samochody premium Kraków'></img>
             </div>
 
