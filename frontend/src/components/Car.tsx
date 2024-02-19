@@ -17,7 +17,7 @@ export default function Car(props: any) {
     return (
         <div className='Car
             inline-block relative border-2 border-black rounded-[20px] w-[270px] h-[370px] my-3 mx-3 font-bebasFont '>
-            {/* ---Ribbon--- */}
+                {/* ---Ribbon--- */}
             {/* Container of the ribbon */}
             <span className={
                 (props.state === 'soon' || props.state === 'zarezerwowane') ? 
@@ -54,12 +54,13 @@ export default function Car(props: any) {
                 style={isImageLoaded ? {display: 'none'} : {display: 'block'}}
             />
 
-            {/* Infobox */}
-            <p className='flex items-center justify-center my-2 h-[56px] text-center'>
+            {/* Car's name */}
+            <p className='flex items-center justify-center py-px px-2 h-[56px] text-center'>
                 <p className='inline-block leading-car-title text-xl align-middle'>{props.title}</p>
             </p>
 
-            <div className='w-48 h-16 mx-auto'>
+            {/* Infobox */}
+            <div className='relative bottom-1 w-48 h-16 mx-auto'>
                 <div className='Car__description__container--odd'>                    
                     <img 
                         className='Car__description__container__img' 
@@ -94,8 +95,8 @@ export default function Car(props: any) {
                 </div>
             </div>
 
-            <NavLink to={`/CarPage/${props.id}`} >
-                <p className='w-[97px] h-[31px] leading-[31px] text-center tracking-[0.03em] text-[20px] border-2 border-black rounded-md block mx-auto bg-white text-black transition-colors duration-1000 no-underline cursor-pointer
+            <NavLink to={`/CarPage/${props.id}`}>
+                <p className='w-[97px] h-[34px] leading-[34px] text-center tracking-[0.03em] text-[20px] border-2 border-black rounded-md block mx-auto bg-white text-black transition-colors duration-1000 no-underline cursor-pointer
                 hover:bg-black hover:text-white'>SZCZEGÓŁY</p>
             </NavLink>
         </div>

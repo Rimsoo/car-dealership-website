@@ -67,13 +67,10 @@
     box-shadow: 109.5px -110px hsl(0, 100%, 40%);
 }
 
-* {
-    border: 1px solid red;
-}
 /* In case of "Benzyna + LPG" description the 4th div needs more space, so that's why the code below */
 .Car__description__container--odd,
 .Car__description__container--even {
-    @apply inline-block h-8;
+    @apply relative left-5 inline-block h-8;
 }
 .Car__description__container--odd {
     @apply relative w-20;

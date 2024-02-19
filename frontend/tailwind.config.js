@@ -39,7 +39,7 @@ module.exports = {
           },
       },
       lineHeight: {
-        'car-title': '27px',
+        'car-title': '21px',
       },
       maxHeight: {
         '80vh': '80vh',
