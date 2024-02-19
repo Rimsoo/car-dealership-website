@@ -5,7 +5,6 @@ import engineering from '../assets/card/engineering.png';
 import gasoline from '../assets/card/gasoline.png';
 import mileage from '../assets/card/mileage.png';
 import gif from "../assets/card/loading.gif";
-import './Car.css';
 
 export default function Car(props: any) {
     const [isImageLoaded, setIsImageLoaded] = useState(false);
@@ -21,13 +20,15 @@ export default function Car(props: any) {
             {/* Container of the ribbon */}
             <span className={
                 (props.state === 'soon' || props.state === 'zarezerwowane') ? 
-                    'container-ribbon--yellow' : (props.state === 'sold' ? 
-                        'container-ribbon--red' : 'container-ribbon--green')}> 
+                    'car__container-ribbon--yellow' : (props.state === 'sold' ? 
+                        'car__container-ribbon--red' : 'car__container-ribbon--green')
+                        + ' car__container-ribbon'}> 
                 {/* The ribbon */}
                 <span className={
                     (props.state === 'soon' || props.state === 'zarezerwowane') ? 
                         'bg-orange-400' : (props.state === 'sold' ? 
-                            'bg-red-600' : 'bg-green-700')}>
+                            'bg-red-600' : 'bg-green-700')
+                            + ' car__container-ribbon'}>
                     {/* Text on the ribbon */}
                     {props.state === 'soon' ? 
                         'Już wkrótce!' : (props.state === 'sold' ?
