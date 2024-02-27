@@ -42,54 +42,7 @@
     @apply bg-amber-500 shadow-car-shadow-yellow;
 }
 
-/* Little shadows of ribbon */
-/* .car__container-ribbon { */
-.Car span {
-    position: absolute;
-    top: -8px;
-    left: -8px;
-    width: 150px;
-    height: 150px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-.Car span span {
-    position: absolute;
-    left: -60px;
-    top: 50px;
-    width: 250px;
-    height: 27px;
-    transform: rotate(-45deg);
-    transform: rotate(-45deg) translateY(-20px);
-    letter-spacing: 0.02em;
-}
 
-.car__container-ribbon--green::after, 
-.car__container-ribbon--yellow::after, 
-.car__container-ribbon--red::after {
-    content: ''; /* must be to show color */
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    bottom: 30.5px;
-    left: 0;
-    z-index: -1;
-}
-.car__container-ribbon--green::after {
-    background-color: hsl(120, 100%, 15%);
-    box-shadow: 109.5px -110px hsl(120, 100%, 15%);
-}
-.car__container-ribbon--yellow::after {
-    background-color: hsl(39, 100%, 40%);
-    box-shadow: 109.5px -110px hsl(39, 100%, 40%);
-}
-.car__container-ribbon--red::after {
-    background-color: hsl(0, 100%, 40%);
-    box-shadow: 109.5px -110px hsl(0, 100%, 40%);
-}
 
 /* In case of "Benzyna + LPG" description the 4th div needs more space, so that's why the code below */
 .Car__description__container--odd,

@@ -6,6 +6,8 @@ import gasoline from '../assets/card/gasoline.png';
 import mileage from '../assets/card/mileage.png';
 import gif from "../assets/card/loading.gif";
 
+import "../components/Car.css";
+
 export default function Car(props: any) {
     const [isImageLoaded, setIsImageLoaded] = useState(false);
 
@@ -16,27 +18,23 @@ export default function Car(props: any) {
     return (
         <div className='Car
             inline-block relative border-2 border-black rounded-[20px] w-[270px] h-[370px] my-3 mx-3 font-bebasFont '>
-                {/* ---Ribbon--- */}
-            {/* Container of the ribbon */}
+
+            {/* Container for a ribbon */}
             <span className={
                 (props.state === 'soon' || props.state === 'zarezerwowane') ? 
-                    'car__container-ribbon--yellow' : (props.state === 'sold' ? 
-                        'car__container-ribbon--red' : 'car__container-ribbon--green')
-                        + ' car__container-ribbon'}> 
+                    'container-ribbon--yellow' : (props.state === 'sold' ? 
+                        'container-ribbon--red' : 'container-ribbon--green')}>
+                {/* The shadow as a pseudoelement */}
                 {/* The ribbon */}
                 <span className={
                     (props.state === 'soon' || props.state === 'zarezerwowane') ? 
-                        'bg-orange-400' : (props.state === 'sold' ? 
-                            'bg-red-600' : 'bg-green-700')
-                            + ' car__container-ribbon'}>
-                    {/* Text on the ribbon */}
+                    'car__container__shadow--yellow' : (props.state === 'sold' ? 
+                    'car__container__shadow--red' : 'car__container__shadow--green')}>
                     {props.state === 'soon' ? 
                         'Już wkrótce!' : (props.state === 'sold' ?
-                            'Sprzedane' : props.state === 'zarezerwowane' ?
-                                'Zarezerwowane' : props.state)}
+                        'Sprzedane' : props.state === 'zarezerwowane' ?
+                        'Zarezerwowane' : props.state)}
                 </span>
-                {/* Equivalent of the :after pseudoelement from the previous code */}
-                {/* <span className="absolute w-[10px] h-[10px] bottom-[30.5px] left-0 -z-10 bg-green-100"></span> */}
             </span>
 
             {/* Main photo */}
