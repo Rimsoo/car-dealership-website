@@ -29,7 +29,7 @@ export default function Car(props: any) {
                 <span className={
                     (props.state === 'soon' || props.state === 'zarezerwowane') ? 
                     'bg-amber-500' : (props.state === 'sold' ? 
-                    'bg-red-500' : 'bg-green-800')}>
+                    'bg-red-600' : 'bg-green-800')}>
                     {props.state === 'soon' ? 
                         'Już wkrótce!' : (props.state === 'sold' ?
                         'Sprzedane' : props.state === 'zarezerwowane' ?

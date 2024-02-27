@@ -51,6 +51,10 @@ module.exports = {
       screens: {
         'xs': '470px',
       },
+      spacing: {
+        '2.5': '10px', // For width and height
+        '7.625': '30.5px', // Custom value for bottom
+      },
       transitionDuration: {
         '1500': '1500ms',
         '2000': '2000ms',
