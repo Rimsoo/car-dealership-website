@@ -28,19 +28,12 @@
 .car__description__container__icons {
     @apply inline-block max-h-4 mr-1;
 }
+
+
 /* Ribbons */
-.car__container__shadow {
+/* .car__container__shadow {
     @apply absolute w-[10px] h-[10px] bottom-[30.5px] left-0 -z-1;
-}
-.car__container__shadow--green {
-    @apply bg-green-900 shadow-car-shadow-green;
-}
-.car__container__shadow--red {
-    @apply bg-red-500 shadow-car-shadow-red;
-}
-.car__container__shadow--yellow {
-    @apply bg-amber-500 shadow-car-shadow-yellow;
-}
+} */
 
 
 

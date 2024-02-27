@@ -33,24 +33,15 @@
     left: 0;
     z-index: -1;
 }
-.Car .container-ribbon--green::after {
+.Car .car__container-ribbon--green::after {
     background-color: hsl(120, 100%, 15%);
     box-shadow: 109.5px -110px hsl(120, 100%, 15%); /* Line responsible for the second shadow (the one higher) */
 }
-.Car .container-ribbon--yellow::after {
+.Car .car__container-ribbon--yellow::after {
     background-color: hsl(39, 100%, 40%);
     box-shadow: 109.5px -110px hsl(39, 100%, 40%); /* Line responsible for the second shadow (the one higher) */
 }
-.Car .container-ribbon--red::after {
+.Car .car__container-ribbon--red::after {
     background-color: hsl(0, 100%, 40%);
     box-shadow: 109.5px -110px hsl(0, 100%, 40%); /* Line responsible for the second shadow (the one higher) */
 }
-/* .Car .ribbon--green {
-    background: green;
-}
-.Car .ribbon--yellow {
-    background: orange;
-}
-.Car .ribbon--red {
-    background: red;
-} */

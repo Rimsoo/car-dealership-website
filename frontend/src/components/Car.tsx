@@ -22,14 +22,14 @@ export default function Car(props: any) {
             {/* Container for a ribbon */}
             <span className={
                 (props.state === 'soon' || props.state === 'zarezerwowane') ? 
-                    'container-ribbon--yellow' : (props.state === 'sold' ? 
-                        'container-ribbon--red' : 'container-ribbon--green')}>
-                {/* The shadow as a pseudoelement */}
+                'car__container-ribbon--yellow' : (props.state === 'sold' ? 
+                'car__container-ribbon--red' : 'car__container-ribbon--green')}>
+                {/* The shadow of the container as a pseudoelement */}
                 {/* The ribbon */}
                 <span className={
                     (props.state === 'soon' || props.state === 'zarezerwowane') ? 
-                    'car__container__shadow--yellow' : (props.state === 'sold' ? 
-                    'car__container__shadow--red' : 'car__container__shadow--green')}>
+                    'bg-amber-500' : (props.state === 'sold' ? 
+                    'bg-red-500' : 'bg-green-800')}>
                     {props.state === 'soon' ? 
                         'Już wkrótce!' : (props.state === 'sold' ?
                         'Sprzedane' : props.state === 'zarezerwowane' ?
