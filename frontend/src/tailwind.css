@@ -35,8 +35,8 @@
     @apply absolute top-[-8px] left-[-8px] w-[150px] h-[150px] text-white flex justify-center items-center overflow-hidden;
 }
 .Car span span {
-    @apply absolute left-[-60px] top-[50px] w-[250px] h-[27px] tracking-[0.02em];
     transform: rotate(-45deg) translateY(-20px);
+    @apply absolute left-[-60px] top-[50px] w-[250px] h-[27px] tracking-[0.02em];
 }
 
 /* Shadow of a ribbon */
@@ -46,17 +46,19 @@
     content: ''; /* must be to show color */
     @apply absolute w-2.5 h-2.5 bottom-7.625 left-0 z-[-1]; 
 }
+
+/* Lines responsible for the second shadow (the one higher) */
 .car__container-ribbon--green::after {
     background-color: hsl(120, 100%, 15%);
-    box-shadow: 109.5px -110px hsl(120, 100%, 15%); /* Line responsible for the second shadow (the one higher) */
+    box-shadow: 109.5px -110px hsl(120, 100%, 15%); 
 }
 .car__container-ribbon--yellow::after {
     background-color: hsl(39, 100%, 40%);
-    box-shadow: 109.5px -110px hsl(39, 100%, 40%); /* Line responsible for the second shadow (the one higher) */
+    box-shadow: 109.5px -110px hsl(39, 100%, 40%);
 }
 .car__container-ribbon--red::after {
     background-color: hsl(0, 100%, 40%);
-    box-shadow: 109.5px -110px hsl(0, 100%, 40%); /* Line responsible for the second shadow (the one higher) */
+    box-shadow: 109.5px -110px hsl(0, 100%, 40%);
 }
 
 /* In case of "Benzyna + LPG" description the 4th div needs more space, so that's why the code below */
