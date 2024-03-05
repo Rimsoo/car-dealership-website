@@ -58,7 +58,7 @@
 }
 .car__container-ribbon--red::after {
     background-color: hsl(0, 100%, 40%);
-=    box-shadow: 109.5px -110px hsl(0, 100%, 40%);
+    box-shadow: 109.5px -110px hsl(0, 100%, 40%);
 }
 
 /* In case of "Benzyna + LPG" description the 4th div needs more space, so that's why the code below */
