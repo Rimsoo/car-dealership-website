@@ -11,8 +11,13 @@ const mergeSort = (arrayToSplit) => {
 const mergeSortComparing = (arrayLeft, arrayRight) => {
     const arraySorted = [];
 
+
+// console.log(arrayLeft, arrayRight)
+
+
     while(arrayLeft.length && arrayRight.length) {
-        if (arrayLeft[0][1].attributes.owners_number > arrayRight[0][1].attributes.owners_number) {
+        // if (arrayLeft[0][1].attributes.owners_number > arrayRight[0][1].attributes.owners_number) {
+        if (arrayLeft[0].attributes.owners_number > arrayRight[0].attributes.owners_number) {
             arraySorted.push(arrayLeft.shift());
         } else {
             arraySorted.push(arrayRight.shift());

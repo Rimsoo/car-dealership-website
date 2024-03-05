@@ -78,17 +78,18 @@ export default function Sold() {
 
             // console.log(data1.data, data2.data)
             // console.log([...data1, ...data2])
-            console.log([...data1.data, ...data2.data]);
-
+            // console.log([...data1.data, ...data2.data]);
+            
             // Assuming the data you're interested in is in the `data` field
             return [...data1.data, ...data2.data];
         })
         .then((combinedData) => {
             // Filter and sort data here or do it later when rendering
             const filteredData = combinedData.filter((car: CarData) => car.attributes.state === 'sold');
+            // console.log(filteredData);
 
             // Implement or import your mergeSort function here, ensuring it is compatible with TypeScript
-            const sortedFilteredData: CarData[] = mergeSort(filteredData); // Ensure you have a `mergeSort` function defined and it is typed correctly
+            const sortedFilteredData = mergeSort(filteredData); // Ensure you have a `mergeSort` function defined and it is typed correctly
 
             setData(sortedFilteredData);
         })
@@ -101,10 +102,9 @@ export default function Sold() {
         });
     }, []); // Empty dependency array means this effect runs once on mount
 
-    if (loading) return <div>Loading...</div>;
+    if (loading) return <Loader/>
     if (error) return <p>Error: {error}</p>;
     
-    // if (loading) return <Loader/>
     // if (error) return <p>Error!!!</p>
     // console.log(data)
     
@@ -113,26 +113,39 @@ export default function Sold() {
 
     // Using merge sort for setting cars in the order basing on "owners_number" attribute. It's treated as "kolejność" attribute in the user's panel
 
+    console.log(data);
+
     return (
         <div id="Sold">
             <div className='cards-area'>
                 <h1 className='page-title pb-8'>POJAZDY, KTÓRE ZNALAZŁY JUŻ NOWEGO WŁAŚCICIELA</h1>
 
                 {/* {sortedFilteredData.map((car: CarData[], index: number) => ( */}
-                {/* {data.map((car: CarData[], index: number) => (
+                {/* {data.map((car: CarData[], index: number) => ( */}
+                {data.map((car: CarData, index: number) => (
                         <Car 
-                            key={'Car no ' + index}
-                            id={car[1].id}
-                            state={car[1].attributes.state}
-                            title={car[1].attributes.title}
-                            mileage={car[1].attributes.mileage} 
-                            year={car[1].attributes.year} 
-                            fuel={car[1].attributes.fuel} 
-                            power={car[1].attributes.power} 
-                            imageSource={strapiURL + car[1].attributes.gallery.data[0].attributes.formats.small.url}
+                            // key={'Car no ' + index}
+                            // id={car[1].id}
+                            // state={car[1].attributes.state}
+                            // title={car[1].attributes.title}
+                            // mileage={car[1].attributes.mileage} 
+                            // year={car[1].attributes.year} 
+                            // fuel={car[1].attributes.fuel} 
+                            // power={car[1].attributes.power} 
+                            // imageSource={strapiURL + car[1].attributes.gallery.data[0].attributes.formats.small.url}
+
+                            // key={'Car no ' + index}
+                            // id={car.id}
+                            // state={car.attributes.state}
+                            // title={car.attributes.title}
+                            // mileage={car.attributes.mileage} 
+                            // year={car.attributes.year} 
+                            // fuel={car.attributes.fuel} 
+                            // power={car.attributes.power} 
+                            // imageSource={strapiURL + car.attributes.gallery.data[0].attributes.formats.small.url}
                         />
                     )
-                )} */}
+                )}
             </div>
         </div>
     )
