@@ -6,8 +6,6 @@ import gasoline from '../assets/card/gasoline.png';
 import mileage from '../assets/card/mileage.png';
 import gif from "../assets/card/loading.gif";
 
-import "../components/Car.css";
-
 export default function Car(props: any) {
     const [isImageLoaded, setIsImageLoaded] = useState(false);
 
