@@ -6,7 +6,7 @@ import mergeSort from '../hooks/mergeSort';
 const strapiURL: string = 'https://kokpit.alfamotors.pl';
 
 // The code line below gets more than 25 records given by a default, the Strapi's limit is 100 (can't be increased)
-const apiURL: string = 'https://kokpit.alfamotors.pl/api/cars?sort=date&pagination[pageSize]=200&populate=*'; 
+const apiURL: string = 'https://kokpit.alfamotors.pl/api/cars?sort=date&pagination[pageSize]=200&populate=*';
 
     // Local:
 // const strapiURL = 'http://localhost:1337';
