@@ -50,7 +50,7 @@ interface CarData {
 }
 
 export default function Sold() {
-    const { loading, error, data } = useFetch(apiURL);
+    let { loading, error, data } = useFetch(apiURL);
     
     if (loading) return <Loader/>
     if (error) return <p>Error!!!</p>
