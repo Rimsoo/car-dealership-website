@@ -31,10 +31,15 @@
 
 
 /* Ribbons */
-.Car span {
+.Car .car__container-ribbon--yellow,
+.Car .car__container-ribbon--red,
+.Car .car__container-ribbon--green {
     @apply absolute top-[-8px] left-[-8px] w-[150px] h-[150px] text-white flex justify-center items-center overflow-hidden;
 }
-.Car span span {
+.Car .car__container-ribbon--yellow span,
+.Car .car__container-ribbon--red span,
+.Car .car__container-ribbon--green span {
+    @apply absolute top-[-8px] left-[-8px] w-[150px] h-[150px] text-white flex justify-center items-center overflow-hidden;
     transform: rotate(-45deg) translateY(-20px);
     @apply absolute left-[-60px] top-[50px] w-[250px] h-[27px] tracking-[0.02em];
 }
@@ -57,8 +62,8 @@
     box-shadow: 109.5px -110px hsl(39, 100%, 40%);
 }
 .car__container-ribbon--red::after {
-    background-color: hsl(0, 100%, 40%);
-    box-shadow: 109.5px -110px hsl(0, 100%, 40%);
+    background-color: hsl(0, 100%, 30%);
+    box-shadow: 109.5px -110px hsl(0, 100%, 30%);
 }
 
 /* In case of "Benzyna + LPG" description the 4th div needs more space, so that's why the code below */

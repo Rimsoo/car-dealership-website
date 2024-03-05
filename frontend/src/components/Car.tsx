@@ -22,7 +22,6 @@ export default function Car(props: any) {
                 (props.state === 'soon' || props.state === 'zarezerwowane') ? 
                 'car__container-ribbon--yellow' : (props.state === 'sold' ? 
                 'car__container-ribbon--red' : 'car__container-ribbon--green')}>
-                {/* The shadow of the container as a pseudoelement */}
                 {/* The ribbon */}
                 <span className={
                     (props.state === 'soon' || props.state === 'zarezerwowane') ? 
@@ -33,6 +32,7 @@ export default function Car(props: any) {
                         'Sprzedane' : props.state === 'zarezerwowane' ?
                         'Zarezerwowane' : props.state)}
                 </span>
+                {/* The shadow of the container as a pseudoelement ::after here */}
             </span>
 
             {/* Main photo */}
@@ -53,7 +53,7 @@ export default function Car(props: any) {
 
             {/* Car's name */}
             <p className='flex items-center justify-center py-px px-2 h-[56px] text-center'>
-                <p className='inline-block leading-car-title text-xl align-middle'>{props.title}</p>
+                <span className='inline-block leading-car-title text-xl align-middle'>{props.title}</span>
             </p>
 
             {/* Infobox */}
