@@ -119,7 +119,7 @@
 
 /* ImageSlider component */
 .image-slider__big-arrows {
-    @apply z-50 h-8 px-1;
+    @apply z-50 h-8 px-1 cursor-pointer;
 }
 
 /* The class for titles in different pages */
