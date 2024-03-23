@@ -1,5 +1,4 @@
 import Car from '../components/Car';
-import Loader from '../components/Loader';
 
 const strapiURL: string = 'https://kokpit.alfamotors.pl';
 
@@ -45,29 +44,12 @@ interface CarData {
 
 export default function Sold(props: any) {
     const arrayToDisplay = props.arrayToDisplay;
-    // const arrayToDisplay = Array.from(props);
-    console.log(arrayToDisplay);
 
     return (
         <div id="Sold">
             <div className='cards-area'>
                 <h1 className='page-title pb-8'>POJAZDY, KTÓRE ZNALAZŁY JUŻ NOWEGO WŁAŚCICIELA</h1>
-                {/* <div>{props}</div> */}
-{/* 
-                {sortedFilteredData.map((car: CarData[], index: number) => (
-                        <Car 
-                            key={'Car no ' + index}
-                            id={car[1].id}
-                            state={car[1].attributes.state}
-                            title={car[1].attributes.title}
-                            mileage={car[1].attributes.mileage} 
-                            year={car[1].attributes.year} 
-                            fuel={car[1].attributes.fuel} 
-                            power={car[1].attributes.power} 
-                            imageSource={strapiURL + car[1].attributes.gallery.data[0].attributes.formats.small.url}
-                        />
-                    )
-                )} */}
+
                 {arrayToDisplay.map((car: CarData[], index: number) => (
                         <Car 
                             key={'Car no ' + index}

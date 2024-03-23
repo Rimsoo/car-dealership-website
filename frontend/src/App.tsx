@@ -10,6 +10,7 @@ import Contact from "./pages/Contact";
 import Financing from "./pages/Financing";
 import Footer from "./components/Footer";
 import Offer from "./pages/Offer";
+import Loader from './components/Loader';
 import Sold from "./pages/Sold";
 import ScrollPagesTop from "./hooks/scrollPagesTop";
 import SiteHeader from "./components/SiteHeader";
@@ -76,7 +77,7 @@ function App() {
   const fetchedObject1 = useFetch(apiURL1);
   const fetchedObject2 = useFetch(apiURL2);
   
-  if (fetchedObject1.loading || fetchedObject2.loading) return;
+  if (fetchedObject1.loading || fetchedObject2.loading) return Loader;
   if (fetchedObject1.error || fetchedObject2.error) return;
   
   // Merging both arrays
@@ -102,8 +103,6 @@ function App() {
   }
   const arrayOfArraysWithSoldCars = splitIntoChunks(filteredCarsSold);
 
-  const trueArray = Array.from(arrayOfArraysWithSoldCars[0]);
-
   return (
     <Router>
       <ApolloProvider client={client}>
@@ -117,9 +116,11 @@ function App() {
             <Route path='/carpage/:id' element={<CarPage />} /> 
             <Route path='/contact' element={<Contact />} /> 
             <Route path='/financing' element={<Financing />} /> 
-            <Route path='/' element={<Offer />} />
+            <Route path='/' element={<Offer arrayToDisplay={filteredCarsOffered} />} />
 
-            <Route path={`/sold`} element={<Sold arrayToDisplay={trueArray} />} />
+            {arrayOfArraysWithSoldCars.map((array: CarData[], index: number) => {
+              return <Route path={`/sold/${index + 1}`} element={<Sold arrayToDisplay={array} />} />
+            })}
 
             <Route path='/thanks' element={<Thanks />} /> 
           </Routes>

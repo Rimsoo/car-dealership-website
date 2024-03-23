@@ -59,29 +59,28 @@ export default function SiteHeader() {
                         <span className={`siteHeader__li__span  ${location.pathname === '/' && 'text-gray-300'}`}>Oferta</span>
                     </li>
                 </NavLink>
-                <NavLink onClick={hideMenu} to='/sold' >
+                <NavLink onClick={hideMenu} to='/sold/1' >
                     <li className='siteHeader__li'>
-                        <span className={`siteHeader__li__span  ${location.pathname === '/Sold' && 'text-gray-300'}`}>Sprzedane</span>
+                        <span className={`siteHeader__li__span  ${location.pathname.startsWith('/sold') || location.pathname.startsWith('/Sold') ? 'text-gray-300' : ''}`}>Sprzedane</span>
                     </li>
                 </NavLink>
-                <NavLink onClick={hideMenu} to='/About' > 
+                <NavLink onClick={hideMenu} to='/about' > 
                      <li className='siteHeader__li'>
-                        <span className={`siteHeader__li__span  ${location.pathname === '/About' && 'text-gray-300'}`}>O nas</span>
+                         <span className={`siteHeader__li__span  ${location.pathname === '/about' && 'text-gray-300'}`}>O nas</span>                    </li>
+                </NavLink>
+                <NavLink onClick={hideMenu} to='/buy' > 
+                    <li className='siteHeader__li'>
+                        <span className={`siteHeader__li__span  ${location.pathname === '/buy' && 'text-gray-300'}`}>Odkup pojazdów</span>
                     </li>
                 </NavLink>
-                <NavLink onClick={hideMenu} to='/Buy' > 
+                <NavLink onClick={hideMenu} to='/financing' > 
                     <li className='siteHeader__li'>
-                        <span className={`siteHeader__li__span  ${location.pathname === '/Buy' && 'text-gray-300'}`}>Odkup pojazdów</span>
-                    </li>
-                </NavLink>
-                <NavLink onClick={hideMenu} to='/Financing' > 
-                    <li className='siteHeader__li'>
-                        <span className={`siteHeader__li__span  ${location.pathname === '/Financing' && 'text-gray-300'}`}>Finansowanie</span>
+                        <span className={`siteHeader__li__span  ${location.pathname === '/financing' && 'text-gray-300'}`}>Finansowanie</span>
                     </li>
                 </NavLink> 
-                <NavLink onClick={hideMenu} to='/Contact' > 
+                <NavLink onClick={hideMenu} to='/contact' > 
                     <li className='siteHeader__li'>
-                        <span className={`siteHeader__li__span  ${location.pathname === '/Contact' && 'text-gray-300'}`}>Kontakt</span>
+                        <span className={`siteHeader__li__span  ${location.pathname === '/contact' && 'text-gray-300'}`}>Kontakt</span>
                     </li>
                 </NavLink>
             </ul>
