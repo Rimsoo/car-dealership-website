@@ -59,7 +59,7 @@ export default function SiteHeader() {
                         <span className={`siteHeader__li__span  ${location.pathname === '/' && 'text-gray-300'}`}>Oferta</span>
                     </li>
                 </NavLink>
-                <NavLink onClick={hideMenu} to='/Sold' >
+                <NavLink onClick={hideMenu} to='/sold' >
                     <li className='siteHeader__li'>
                         <span className={`siteHeader__li__span  ${location.pathname === '/Sold' && 'text-gray-300'}`}>Sprzedane</span>
                     </li>

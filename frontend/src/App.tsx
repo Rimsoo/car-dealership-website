@@ -76,8 +76,6 @@ function App() {
   const fetchedObject1 = useFetch(apiURL1);
   const fetchedObject2 = useFetch(apiURL2);
   
-  // if (fetchedObject1.loading || fetchedObject2.loading) return <Loader/>
-  // if (fetchedObject1.error || fetchedObject2.error) return <p>Error!!!</p>
   if (fetchedObject1.loading || fetchedObject2.loading) return;
   if (fetchedObject1.error || fetchedObject2.error) return;
   
@@ -104,7 +102,7 @@ function App() {
   }
   const arrayOfArraysWithSoldCars = splitIntoChunks(filteredCarsSold);
 
-  console.log(typeof arrayOfArraysWithSoldCars);
+  const trueArray = Array.from(arrayOfArraysWithSoldCars[0]);
 
   return (
     <Router>
@@ -121,7 +119,7 @@ function App() {
             <Route path='/financing' element={<Financing />} /> 
             <Route path='/' element={<Offer />} />
 
-            <Route path={`/sold/${1}`} element={<Sold arrayToDisplay={arrayOfArraysWithSoldCars} />} />
+            <Route path={`/sold`} element={<Sold arrayToDisplay={trueArray} />} />
 
             <Route path='/thanks' element={<Thanks />} /> 
           </Routes>
