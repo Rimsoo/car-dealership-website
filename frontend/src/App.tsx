@@ -33,7 +33,10 @@ const client = new ApolloClient({
 
 // The code lines below get more than 25 records given by a default, the Strapi's limit is 100 (can't be increased)
 const apiURL1: string = 'https://kokpit.alfamotors.pl/api/cars?sort=date&pagination[pageSize]=100&populate=*';
-const apiURL2: string = 'https://kokpit.alfamotors.pl/api/cars?sort=date&pagination[start]=100&pagination[limit]=100&populate=*'; 
+const apiURL2: string = 'https://kokpit.alfamotors.pl/api/cars?sort=date&pagination[start]=100&pagination[limit]=100&populate=*';
+
+// Pages with sold cars counter
+let chunksQuantity = 0;
 
 // TypeScript
 interface CarAttributes {
@@ -95,10 +98,14 @@ function App() {
   // Splitting Sold cars into smaller arrays each containing up to 48 elements
   function splitIntoChunks(array: []) {
     const result= []
+    chunksQuantity = 0;
+
     for (let i = 0; i < array.length; i += 48) {
       const chunk = array.slice(i, i + 48);
       result.push(chunk);
+      chunksQuantity++;
     }
+
     return result;
   }
   const arrayOfArraysWithSoldCars = splitIntoChunks(filteredCarsSold);
@@ -119,7 +126,7 @@ function App() {
             <Route path='/' element={<Offer arrayToDisplay={filteredCarsOffered} />} />
 
             {arrayOfArraysWithSoldCars.map((array: CarData[], index: number) => {
-              return <Route path={`/sold/${index + 1}`} element={<Sold arrayToDisplay={array} />} />
+              return <Route path={`/sold/${index + 1}`} element={<Sold arrayToDisplay={array} pagesQuantity={chunksQuantity} />} />
             })}
 
             <Route path='/thanks' element={<Thanks />} /> 

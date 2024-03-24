@@ -1,4 +1,5 @@
 import Car from '../components/Car';
+import PagesToggler from '../components/PagesToggler';
 
 const strapiURL: string = 'https://kokpit.alfamotors.pl';
 
@@ -44,6 +45,7 @@ interface CarData {
 
 export default function Sold(props: any) {
     const arrayToDisplay = props.arrayToDisplay;
+    const pagesQuantity = props.pagesQuantity;
 
     return (
         <div id="Sold">
@@ -64,6 +66,8 @@ export default function Sold(props: any) {
                         />
                     )
                 )}
+
+                <PagesToggler pagesQuantity={pagesQuantity} />
             </div>
         </div>
     )
