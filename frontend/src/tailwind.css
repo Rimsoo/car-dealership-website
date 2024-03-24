@@ -17,6 +17,10 @@
     @apply mx-auto pb-12 w-[285px] sm:w-[610px] lg:w-[900px] xl:w-[1200px] pb-16;
 }
 
+.cards-area--sold {
+    @apply flex flex-wrap justify-center;
+}
+
 /* Car component */
 .car__description__container--odd {
     @apply inline-block h-8 w-[70px];

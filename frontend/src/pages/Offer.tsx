@@ -44,8 +44,8 @@ export default function Offer(props: any) {
 
   return (
     <div id="Offer">
+      <h1 className='page-title pb-8'>SPRAWDŹ NASZĄ OFERTĘ</h1>
       <div className='cards-area'>
-        <h1 className='page-title pb-8'>SPRAWDŹ NASZĄ OFERTĘ</h1>
         {arrayToDisplay.map((car: CarData[], index: number) => (
           <Car
             key={'Car no ' + index}
