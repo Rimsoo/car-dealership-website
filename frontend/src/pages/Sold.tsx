@@ -1,4 +1,5 @@
 import Car from '../components/Car';
+import Loader from '../components/Loader';
 import PagesToggler from '../components/PagesToggler';
 
 const strapiURL: string = 'https://kokpit.alfamotors.pl';
@@ -43,28 +44,36 @@ interface CarData {
     attributes: CarAttributes;
 }
 
-export default function Sold(props: any) {
-    const arrayToDisplay = props.arrayToDisplay;
-    const pagesQuantity = props.pagesQuantity;
+
+interface SoldProps {
+    arrayToDisplay: CarData[][];
+    isLoading: boolean;
+    pagesQuantity: number;
+}
+
+export default function Sold(props: SoldProps) {
+    const { arrayToDisplay, isLoading, pagesQuantity } = props;
 
     return (
         <div id="Sold">
             <h1 className='page-title pb-8'>POJAZDY, KTÓRE ZNALAZŁY JUŻ NOWEGO WŁAŚCICIELA</h1>
             <div className='cards-area cards-area--sold'>
 
-                {arrayToDisplay.map((car: CarData[], index: number) => (
-                    <Car 
-                        key={'Car no ' + index}
-                        id={car[1].id}
-                        state={car[1].attributes.state}
-                        title={car[1].attributes.title}
-                        mileage={car[1].attributes.mileage} 
-                        year={car[1].attributes.year} 
-                        fuel={car[1].attributes.fuel} 
-                        power={car[1].attributes.power} 
-                        imageSource={strapiURL + car[1].attributes.gallery.data[0].attributes.formats.small.url}
-                    />
-                ))}
+                {isLoading ? (<Loader/>) : (
+                    arrayToDisplay.map((car: CarData[], index: number) => (
+                        <Car 
+                            key={'Car no ' + index}
+                            id={car[1].id}
+                            state={car[1].attributes.state}
+                            title={car[1].attributes.title}
+                            mileage={car[1].attributes.mileage} 
+                            year={car[1].attributes.year} 
+                            fuel={car[1].attributes.fuel} 
+                            power={car[1].attributes.power} 
+                            imageSource={strapiURL + car[1].attributes.gallery.data[0].attributes.formats.small.url}
+                        />
+                    ))
+                )}
 
                 <PagesToggler pagesQuantity={pagesQuantity} />
             </div>

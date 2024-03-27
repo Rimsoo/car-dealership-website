@@ -1,3 +1,4 @@
+import {useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // import { HashRouter } from 'react-router-dom';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'; // For fetching with graphql
@@ -10,7 +11,6 @@ import Contact from "./pages/Contact";
 import Financing from "./pages/Financing";
 import Footer from "./components/Footer";
 import Offer from "./pages/Offer";
-import Loader from './components/Loader';
 import Sold from "./pages/Sold";
 import ScrollPagesTop from "./hooks/scrollPagesTop";
 import SiteHeader from "./components/SiteHeader";
@@ -77,10 +77,22 @@ interface CarData {
 }
 
 function App() {
+  const [isLoading, setIsLoading] = useState<boolean>(true); // Correct initialization with useState
+
   const fetchedObject1 = useFetch(apiURL1);
   const fetchedObject2 = useFetch(apiURL2);
+
+  // React useEffect hook to reactively manage isLoading based on fetched data
+  useEffect(() => {
+    // Update isLoading based on loading states of fetched objects
+    if (fetchedObject1.loading || fetchedObject2.loading) {
+      setIsLoading(true);
+    } else {
+      setIsLoading(false);
+    }
+    // Also consider updating isLoading based on error states if necessary
+  }, [fetchedObject1.loading, fetchedObject2.loading, fetchedObject1.error, fetchedObject2.error]);
   
-  if (fetchedObject1.loading || fetchedObject2.loading) return Loader;
   if (fetchedObject1.error || fetchedObject2.error) return;
   
   // Merging both arrays
@@ -123,10 +135,10 @@ function App() {
             <Route path='/carpage/:id' element={<CarPage />} /> 
             <Route path='/contact' element={<Contact />} /> 
             <Route path='/financing' element={<Financing />} /> 
-            <Route path='/' element={<Offer arrayToDisplay={filteredCarsOffered} />} />
+            <Route path='/' element={<Offer arrayToDisplay={filteredCarsOffered} isLoading={isLoading} />} />
 
-            {arrayOfArraysWithSoldCars.map((array: CarData[], index: number) => {
-              return <Route path={`/sold/${index + 1}`} element={<Sold arrayToDisplay={array} pagesQuantity={chunksQuantity} />} />
+            {arrayOfArraysWithSoldCars.map((array: CarData[][], index: number) => {
+              return <Route path={`/sold/${index + 1}`} element={<Sold arrayToDisplay={array} isLoading={isLoading} pagesQuantity={chunksQuantity} />} />
             })}
 
             <Route path='/thanks' element={<Thanks />} /> 

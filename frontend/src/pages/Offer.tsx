@@ -1,4 +1,5 @@
 import Car from '../components/Car';
+import Loader from '../components/Loader';
 
 const strapiURL: string = 'https://kokpit.alfamotors.pl';
 
@@ -39,26 +40,34 @@ interface CarData {
   attributes: CarAttributes;
 }
 
-export default function Offer(props: any) {
-  const arrayToDisplay = props.arrayToDisplay;
+interface OfferProps {
+  arrayToDisplay: CarData[][];
+  isLoading: boolean;
+}
+
+export default function Offer(props: OfferProps) {
+  const { arrayToDisplay, isLoading } = props;
 
   return (
     <div id="Offer">
       <h1 className='page-title pb-8'>SPRAWDŹ NASZĄ OFERTĘ</h1>
       <div className='cards-area'>
-        {arrayToDisplay.map((car: CarData[], index: number) => (
-          <Car
-            key={'Car no ' + index}
-            id={car[1].id}
-            state={car[1].attributes.state}
-            title={car[1].attributes.title}
-            mileage={car[1].attributes.mileage} 
-            year={car[1].attributes.year} 
-            fuel={car[1].attributes.fuel} 
-            power={car[1].attributes.power} 
-            imageSource={strapiURL + car[1].attributes.gallery.data[0].attributes.formats.small.url}
-          />
-        ))}
+        
+        {isLoading ? (<Loader/>) : (
+          arrayToDisplay.map((car: CarData[], index: number) => (
+            <Car
+              key={'Car no ' + index}
+              id={car[1].id}
+              state={car[1].attributes.state}
+              title={car[1].attributes.title}
+              mileage={car[1].attributes.mileage} 
+              year={car[1].attributes.year} 
+              fuel={car[1].attributes.fuel} 
+              power={car[1].attributes.power} 
+              imageSource={strapiURL + car[1].attributes.gallery.data[0].attributes.formats.small.url}
+            />
+          ))
+        )}
       </div>
     </div>
   )

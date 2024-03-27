@@ -1,5 +1,5 @@
 const mergeSort = (arrayToSplit) => {
-    if (arrayToSplit.length === 1) return arrayToSplit;
+    if (arrayToSplit.length <= 1) return arrayToSplit;
 
     const arrayMiddleOne = arrayToSplit.length / 2;
     const arrayLeft = arrayToSplit.slice(0, arrayMiddleOne);

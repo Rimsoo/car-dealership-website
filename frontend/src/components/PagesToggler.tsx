@@ -1,6 +1,10 @@
 import { useLocation, NavLink } from 'react-router-dom';
 
-export default function PagesToggler (props: any) {
+interface PagesTogglerProps {
+    pagesQuantity: number;
+}
+
+export default function PagesToggler (props: PagesTogglerProps) {
     const pagesQuantity: number = props.pagesQuantity;
     const location = useLocation();
 
@@ -17,11 +21,9 @@ export default function PagesToggler (props: any) {
         </NavLink>
     ));
     
-    console.log(pages);
-
     return (
         <div id='PagesToggler' className=''>
-            <ul className='flex py-2 list-none justify-center font-bebasFont text-2xl'>
+            <ul className='flex pt-7 pb-1 list-none justify-center font-bebasFont text-2xl'>
                 {pages}
             </ul>
         </div>
