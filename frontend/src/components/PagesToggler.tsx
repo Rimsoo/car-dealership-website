@@ -23,7 +23,7 @@ export default function PagesToggler (props: PagesTogglerProps) {
     
     return (
         <div id='PagesToggler' className=''>
-            <ul className='flex pt-7 pb-1 list-none justify-center font-bebasFont text-2xl'>
+            <ul className='flex w-full pb-16 list-none justify-center font-bebasFont text-2xl'>
                 {pages}
             </ul>
         </div>

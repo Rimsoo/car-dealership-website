@@ -58,7 +58,6 @@ export default function Sold(props: SoldProps) {
         <div id="Sold">
             <h1 className='page-title pb-8'>POJAZDY, KTÓRE ZNALAZŁY JUŻ NOWEGO WŁAŚCICIELA</h1>
             <div className='cards-area cards-area--sold'>
-
                 {isLoading ? (<Loader/>) : (
                     arrayToDisplay.map((car: CarData[], index: number) => (
                         <Car 
@@ -74,9 +73,9 @@ export default function Sold(props: SoldProps) {
                         />
                     ))
                 )}
-
-                <PagesToggler pagesQuantity={pagesQuantity} />
             </div>
+
+            <PagesToggler pagesQuantity={pagesQuantity} />  
         </div>
     )
 }
