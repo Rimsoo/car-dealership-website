@@ -14,7 +14,7 @@
 }
 
 .cards-area {
-    @apply mx-auto w-[285px] sm:w-[610px] lg:w-[900px] xl:w-[1200px] pb-4;
+    @apply mx-auto w-[285px] sm:w-[610px] lg:w-[900px] xl:w-[1200px] pb-8;
 }
 
 .cards-area--sold {

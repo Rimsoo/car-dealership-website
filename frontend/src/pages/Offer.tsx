@@ -52,7 +52,6 @@ export default function Offer(props: OfferProps) {
     <div id="Offer">
       <h1 className='page-title pb-8'>SPRAWDŹ NASZĄ OFERTĘ</h1>
       <div className='cards-area'>
-        
         {isLoading ? (<Loader/>) : (
           arrayToDisplay.map((car: CarData[], index: number) => (
             <Car
