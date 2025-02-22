@@ -12,7 +12,7 @@ import Financing from "./pages/Financing";
 import Footer from "./components/Footer";
 import Offer from "./pages/Offer";
 import Sold from "./pages/Sold";
-import ScrollPagesTop from "./hooks/scrollPagesTop";
+import ScrollPagesTop from "./hooks/ScrollPagesTop";
 import SiteHeader from "./components/SiteHeader";
 import Thanks from "./pages/Thanks";
 import Wallpaper from "./components/Wallpaper";
