@@ -1,19 +1,19 @@
 body {
   margin: 0;
   /* Another Segoe font added for Safari */
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family:
+    source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 @font-face {
-  font-family: 'bebasFont';
-  src: url(./fonts/BebasNeue-Regular.ttf);
+  font-family: "Inter";
+  src: url(./fonts/Inter.ttf);
 }
 
 /* Setting Segoe font for Safari */
@@ -21,3 +21,4 @@ code {
   font-family: SegoeUI;
   src: url(./fonts/SegoeUI.ttf);
 } */
+

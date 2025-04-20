@@ -2,7 +2,7 @@
 @tailwind components;
 
 .about__subtitle {
-    @apply text-2xl font-medium underline underline-offset-[4px] mb-[4px] font-bebasFont
+    @apply text-2xl font-medium underline underline-offset-[4px] mb-[4px] font-inter
 }
 
 /* Buy */
@@ -128,7 +128,7 @@
 
 /* The class for titles in different pages */
 .page-title {
-    @apply pt-8 text-3xl font-medium text-center underline decoration-2 underline-offset-[8px] font-bebasFont
+    @apply pt-8 text-3xl font-medium text-center underline decoration-2 underline-offset-[8px] font-inter
 }
 
 /* Site header component*/
