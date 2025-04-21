@@ -19,51 +19,54 @@ export default function Car(props: any) {
             inline-block relative border-2 border-black rounded-[20px] w-[270px] h-[370px] my-3 mx-3 font-inter "
     >
       {/* Container for a ribbon */}
-      <span
-        className={
-          props.state === "soon" || props.state === "zarezerwowane"
-            ? "car__container-ribbon--yellow"
-            : props.state === "sold"
-              ? "car__container-ribbon--red"
-              : "car__container-ribbon--green"
-        }
-      >
-        {/* The ribbon */}
+      <NavLink to={`/CarPage/${props.id}`}>
         <span
           className={
             props.state === "soon" || props.state === "zarezerwowane"
-              ? "bg-amber-500"
+              ? "car__container-ribbon--yellow"
               : props.state === "sold"
-                ? "bg-red-600"
-                : "bg-green-800"
+                ? "car__container-ribbon--red"
+                : "car__container-ribbon--green"
           }
         >
-          {props.state === "soon"
-            ? "À venir"
-            : props.state === "sold"
-              ? "Vendu"
-              : props.state === "zarezerwowane"
-                ? "Réservé"
-                : props.price + " EUR"}
+          {/* The ribbon */}
+          <span
+            className={
+              props.state === "soon" || props.state === "zarezerwowane"
+                ? "bg-amber-500"
+                : props.state === "sold"
+                  ? "bg-red-600"
+                  : "bg-green-800"
+            }
+          >
+            {props.state === "soon"
+              ? "À venir"
+              : props.state === "sold"
+                ? "Vendu"
+                : props.state === "zarezerwowane"
+                  ? "Réservé"
+                  : props.price + " EUR"}
+          </span>
+          {/* The shadow of the container as a pseudoelement ::after here */}
         </span>
-        {/* The shadow of the container as a pseudoelement ::after here */}
-      </span>
 
-      {/* Main photo */}
-      <img
-        className="w-full h-[200px] rounded-tl-[20px] rounded-tr-[20px] object-cover"
-        src={props.imageSource}
-        alt="Solidne auta używane"
-        style={isImageLoaded ? { display: "block" } : { display: "none" }}
-        // loading="lazy"
-        onLoad={handleImageLoad}
-      />
-      <img
-        className="block h-[200px] p-[70px] mx-auto border-b-2 border-black"
-        src={gif}
-        alt="Solidne auta używane"
-        style={isImageLoaded ? { display: "none" } : { display: "block" }}
-      />
+        {/* Main photo */}
+
+        <img
+          className="w-full h-[200px] rounded-tl-[20px] rounded-tr-[20px] object-cover"
+          src={props.imageSource}
+          alt="Solidne auta używane"
+          style={isImageLoaded ? { display: "block" } : { display: "none" }}
+          // loading="lazy"
+          onLoad={handleImageLoad}
+        />
+        <img
+          className="block h-[200px] p-[70px] mx-auto border-b-2 border-black"
+          src={gif}
+          alt="banderole"
+          style={isImageLoaded ? { display: "none" } : { display: "block" }}
+        />
+      </NavLink>
 
       {/* Car's name */}
       <p className="flex items-center justify-center py-px px-2 h-[56px] text-center">
@@ -78,7 +81,7 @@ export default function Car(props: any) {
           <img
             className="Car__description__container__img"
             src={calendar}
-            alt="Dealer samochodów premium"
+            alt="calendar"
           />
           {props.year}
         </div>
@@ -86,7 +89,7 @@ export default function Car(props: any) {
           <img
             className="Car__description__container__img"
             src={mileage}
-            alt="Samochody z niskim przebiegiem"
+            alt="mileage"
           />
           {props.mileage}
           {" km"}
@@ -95,16 +98,16 @@ export default function Car(props: any) {
           <img
             className="Car__description__container__img"
             src={engineering}
-            alt="Dealer aut klasy premium w Miechowie"
+            alt="power"
           />
           {props.power}
-          {" KM"}
+          {" CV"}
         </div>
         <div className="Car__description__container--even">
           <img
             className="Car__description__container__img"
             src={gasoline}
-            alt="Auta używane Miechów"
+            alt="carburant"
           />
           {props.fuel}
         </div>

@@ -5,10 +5,8 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client"; //
 
 // page and layout imports
 import About from "./pages/About";
-import Buy from "./pages/Buy";
 import CarPage from "./pages/CarPage";
 import Contact from "./pages/Contact";
-import Financing from "./pages/Financing";
 import Footer from "./components/Footer";
 import Offer from "./pages/Offer";
 import Sold from "./pages/Sold";
@@ -183,4 +181,3 @@ function App() {
 }
 
 export default App;
-

@@ -18,33 +18,33 @@ export default function Contact() {
 
         <form
           className="text-lg"
-          action="https://formsubmit.co/alfamotors.kontakt@gmail.com"
+          action="https://formsubmit.co/df3a66f1063e9ab806e6f7acb05d6454"
           method="POST"
         >
           <input
             className="contact__container__form__input contact__container__form__input-contour"
             type="text"
-            name="Prénom"
+            name="name"
             placeholder="Prénom"
             required
           />
           <input
             className="contact__container__form__input contact__container__form__input-contour"
             type="text"
-            name="Nom"
+            name="lastname"
             placeholder="Nom"
             required
           />
           <input
             className="contact__container__form__input contact__container__form__input-contour"
             type="text"
-            name="Numéro de téléphone"
+            name="phone"
             placeholder="Numéro de téléphone"
           />
           <input
             className="contact__container__form__input contact__container__form__input-contour"
             type="email"
-            name="Adresse e-mail"
+            name="email"
             placeholder="Adresse e-mail"
             required
           />
@@ -52,7 +52,7 @@ export default function Contact() {
           {/* Zone de texte */}
           <textarea
             className="contact__container__form__input contact__container__form__input-contour h-48"
-            name="Message"
+            name="message"
             placeholder="Message"
             required
             rows={4}
@@ -62,24 +62,28 @@ export default function Contact() {
           <input
             className="contact__container__form__input
                     contact__container__form__input-contour-contour
-                    border-2 my-1 mx-auto pt-0.5  tracking-wide border-black rounded-md block border-black rounded-md block mx-autoduration-1000 transition-colors cursor-pointer
+                    border-2 my-1 mx-auto pt-0.5  tracking-wide border-black rounded-md block mx-autoduration-1000 transition-colors cursor-pointer
                     hover:bg-black hover:text-white"
             id="contact-area__button"
             type="submit"
             value="ENVOYER"
           />
-
+          <input
+            type="hidden"
+            name="_autoresponse"
+            value="Voici une copie de votre demande, nous y répondrons dans les plus brefs délais."
+          />
           <input
             className="contact__container__form__input contact__container__form__input-contour"
             type="hidden"
             name="_subject"
-            value="Un client a envoyé une demande"
+            value="Demande de contact"
           ></input>
           <input
             className="contact__container__form__input contact__container__form__input-contour"
             type="hidden"
             name="_next"
-            value="https://alfamotors.pl/thanks"
+            value="https://get-the-car.com/thanks"
           ></input>
         </form>
       </span>
