@@ -11,7 +11,6 @@ module.exports = {
         "car-shadow-red": "109.5px -110px hsl(0, 100%, 40%)",
         "car-shadow-yellow": "0px 70px hsl(39, 100%, 40%)",
         "buy-form": "5px 5px 5px 5px hsl(0, 0%, 80%)",
-        "car-page-shadow": "5px 5px 5px 5px hsl(0, 0%, 70%)",
       },
       colors: {
         "footer-gray": "#666666",
@@ -70,4 +69,3 @@ module.exports = {
   },
   plugins: [],
 };
-

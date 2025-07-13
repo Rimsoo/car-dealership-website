@@ -16,7 +16,7 @@ export default function Car(props: any) {
   return (
     <div
       className="Car
-            inline-block relative border-2 border-black rounded-[20px] w-[270px] h-[370px] my-3 mx-3 font-inter "
+            inline-block relative border-2 border-white rounded-[20px] w-[270px] h-[370px] my-3 mx-3 font-inter "
     >
       {/* Container for a ribbon */}
       <NavLink to={`/CarPage/${props.id}`}>

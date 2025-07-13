@@ -97,7 +97,7 @@
 
 /* Car page */
 .CarPage__table__body__row {
-  @apply flex justify-between border-t border-gray-500;
+  @apply flex justify-between border-t border-r-gray-200;
 }
 .CarPage__price__area__dash {
   @apply hidden sm:inline-block;

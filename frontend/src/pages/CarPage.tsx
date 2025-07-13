@@ -151,9 +151,9 @@ export default function CarPage() {
       {/* Mini slider */}
       <ImageSlider id="ImageSlider" slides={imagesURLs} />
       <table
-        className="relative top-16 w-90vw max-w-lg mx-auto bg-gray-100 border border-black shadow-car-page-shadow text-[15px] font-medium
+        className="relative rounded-[5px] top-16 w-90vw max-w-lg mx-auto bg-gray-100 border border-black shadow-car-page-shadow text-[15px] font-medium
             lg:inline-block lg:top-0 lg:left-2 lg:max-w-none lg:w-[360px]
-            xl:left-4
+            xl:left-4 p-2
             "
       >
         <tbody className="block width-full">
@@ -267,7 +267,7 @@ export default function CarPage() {
           </tr>
         </tbody>
       </table>
-      <div className="CarPage__description relative top-32 w-90vw max-w-[1080px] mx-auto bg-gray-100 shadow-car-page-shadow">
+      <div className="rounded-[5px] CarPage__description relative top-32 w-90vw max-w-[1080px] mx-auto bg-gray-100  text-black">
         <div className="pt-3 pb-7 font-medium text-3xl text-center underline underline-offset-[12px]">
           Description du véhicule
         </div>

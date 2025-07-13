@@ -68,9 +68,9 @@ export default function SiteHeader() {
 
         {/* Navbar */}
         <ul
-          className={`z-20 top-[139px] w-full
-                sm:top-[92px]
-                lg:top-[70px] lg:pl-3
+          className={`absolute z-20 top-[170px] w-full
+                sm:top-[90px]
+                lg:top-[105px] lg:pl-3
                 ${menuOpen ? "siteHeader__navbar--shown" : "siteHeader__navbar--hidden"}`}
           ref={menuRef}
         >
