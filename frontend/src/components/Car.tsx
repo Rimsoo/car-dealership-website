@@ -22,9 +22,9 @@ export default function Car(props: any) {
       <NavLink to={`/CarPage/${props.id}`}>
         <span
           className={
-            props.state === "soon" || props.state === "zarezerwowane"
+            props.state === "soon" || props.state === "reserve"
               ? "car__container-ribbon--yellow"
-              : props.state === "sold"
+              : props.state === "vendu"
                 ? "car__container-ribbon--red"
                 : "car__container-ribbon--green"
           }
@@ -32,18 +32,18 @@ export default function Car(props: any) {
           {/* The ribbon */}
           <span
             className={
-              props.state === "soon" || props.state === "zarezerwowane"
+              props.state === "soon" || props.state === "reserve"
                 ? "bg-amber-500"
-                : props.state === "sold"
+                : props.state === "vendu"
                   ? "bg-red-600"
                   : "bg-green-800"
             }
           >
             {props.state === "soon"
               ? "À venir"
-              : props.state === "sold"
+              : props.state === "vendu"
                 ? "Vendu"
-                : props.state === "zarezerwowane"
+                : props.state === "reserve"
                   ? "Réservé"
                   : props.price + " EUR"}
           </span>

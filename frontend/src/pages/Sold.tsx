@@ -2,7 +2,7 @@ import Car from "../components/Car";
 import Loader from "../components/Loader";
 import PagesToggler from "../components/PagesToggler";
 
-const strapiURL: string = "https://kokpit.alfamotors.pl";
+const strapiURL: string = "http://localhost:1337";
 
 // Local:
 // const strapiURL = 'http://localhost:1337';
@@ -83,4 +83,3 @@ export default function Sold(props: SoldProps) {
     </div>
   );
 }
-

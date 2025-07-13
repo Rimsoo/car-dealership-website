@@ -30,9 +30,9 @@ const client = new ApolloClient({
 
 // The code lines below get more than 25 records given by a default, the Strapi's limit is 100 (can't be increased)
 const apiURL1: string =
-  "https://kokpit.alfamotors.pl/api/cars?sort=date&pagination[pageSize]=100&populate=*";
+  "http://localhost:1337/api/cars?sort=id&pagination[pageSize]=100&populate=*";
 const apiURL2: string =
-  "https://kokpit.alfamotors.pl/api/cars?sort=date&pagination[start]=100&pagination[limit]=100&populate=*";
+  "http://localhost:1337/api/cars?sort=id&pagination[start]=100&pagination[limit]=100&populate=*";
 
 // Pages with sold cars counter
 let chunksQuantity = 0;
@@ -108,12 +108,12 @@ function App() {
 
   // Extracting offered cars
   const filteredCarsOffered = sortedCars.filter(
-    (car: CarData[]) => car[1].attributes.state !== "sold",
+    (car: CarData[]) => car[1].attributes.state !== "vendu",
   );
 
   // Extracting sold cars
   const filteredCarsSold = sortedCars.filter(
-    (car: CarData[]) => car[1].attributes.state === "sold",
+    (car: CarData[]) => car[1].attributes.state === "vendu",
   );
 
   // Splitting Sold cars into smaller arrays each containing up to 48 elements

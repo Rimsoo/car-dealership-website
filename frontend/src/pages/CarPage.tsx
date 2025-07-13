@@ -4,9 +4,7 @@ import Loader from "../components/Loader";
 import { useParams } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 
-const strapiURL = "https://kokpit.alfamotors.pl/";
-const apiURL =
-  "https://kokpit.alfamotors.pl/api/cars?sort=date&pagination[start]=12&pagination[limit]=100&populate=* ";
+const strapiURL = "http://localhost:1337";
 
 // Local
 // const strapiURL = 'http://localhost:1337';
@@ -80,9 +78,10 @@ export default function CarPage() {
   let pagination: number = Number(id) - 20; // TS doesn't accept substracting number from string
   if (pagination < 0) pagination = 0;
   const apiURL =
-    "https://kokpit.alfamotors.pl/api/cars?sort=date&pagination[start]=" +
+    "http://localhost:1337/api/cars?sort=id&pagination[start]=" +
     pagination +
     "&pagination[limit]=100&populate=* ";
+  console.debug(apiURL);
 
   const { loading, error, data } = useFetch(apiURL);
   let imagesURLs: string[] = []; // here will be stored URLs of images
@@ -133,7 +132,7 @@ export default function CarPage() {
         <div
           className="CarPage__price__area font-medium text-red-600 sm:inline-block"
           style={
-            foundCar[1].attributes.state === "sold" ||
+            foundCar[1].attributes.state === "vendu" ||
             foundCar[1].attributes.state === "soon"
               ? { display: "none" }
               : {}
@@ -143,7 +142,7 @@ export default function CarPage() {
             {foundCar[1].attributes.price ? ` - ` : " "}
           </span>
           <span className="CarPage__price__area__number">
-            {foundCar[1].attributes.state === "zarezerwowane"
+            {foundCar[1].attributes.state === "reserve"
               ? " - RÉSERVÉ"
               : foundCar[1].attributes.price + " EUR"}
           </span>
@@ -279,4 +278,3 @@ export default function CarPage() {
     </div>
   );
 }
-

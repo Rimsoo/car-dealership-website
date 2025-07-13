@@ -2,188 +2,185 @@
 @tailwind components;
 
 .about__subtitle {
-    @apply text-2xl font-medium underline underline-offset-[4px] mb-[4px] font-inter
+  @apply text-2xl font-medium underline underline-offset-[4px] mb-[4px] font-inter;
 }
 
 /* Buy */
 .buy__area__form__attachment {
-    @apply block w-40 my-1 mx-auto p-0.5 border-2 border-black rounded-md text-sm xl:my-px;
+  @apply block w-40 my-1 mx-auto p-0.5 border-2 border-black rounded-md text-sm xl:my-px;
 }
 .buy__area__form__input {
-    @apply block w-full my-1 mx-auto pl-1 border-2 border-black rounded-md text-lg;
+  @apply block w-full my-1 mx-auto pl-1 border-2 border-black rounded-md text-lg;
 }
 
 .cards-area {
-    @apply mx-auto w-[285px] sm:w-[610px] lg:w-[900px] xl:w-[1200px] pb-8;
+  @apply mx-auto w-[285px] sm:w-[610px] lg:w-[900px] xl:w-[1200px] pb-8;
 }
 
 .cards-area--sold {
-    @apply flex flex-wrap justify-center;
+  @apply flex flex-wrap justify-center;
 }
 
 /* Car component */
 .car__description__container--odd {
-    @apply inline-block h-8 w-[70px];
+  @apply inline-block h-8 w-[70px];
 }
 /* In case of "Benzyna + LPG" description the 4th div needs more space, so that's why even elements are wider */
 .car__description__container--even {
-    @apply inline-block left-[10px] h-8 w-24 relative;
+  @apply inline-block left-[10px] h-8 w-24 relative;
 }
 .car__description__container__icons {
-    @apply inline-block max-h-4 mr-1;
+  @apply inline-block max-h-4 mr-1;
 }
-
 
 /* Ribbons */
 .Car .car__container-ribbon--yellow,
 .Car .car__container-ribbon--red,
 .Car .car__container-ribbon--green {
-    @apply absolute top-[-8px] left-[-8px] w-[150px] h-[150px] text-white flex justify-center items-center overflow-hidden;
+  @apply absolute top-[-8px] left-[-8px] w-[150px] h-[150px] text-white flex justify-center items-center overflow-hidden;
 }
 .Car .car__container-ribbon--yellow span,
 .Car .car__container-ribbon--red span,
 .Car .car__container-ribbon--green span {
-    @apply absolute top-[-8px] left-[-8px] w-[150px] h-[150px] text-white flex justify-center items-center overflow-hidden;
-    transform: rotate(-45deg) translateY(-20px);
-    @apply absolute left-[-60px] top-[50px] w-[250px] h-[27px] tracking-[0.02em];
+  @apply absolute top-[-8px] left-[-8px] w-[150px] h-[150px] text-white flex justify-center items-center overflow-hidden;
+  transform: rotate(-45deg) translateY(-20px);
+  @apply absolute left-[-60px] top-[50px] w-[250px] h-[27px] tracking-[0.02em];
 }
 
 /* Shadow of a ribbon */
-.car__container-ribbon--green::after, 
-.car__container-ribbon--yellow::after, 
+.car__container-ribbon--green::after,
+.car__container-ribbon--yellow::after,
 .car__container-ribbon--red::after {
-    content: ''; /* must be to show color */
-    @apply absolute w-2.5 h-2.5 bottom-7.625 left-0 z-[-1]; 
+  content: ""; /* must be to show color */
+  @apply absolute w-2.5 h-2.5 bottom-7.625 left-0 z-[-1];
 }
 
 /* Lines responsible for the second shadow (the one higher) */
 .car__container-ribbon--green::after {
-    background-color: hsl(120, 100%, 15%);
-    box-shadow: 109.5px -110px hsl(120, 100%, 15%); 
+  background-color: hsl(120, 100%, 15%);
+  box-shadow: 109.5px -110px hsl(120, 100%, 15%);
 }
 .car__container-ribbon--yellow::after {
-    background-color: hsl(39, 100%, 40%);
-    box-shadow: 109.5px -110px hsl(39, 100%, 40%);
+  background-color: hsl(39, 100%, 40%);
+  box-shadow: 109.5px -110px hsl(39, 100%, 40%);
 }
 .car__container-ribbon--red::after {
-    background-color: hsl(0, 100%, 30%);
-    box-shadow: 109.5px -110px hsl(0, 100%, 30%);
+  background-color: hsl(0, 100%, 30%);
+  box-shadow: 109.5px -110px hsl(0, 100%, 30%);
 }
 
 /* In case of "Benzyna + LPG" description the 4th div needs more space, so that's why the code below */
 .Car__description__container--odd,
 .Car__description__container--even {
-    @apply relative left-5 inline-block h-8;
+  @apply relative left-5 inline-block h-8;
 }
 .Car__description__container--odd {
-    @apply relative w-20;
+  @apply relative w-20;
 }
 .Car__description__container--even {
-    @apply relative w-[100px];
+  @apply relative w-[100px];
 }
 .Car__description__container__img {
-    @apply inline-block max-h-4 mr-1;
+  @apply inline-block max-h-4 mr-1;
 }
 
 /* Contact page */
 .contact__container__form__input {
-    @apply my-0.5 w-full;
+  @apply my-0.5 w-full;
 }
 .contact__container__form__input-contour {
-    @apply h-7 pl-1 border-2 border-black rounded-md;
+  @apply h-7 pl-1 border-2 border-black rounded-md;
 }
 .contact__container__title {
-    @apply pt-6 pb-4 text-2xl text-center underline underline-offset-4 lg:text-left lg:pb-2 lg:pl-1 lg:underline-offset-[6px];
+  @apply pt-6 pb-4 text-2xl text-center underline underline-offset-4 lg:text-left lg:pb-2 lg:pl-1 lg:underline-offset-[6px];
 }
 
 /* Car page */
 .CarPage__table__body__row {
-    @apply flex justify-between border-t border-gray-500;
-
+  @apply flex justify-between border-t border-gray-500;
 }
 .CarPage__price__area__dash {
-    @apply hidden sm:inline-block;
+  @apply hidden sm:inline-block;
 }
 .CarPage__table__body__row__cell-first {
-    @apply pl-1 text-gray-700;    
-
+  @apply pl-1 text-gray-700;
 }
 .CarPage__table__body__row__cell-second {
-    @apply pr-1 text-right text-car-page-red;    
+  @apply pr-1 text-right text-car-page-red;
 }
 .CarPage__table__body__row__cell-first,
 .CarPage__table__body__row__cell-second {
-    @apply leading-7;
+  @apply leading-7;
 }
 
 /* Financing page */
 .financing__options {
-    @apply my-4 w-full;
+  @apply my-4 w-full;
 }
 
 /* ImageSlider component */
 .image-slider__big-arrows {
-    @apply z-50 h-8 px-1 cursor-pointer;
+  @apply z-50 h-8 px-1 cursor-pointer;
 }
 
 /* The class for titles in different pages */
 .page-title {
-    @apply pt-8 text-3xl font-medium text-center underline decoration-2 underline-offset-[8px] font-inter
+  @apply pt-8 text-3xl font-medium text-center underline decoration-2 underline-offset-[8px] font-inter;
 }
 
 /* Site header component*/
 .siteHeader__li {
-    @apply p-3 text-center bg-white hover:bg-gray-200 transition-colors
-    lg:inline-block lg:mx-1 lg:hover:bg-white;
+  @apply p-3 text-center bg-black text-white py-2
+    lg:inline-block lg:mx-1 lg:hover:bg-black border-b-yellow-500 hover:border-b-2 hover:border-b-yellow-500;
 }
 .siteHeader__li__span {
-    @apply hover:text-gray-300 active:text-gray-100 transition-colors duration-500;
+  @apply border-b-0;
 }
 .siteHeader__navbar--shown {
-    @apply opacity-95 transition ease-in-out duration-500
+  @apply opacity-95 transition ease-in-out duration-500
     lg:opacity-100;
 }
 .siteHeader__navbar--hidden {
-    @apply opacity-0 transition ease-in-out duration-500
+  @apply opacity-0 transition ease-in-out duration-500
     lg:opacity-100;
 }
 
 /* Slider component */
 .slider--custom-margin {
-    @media (min-width: 1024px) {
-        margin-left: calc(50vw - 510px) !important;
-    }
+  @media (min-width: 1024px) {
+    margin-left: calc(50vw - 510px) !important;
+  }
 }
 .container-slider__arrow {
-    @apply absolute flex items-center top-0 h-full z-20 bg-transparent duration-1000 cursor-pointer;
+  @apply absolute flex items-center top-0 h-full z-20 bg-transparent duration-1000 cursor-pointer;
 }
 .container-slider__arrow__img {
-    @apply relative w-5 px-1 opacity-0 transition-opacity duration-1000 xs:w-8 xs:px-2;
+  @apply relative w-5 px-1 opacity-0 transition-opacity duration-1000 xs:w-8 xs:px-2;
 }
-.container-slider__slider:hover  ~ .container-slider__right-arrow,     
-.container-slider__slider:hover  ~ .container-slider__left-arrow,
+.container-slider__slider:hover ~ .container-slider__right-arrow,
+.container-slider__slider:hover ~ .container-slider__left-arrow,
 .container-slider__left-arrow:hover,
-.container-slider__right-arrow:hover {      
-    background-color: hsl(0, 0%, 0%, 0.4);
-    transition-duration: 1s;
+.container-slider__right-arrow:hover {
+  background-color: hsl(0, 0%, 0%, 0.4);
+  transition-duration: 1s;
 }
-.container-slider__slider:hover ~ .container-slider__right-arrow img,     
+.container-slider__slider:hover ~ .container-slider__right-arrow img,
 .container-slider__slider:hover ~ .container-slider__left-arrow img,
 .container-slider__left-arrow:hover > img,
 .container-slider__right-arrow:hover > img {
-    opacity: 1;
-    transition: opacity 1s;
+  opacity: 1;
+  transition: opacity 1s;
 }
 
 /* Wallpaper component */
 .wallpaper__pic {
-    @apply h-full w-full absolute bg-center bg-cover;
+  @apply h-full w-full absolute bg-center bg-cover;
 }
 .wallpaper__pic-shown {
-    @apply opacity-100 transition-opacity duration-2500
+  @apply opacity-100 transition-opacity duration-2500;
 }
 .wallpaper__pic-hidden {
-    @apply opacity-0 transition-opacity duration-2500
+  @apply opacity-0 transition-opacity duration-2500;
 }
 
 @tailwind utilities;

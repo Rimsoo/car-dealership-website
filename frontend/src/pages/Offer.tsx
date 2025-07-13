@@ -1,7 +1,7 @@
 import Car from "../components/Car";
 import Loader from "../components/Loader";
 
-const strapiURL: string = "https://kokpit.alfamotors.pl";
+const strapiURL: string = "http://localhost:1337";
 
 interface CarAttributes {
   state: string;
@@ -78,4 +78,3 @@ export default function Offer(props: OfferProps) {
     </div>
   );
 }
-
