@@ -1,7 +1,7 @@
 import Car from "../components/Car";
 import Loader from "../components/Loader";
 
-const strapiURL: string = "http://localhost:1337";
+const strapiURL: string = "https://getthecar.aaaoz.fr";
 
 interface CarAttributes {
   state: string;

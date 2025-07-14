@@ -4,11 +4,11 @@ import Loader from "../components/Loader";
 import { useParams } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 
-const strapiURL = "http://localhost:1337";
+const strapiURL = "https://getthecar.aaaoz.fr";
 
 // Local
-// const strapiURL = 'http://localhost:1337';
-// const apiURL = 'http://localhost:1337/api/cars?populate=*';
+// const strapiURL = 'https://getthecar.aaaoz.fr';
+// const apiURL = 'https://getthecar.aaaoz.fr/api/cars?populate=*';
 
 interface CarAttributes {
   title: string;
@@ -78,7 +78,7 @@ export default function CarPage() {
   let pagination: number = Number(id) - 20; // TS doesn't accept substracting number from string
   if (pagination < 0) pagination = 0;
   const apiURL =
-    "http://localhost:1337/api/cars?sort=id&pagination[start]=" +
+    "https://getthecar.aaaoz.fr/api/cars?sort=id&pagination[start]=" +
     pagination +
     "&pagination[limit]=100&populate=* ";
   console.debug(apiURL);

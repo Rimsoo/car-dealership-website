@@ -24,15 +24,15 @@ import "./tailwind.css";
 
 // Graphql
 const client = new ApolloClient({
-  uri: "http://localhost:1337/graphql",
+  uri: "https://getthecar.aaaoz.fr/graphql",
   cache: new InMemoryCache(),
 });
 
 // The code lines below get more than 25 records given by a default, the Strapi's limit is 100 (can't be increased)
 const apiURL1: string =
-  "http://localhost:1337/api/cars?sort=id&pagination[pageSize]=100&populate=*";
+  "https://getthecar.aaaoz.fr/api/cars?sort=id&pagination[pageSize]=100&populate=*";
 const apiURL2: string =
-  "http://localhost:1337/api/cars?sort=id&pagination[start]=100&pagination[limit]=100&populate=*";
+  "https://getthecar.aaaoz.fr/api/cars?sort=id&pagination[start]=100&pagination[limit]=100&populate=*";
 
 // Pages with sold cars counter
 let chunksQuantity = 0;

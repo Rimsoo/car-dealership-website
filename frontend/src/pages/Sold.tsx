@@ -2,11 +2,11 @@ import Car from "../components/Car";
 import Loader from "../components/Loader";
 import PagesToggler from "../components/PagesToggler";
 
-const strapiURL: string = "http://localhost:1337";
+const strapiURL: string = "https://getthecar.aaaoz.fr";
 
 // Local:
-// const strapiURL = 'http://localhost:1337';
-// const apiURL = 'http://localhost:1337/api/cars?populate=*';
+// const strapiURL = 'https://getthecar.aaaoz.fr';
+// const apiURL = 'https://getthecar.aaaoz.fr/api/cars?populate=*';
 interface CarAttributes {
   state: string;
   title: string;
