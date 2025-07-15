@@ -131,7 +131,7 @@
 /* Site header component*/
 .siteHeader__li {
   @apply p-3 text-center bg-black text-white py-2
-    lg:inline-block lg:mx-1 lg:hover:bg-black border-b-yellow-500 hover:border-b-2 hover:border-b-yellow-500;
+    lg:inline-block lg:mx-1 lg:hover:bg-black border-b-yellow-600 hover:border-b-2 hover:border-b-yellow-600;
 }
 .siteHeader__li__span {
   @apply border-b-0;

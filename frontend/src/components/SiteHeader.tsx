@@ -77,7 +77,7 @@ export default function SiteHeader() {
           <NavLink onClick={hideMenu} to="/">
             <li className="siteHeader__li">
               <span
-                className={`siteHeader__li__span  ${location.pathname === "/" && " text-yellow-500"}`}
+                className={`siteHeader__li__span  ${location.pathname === "/" && " text-yellow-600"}`}
               >
                 Offre
               </span>
@@ -86,7 +86,7 @@ export default function SiteHeader() {
           <NavLink onClick={hideMenu} to="/sold/1">
             <li className="siteHeader__li">
               <span
-                className={`siteHeader__li__span  ${location.pathname.startsWith("/sold") || location.pathname.startsWith("/Sold") ? "text-yellow-500" : ""}`}
+                className={`siteHeader__li__span  ${location.pathname.startsWith("/sold") || location.pathname.startsWith("/Sold") ? "text-yellow-600" : ""}`}
               >
                 Véhicules Vendus
               </span>
@@ -95,7 +95,7 @@ export default function SiteHeader() {
           <NavLink onClick={hideMenu} to="/about">
             <li className="siteHeader__li">
               <span
-                className={`siteHeader__li__span  ${location.pathname === "/about" && "text-yellow-500"}`}
+                className={`siteHeader__li__span  ${location.pathname === "/about" && "text-yellow-600"}`}
               >
                 À propos
               </span>{" "}
@@ -104,7 +104,7 @@ export default function SiteHeader() {
           {/* <NavLink onClick={hideMenu} to="/buy"> */}
           {/*   <li className="siteHeader__li"> */}
           {/*     <span */}
-          {/*       className={`siteHeader__li__span  ${location.pathname === "/buy" && "text-yellow-500"}`} */}
+          {/*       className={`siteHeader__li__span  ${location.pathname === "/buy" && "text-yellow-600"}`} */}
           {/*     > */}
           {/*       Rachat de véhicule */}
           {/*     </span> */}
@@ -113,7 +113,7 @@ export default function SiteHeader() {
           {/* <NavLink onClick={hideMenu} to="/financing"> */}
           {/*   <li className="siteHeader__li"> */}
           {/*     <span */}
-          {/*       className={`siteHeader__li__span  ${location.pathname === "/financing" && "text-yellow-500"}`} */}
+          {/*       className={`siteHeader__li__span  ${location.pathname === "/financing" && "text-yellow-600"}`} */}
           {/*     > */}
           {/*       Financement */}
           {/*     </span> */}
@@ -122,7 +122,7 @@ export default function SiteHeader() {
           <NavLink onClick={hideMenu} to="/contact">
             <li className="siteHeader__li">
               <span
-                className={`siteHeader__li__span  ${location.pathname === "/contact" && "text-yellow-500"}`}
+                className={`siteHeader__li__span  ${location.pathname === "/contact" && "text-yellow-600"}`}
               >
                 Contact
               </span>

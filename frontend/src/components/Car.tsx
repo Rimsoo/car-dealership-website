@@ -33,10 +33,10 @@ export default function Car(props: any) {
           <span
             className={
               props.state === "soon" || props.state === "reserve"
-                ? "bg-amber-500"
+                ? "bg-gray-400"
                 : props.state === "vendu"
-                  ? "bg-red-600"
-                  : "bg-green-800"
+                  ? "bg-black"
+                  : "bg-yellow-600"
             }
           >
             {props.state === "soon"

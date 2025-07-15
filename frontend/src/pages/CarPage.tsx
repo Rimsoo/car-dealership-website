@@ -130,7 +130,7 @@ export default function CarPage() {
       >
         {foundCar[1].attributes.title + " "}
         <div
-          className="CarPage__price__area font-medium text-yellow-500 sm:inline-block"
+          className="CarPage__price__area font-medium text-yellow-600 sm:inline-block"
           style={
             foundCar[1].attributes.state === "vendu" ||
             foundCar[1].attributes.state === "soon"
