@@ -83,7 +83,7 @@ export default function ImageSlider(props: any) {
       >
         {props.slides.map((slide: string, index: number) => (
           <div
-            className="px-0.5 text-3xl leading-6 text-red-600 cursor-pointer"
+            className="px-0.5 text-3xl leading-6 text-yellow-500 cursor-pointer"
             key={index}
             onClick={() => setCurrentIndex(index)}
             style={currentIndex === index ? dotsStyle : {}}
@@ -148,4 +148,3 @@ export default function ImageSlider(props: any) {
     </div>
   );
 }
-

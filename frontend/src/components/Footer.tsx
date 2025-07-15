@@ -8,7 +8,7 @@ export default function Footer() {
       <span className="px-2">
         Copyright © {new Date().getFullYear()} GetTHEcar
       </span>
-      <span className="px-2">Réalisation ARDEO Grzegorz Muszyński</span>
+      {/* <span className="px-2">Réalisation ARDEO Grzegorz Muszyński</span> */}
     </div>
   );
 }

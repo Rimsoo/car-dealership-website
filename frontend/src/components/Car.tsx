@@ -76,7 +76,7 @@ export default function Car(props: any) {
       </p>
 
       {/* Infobox */}
-      <div className="relative bottom-1 w-48 h-16 mx-auto">
+      <div className="relative bottom-1 w-52 h-16 mx-auto">
         <div className="Car__description__container--odd">
           <img
             className="Car__description__container__img"

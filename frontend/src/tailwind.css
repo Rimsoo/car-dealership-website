@@ -78,7 +78,7 @@
   @apply relative w-20;
 }
 .Car__description__container--even {
-  @apply relative w-[100px];
+  @apply relative w-[110px];
 }
 .Car__description__container__img {
   @apply inline-block max-h-4 mr-1;
@@ -106,7 +106,7 @@
   @apply pl-1 text-gray-700;
 }
 .CarPage__table__body__row__cell-second {
-  @apply pr-1 text-right text-car-page-red;
+  @apply pr-1 text-right text-yellow-600;
 }
 .CarPage__table__body__row__cell-first,
 .CarPage__table__body__row__cell-second {
@@ -137,12 +137,11 @@
   @apply border-b-0;
 }
 .siteHeader__navbar--shown {
-  @apply opacity-95 transition ease-in-out duration-500
-    lg:opacity-100;
+  @apply opacity-95 transition ease-in-out duration-500 
+    lg:opacity-100 lg:block;
 }
 .siteHeader__navbar--hidden {
-  @apply opacity-0 transition ease-in-out duration-500
-    lg:opacity-100;
+  @apply opacity-0 transition ease-in-out duration-500 lg:opacity-100 lg:block hidden;
 }
 
 /* Slider component */
